@@ -8,5 +8,27 @@
 
 import Foundation
 
-print("Hello, World!")
+
+func list() {
+    let derivedData = DerivedDataTarget()
+    derivedData.updateMetadata()
+    print(derivedData.metadataDescription())
+}
+
+func remove(target: String) {
+    print("Remove: \(target)")
+}
+
+func help() {
+    
+}
+
+print("Args: \(CommandLine.arguments)")
+let option = Option(options: CommandLine.arguments)
+switch option {
+    case .help : help()
+    case .list : list()
+    case .remove (let target) : remove(target: target)
+}
+
 
