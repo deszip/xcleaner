@@ -28,29 +28,29 @@ class OptionsParserTests: XCTestCase {
         parser?.parse(arguments: ["/path/to/executable", "-l"])
         
         XCTAssert(parser?.options.count == 1)
-        XCTAssert(parser?.options[0] == Option.list(TargetType.all))
+        XCTAssert(parser?.options[0] == Option.list(TargetSignature.all()))
     }
 
     func testOptionsParsesSingleOptionWithValue() {
         parser?.parse(arguments: ["/path/to/executable", "-l", "DerivedData"])
         
         XCTAssert(parser?.options.count == 1)
-        XCTAssert(parser?.options[0] == Option.list(TargetType.derivedData))
+        XCTAssert(parser?.options[0] == Option.list([TargetSignature(type: TargetType.derivedData)]))
     }
     
     func testOptionsParsesMultipleOptionsWithValue() {
         parser?.parse(arguments: ["/path/to/executable", "-l", "DerivedData", "-r", "Archives"])
         
         XCTAssert(parser?.options.count == 2)
-        XCTAssert(parser?.options[0] == Option.list(TargetType.derivedData))
-        XCTAssert(parser?.options[1] == Option.remove(TargetType.archives))
+        XCTAssert(parser?.options[0] == Option.list([TargetSignature(type: TargetType.derivedData)]))
+        XCTAssert(parser?.options[1] == Option.remove([TargetSignature(type: TargetType.archives)]))
     }
     
     func testOptionsParsesArgumentsWithoutExecutablePath() {
         parser?.parse(arguments: ["-l", "DerivedData"])
         
         XCTAssert(parser?.options.count == 1)
-        XCTAssert(parser?.options[0] == Option.list(TargetType.derivedData))
+        XCTAssert(parser?.options[0] == Option.list([TargetSignature(type: TargetType.derivedData)]))
     }
     
     func testOptionsParsesEmptyInput() {

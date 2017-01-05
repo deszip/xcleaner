@@ -26,8 +26,8 @@ if parser.options.contains(Option.help) {
 
 parser.options.forEach { nextOption in
     switch nextOption {
-        case .list(let targetType): cleaner.list(targetTypes: [targetType])
-        case .remove(let targetType): cleaner.remove(targetTypes: [targetType])
+        case .list(let signatures): cleaner.list(targetSignatures: signatures)
+        case .remove(let signatures): cleaner.remove(targetSignatures: signatures)
         
         default: help()
     }
