@@ -8,27 +8,29 @@
 
 import Foundation
 
+let cleaner = Cleaner()
 
-func list() {
-    let derivedData = DerivedDataTarget()
-    derivedData.updateMetadata()
-    print(derivedData.metadataDescription())
-}
-
-func remove(target: String) {
-    print("Remove: \(target)")
-}
+// MARK: - Processing input -
 
 func help() {
-    
+    //...
 }
 
-print("Args: \(CommandLine.arguments)")
-let option = Option(options: CommandLine.arguments)
-switch option {
-    case .help : help()
-    case .list : list()
-    case .remove (let target) : remove(target: target)
+let parser = OptionsParser()
+parser.parse(arguments: CommandLine.arguments)
+
+if parser.options.contains(Option.help) {
+    help()
+    exit(EXIT_SUCCESS)
 }
 
+parser.options.forEach { nextOption in
+    switch nextOption {
+        case .list(let targetType): cleaner.list(targetTypes: [targetType])
+        case .remove(let targetType): cleaner.remove(targetTypes: [targetType])
+        
+        default: help()
+    }
+}
 
+exit(EXIT_SUCCESS)

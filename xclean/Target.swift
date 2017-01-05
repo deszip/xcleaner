@@ -18,12 +18,24 @@ enum TargetType: String {
     case backup
     case rootCoreSimulator
     case docSets
+    
+    case all = ""
 }
 
-protocol Target {
+/*
+struct TargetType : OptionSet {
+    let rawValue: String
     
+    static let derivedData  = TargetType(rawValue: "~/Library/Developer/Xcode/DerivedData")
+    static let archives = TargetType(rawValue: "")
+    static let deviceSupport  = TargetType(rawValue: "")
+}
+*/
+
+protocol Target {
     var type: TargetType { get }
     var url: NSURL { get }
+    var name: String { get }
     
     func updateMetadata()
     

@@ -10,8 +10,11 @@ import Foundation
 
 class DerivedDataTarget: Target {
     
+    private let outdatedTreshold: TimeInterval = 3600 * 48
+    
     let type: TargetType
     let url: NSURL
+    let name: String = "DerivedData"
     
     var entries: [Entry] = []
     
@@ -43,7 +46,17 @@ class DerivedDataTarget: Target {
     }
     
     func clean() {
-        //...
+        let currentDate = Date()
+        entries.forEach { nextEntry in
+            if currentDate.timeIntervalSince(nextEntry.accessDate) >= outdatedTreshold {
+                do {
+                    //try FileManager.default.removeItem(at: nextEntry.url)
+                    print("Removing: \(nextEntry.url)\n")
+                } catch {
+                    print("Unhandled error: \(error)")
+                }
+            }
+        }
     }
     
     // MARK: - Private -
