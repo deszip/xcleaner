@@ -10,14 +10,20 @@ import Foundation
 
 class DerivedDataTarget: Target {
     
-    private let outdatedTreshold: TimeInterval = 3600 * 48
+    private let outdatedTreshold: TimeInterval = 0
+    
+    private let entryBuilder: EntryBuilder
+    private let inspector: Inspector
+    private let environment: Environment
     
     let signature: TargetSignature
     let name: String = "DerivedData"
-    
     var entries: [Entry] = []
     
-    init() {
+    init(entryBuilder: EntryBuilder, inspector: Inspector, environment: Environment) {
+        self.entryBuilder = entryBuilder
+        self.inspector = inspector
+        self.environment = environment
         self.signature = TargetSignature(type: TargetType.derivedData)
     }
     
@@ -30,27 +36,33 @@ class DerivedDataTarget: Target {
     }
     
     func metadataDescription() -> String {
-        var description = "Total safe to remove: " + formattedSize(size: safeSize()) + "\n"
+        var description = "DerivedData total: " + Formatter.formattedSize(size: safeSize()) + "\n\n"
+        var components: [[String]] = []
         for projectEntry in entries {
-            description += (projectEntry.metadataDescription() + "\n")
+            //description += Formatter.alignedStringComponents(projectEntry.metadataDescription(), padding: 10)
+            components.append(projectEntry.metadataDescription())
         }
+        
+        description += Formatter.alignedStringComponents(components)
         
         return description
     }
     
     func safeSize() -> Int64 {
-        return outdatedProjects().reduce(0, { (size, entry) in
+        return entries.filter({ entryIsSafeToRemove($0) }).reduce(0, { (size, entry) in
             entry.size + size
         })
     }
     
     func clean() {
-        outdatedProjects().forEach { entry in
-            do {
-                //try FileManager.default.removeItem(at: nextEntry.url)
-                print("Removing: \(entry.url)\n")
-            } catch {
-                print("Unhandled error: \(error)")
+        entries.forEach { entry in
+            if entryIsSafeToRemove(entry) {
+                do {
+                    //try inspector.fileManager.removeItem(at: nextEntry.url)
+                    environment.stdout("Removing: \(entry.url.path)\n")
+                } catch {
+                    environment.stderr("Unhandled error: \(error)")
+                }
             }
         }
     }
@@ -58,64 +70,15 @@ class DerivedDataTarget: Target {
     // MARK: - Private -
     
     private func projectsList() -> [Entry] {
-        // Flat all urls
-        let files = signature.pathes.map { url -> [URL] in
-            return try! FileManager.default.contentsOfDirectory(at: url as URL, includingPropertiesForKeys: [URLResourceKey.contentModificationDateKey], options: [])
-            }.flatMap { $0 }
-        
-        let filteredDirectories = files.filter { nextURL -> Bool in
-            if nextURL.lastPathComponent == "ModuleCache" {
-                return false
-            }
-            var isDirectory: ObjCBool = false
-            FileManager.default.fileExists(atPath: nextURL.path, isDirectory: &isDirectory)
-            return isDirectory.boolValue
-        }
-        
-        return filteredDirectories.map { nextURL -> Entry in
-            let entry = Entry(url: nextURL)
-            entry.displayName = projectName(projectDirectoryName: nextURL.lastPathComponent)
-            entry.size = sizeOfDirectory(url: nextURL)
-            entry.formattedSize = formattedSize(size: entry.size)
-            
-            let attributes = try! FileManager.default.attributesOfItem(atPath: nextURL.path) as NSDictionary
-            entry.accessDate = attributes.fileModificationDate() ?? Date()
-            
-            return entry
-        }
-    }
-    
-    private func sizeOfDirectory(url: URL) -> Int64 {
-        guard let directoryEnumerator = FileManager.default.enumerator(at: url as URL,
-                                                                   includingPropertiesForKeys: [URLResourceKey.fileSizeKey, URLResourceKey.nameKey],
-                                                                   options: [.skipsHiddenFiles],
-                                                                   errorHandler: nil) else { return 0 }
-        
-        var totalSize: Int64 = 0
-        try! directoryEnumerator.allObjects.forEach({ nextURL in
-            let attributes = try FileManager.default.attributesOfItem(atPath: (nextURL as! URL).path) as NSDictionary
-            totalSize += attributes.fileSize().hashValue
-        })
-        
-        return totalSize
-    }
-    
-    private func formattedSize(size: Int64) -> String {
-        let byteCountFormatter = ByteCountFormatter()
-        byteCountFormatter.allowedUnits = .useAll
-        byteCountFormatter.countStyle = .file
-        let formattedSize = byteCountFormatter.string(fromByteCount: size)
-        
-        return formattedSize
+        return entryBuilder.entriesAtURLs(signature.urls, onlyDirectories: true)
     }
     
     private func projectName(projectDirectoryName: String) -> String {
-        return projectDirectoryName.components(separatedBy: CharacterSet.init(charactersIn: "-"))[0]
+        return projectDirectoryName.components(separatedBy: "-")[0]
     }
     
-    private func outdatedProjects() -> [Entry] {
-        let currentDate = Date()
-        return entries.filter { currentDate.timeIntervalSince($0.accessDate) >= outdatedTreshold }
+    private func entryIsSafeToRemove(_ entry: Entry) -> Bool {
+        return Date().timeIntervalSince(entry.accessDate) >= outdatedTreshold
     }
     
 }

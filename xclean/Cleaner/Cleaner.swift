@@ -10,25 +10,35 @@ import Foundation
 
 class Cleaner {
     
+    private let environment: Environment
+    
+    init(environment: Environment) {
+        self.environment = environment
+    }
+    
     func list(targetSignatures: [TargetSignature]) {
         for target in buildTargets(targetSignatures: targetSignatures) {
             target.updateMetadata()
-            print("Target: \(target.name))\n")
-            print(target.metadataDescription())
+            environment.stdout(target.metadataDescription())
         }
     }
 
     func remove(targetSignatures: [TargetSignature]) {
         for target in buildTargets(targetSignatures: targetSignatures) {
             target.updateMetadata()
-            print(target.clean())
+            target.clean()
         }
     }
 
     func buildTargets(targetSignatures: [TargetSignature]) -> [Target] {
+        let inspector = Inspector(fileManager: FileManager.default)
+        let entryBuilder = EntryBuilder(inspector: inspector)
+        
         return targetSignatures.map { signature -> Target in
             switch signature.type {
-                case .derivedData :     return DerivedDataTarget()
+            case .derivedData :     return DerivedDataTarget(entryBuilder: entryBuilder,
+                                                             inspector: inspector,
+                                                             environment: environment)
                 case .archives :        return ArchivesTarget()
                 case .deviceSupport:    return DeviceSupportTarget()
                 case .coreSimulator:    return CoreSimulatorTarget()
@@ -36,8 +46,6 @@ class Cleaner {
                 case .xcodeCaches:      return XCodeCachesTarget()
                 case .backup:           return BackupTarget()
                 case .docSets:          return DocSetsTarget()
-                
-                default: exit(EXIT_FAILURE)
             }
         }
     }

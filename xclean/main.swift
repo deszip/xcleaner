@@ -8,23 +8,22 @@
 
 import Foundation
 
-let cleaner = Cleaner()
-
 // MARK: - Processing input -
 
 func help() {
-    //...
+    print("Help...")
 }
 
-let parser = OptionsParser()
-parser.parse(arguments: CommandLine.arguments)
+let environment = Environment()
 
-if parser.options.contains(Option.help) {
+if environment.options.contains(Option.help) {
     help()
-    exit(EXIT_SUCCESS)
+    environment.terminate()
 }
 
-parser.options.forEach { nextOption in
+let cleaner = Cleaner(environment: environment)
+
+environment.options.forEach { nextOption in
     switch nextOption {
         case .list(let signatures): cleaner.list(targetSignatures: signatures)
         case .remove(let signatures): cleaner.remove(targetSignatures: signatures)
@@ -33,4 +32,4 @@ parser.options.forEach { nextOption in
     }
 }
 
-exit(EXIT_SUCCESS)
+environment.terminate()

@@ -19,6 +19,14 @@
 		0E8C159C1E1EA71A00E17883 /* BackupTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C159A1E1EA71A00E17883 /* BackupTarget.swift */; };
 		0E8C159E1E1EA74400E17883 /* DocSetsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C159D1E1EA74400E17883 /* DocSetsTarget.swift */; };
 		0E8C159F1E1EA74400E17883 /* DocSetsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C159D1E1EA74400E17883 /* DocSetsTarget.swift */; };
+		0E8C15B11E213F1800E17883 /* Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* Inspector.swift */; };
+		0E8C15B21E213F1800E17883 /* Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* Inspector.swift */; };
+		0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
+		0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
+		0EC34F031E214AC6009CA999 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F021E214AC6009CA999 /* Environment.swift */; };
+		0EC34F041E214AC8009CA999 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F021E214AC6009CA999 /* Environment.swift */; };
+		0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F051E215157009CA999 /* EntryBuilder.swift */; };
+		0EC34F071E215159009CA999 /* EntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F051E215157009CA999 /* EntryBuilder.swift */; };
 		0EC7418A1E1D345C0008A630 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC741891E1D345C0008A630 /* main.swift */; };
 		0EDCC2F61E1D6C0400CCD82D /* OptionsParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC2F51E1D6C0400CCD82D /* OptionsParserTests.swift */; };
 		0EDCC2FE1E1E7C1E00CCD82D /* Cleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */; };
@@ -54,6 +62,10 @@
 		0E8C15971E1EA6EB00E17883 /* XCodeCachesTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCodeCachesTarget.swift; sourceTree = "<group>"; };
 		0E8C159A1E1EA71A00E17883 /* BackupTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupTarget.swift; sourceTree = "<group>"; };
 		0E8C159D1E1EA74400E17883 /* DocSetsTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocSetsTarget.swift; sourceTree = "<group>"; };
+		0E8C15B01E213F1800E17883 /* Inspector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspector.swift; sourceTree = "<group>"; };
+		0E8C15B41E21406D00E17883 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		0EC34F021E214AC6009CA999 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		0EC34F051E215157009CA999 /* EntryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryBuilder.swift; sourceTree = "<group>"; };
 		0EC741861E1D345C0008A630 /* xclean */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xclean; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC741891E1D345C0008A630 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0EDCC2E91E1D6ABF00CCD82D /* XCleanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCleanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E8C15B31E21406100E17883 /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				0E8C15B41E21406D00E17883 /* Formatter.swift */,
+				0EC34F021E214AC6009CA999 /* Environment.swift */,
+			);
+			path = Output;
+			sourceTree = "<group>";
+		};
 		0EC7417D1E1D345C0008A630 = {
 			isa = PBXGroup;
 			children = (
@@ -107,9 +128,11 @@
 			isa = PBXGroup;
 			children = (
 				0EC741891E1D345C0008A630 /* main.swift */,
+				0E8C15B01E213F1800E17883 /* Inspector.swift */,
 				0EDCC2FA1E1E7C0E00CCD82D /* Cleaner */,
 				0EDCC2FB1E1E7C0E00CCD82D /* Models */,
 				0EDCC2FC1E1E7C0E00CCD82D /* Targets */,
+				0E8C15B31E21406100E17883 /* Output */,
 				0EC741981E1D62CA0008A630 /* Dependencies */,
 			);
 			path = xclean;
@@ -144,6 +167,7 @@
 			children = (
 				0EDCC3001E1E7C3100CCD82D /* Entry.swift */,
 				0EDCC3011E1E7C3100CCD82D /* Option.swift */,
+				0EC34F051E215157009CA999 /* EntryBuilder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,8 +175,8 @@
 		0EDCC2FC1E1E7C0E00CCD82D /* Targets */ = {
 			isa = PBXGroup;
 			children = (
-				0EDCC3061E1E7C4100CCD82D /* DerivedDataTarget.swift */,
 				0EDCC3071E1E7C4100CCD82D /* Target.swift */,
+				0EDCC3061E1E7C4100CCD82D /* DerivedDataTarget.swift */,
 				0EDCC30C1E1E7CF700CCD82D /* ArchivesTarget.swift */,
 				0E8C158E1E1EA60E00E17883 /* DeviceSupportTarget.swift */,
 				0E8C15901E1EA63E00E17883 /* CoreSimulatorTarget.swift */,
@@ -257,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8C158F1E1EA60E00E17883 /* DeviceSupportTarget.swift in Sources */,
+				0EC34F031E214AC6009CA999 /* Environment.swift in Sources */,
 				0E8C15911E1EA63E00E17883 /* CoreSimulatorTarget.swift in Sources */,
 				0EDCC3041E1E7C3100CCD82D /* Option.swift in Sources */,
 				0EDCC3081E1E7C4100CCD82D /* DerivedDataTarget.swift in Sources */,
@@ -265,9 +290,12 @@
 				0E8C15951E1EA6A500E17883 /* IPhoneSimulatorTarget.swift in Sources */,
 				0E8C159E1E1EA74400E17883 /* DocSetsTarget.swift in Sources */,
 				0EDCC30A1E1E7C4100CCD82D /* Target.swift in Sources */,
+				0E8C15B11E213F1800E17883 /* Inspector.swift in Sources */,
 				0E8C15981E1EA6EB00E17883 /* XCodeCachesTarget.swift in Sources */,
 				0EC7418A1E1D345C0008A630 /* main.swift in Sources */,
+				0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */,
 				0E8C159B1E1EA71A00E17883 /* BackupTarget.swift in Sources */,
+				0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */,
 				0EDCC30D1E1E7CF700CCD82D /* ArchivesTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EDCC3051E1E7C3100CCD82D /* Option.swift in Sources */,
+				0EC34F041E214AC8009CA999 /* Environment.swift in Sources */,
 				0EDCC3091E1E7C4100CCD82D /* DerivedDataTarget.swift in Sources */,
 				0EDCC3031E1E7C3100CCD82D /* Entry.swift in Sources */,
 				0E8C15931E1EA65700E17883 /* DeviceSupportTarget.swift in Sources */,
@@ -285,9 +314,12 @@
 				0E8C15961E1EA6A500E17883 /* IPhoneSimulatorTarget.swift in Sources */,
 				0E8C159F1E1EA74400E17883 /* DocSetsTarget.swift in Sources */,
 				0EDCC30B1E1E7C4100CCD82D /* Target.swift in Sources */,
+				0E8C15B21E213F1800E17883 /* Inspector.swift in Sources */,
 				0E8C15991E1EA6EB00E17883 /* XCodeCachesTarget.swift in Sources */,
 				0EDCC2F61E1D6C0400CCD82D /* OptionsParserTests.swift in Sources */,
+				0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */,
 				0E8C159C1E1EA71A00E17883 /* BackupTarget.swift in Sources */,
+				0EC34F071E215159009CA999 /* EntryBuilder.swift in Sources */,
 				0EDCC30E1E1E7CF700CCD82D /* ArchivesTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

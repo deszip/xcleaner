@@ -78,7 +78,11 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-l"
+            argument = "-l foo"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-l DerivedData"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

@@ -53,6 +53,13 @@ class OptionsParserTests: XCTestCase {
         XCTAssert(parser?.options[0] == Option.list([TargetSignature(type: TargetType.derivedData)]))
     }
     
+    func testOptionsParsesInvalidTarget() {
+        parser?.parse(arguments: ["/path/to/executable", "-l", "foo"])
+        
+        XCTAssert(parser?.options.count == 1)
+        XCTAssert(parser?.options[0] == Option.list(TargetSignature.all()))
+    }
+    
     func testOptionsParsesEmptyInput() {
         parser?.parse(arguments: [])
         
