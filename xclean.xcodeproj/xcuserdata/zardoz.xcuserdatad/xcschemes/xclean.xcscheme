@@ -78,8 +78,12 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-l"
+            argument = "-r"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-l"
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l foo"
@@ -87,6 +91,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l DerivedData"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-l DeviceSupport"
             isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>

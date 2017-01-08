@@ -17,17 +17,27 @@ class Cleaner {
     }
     
     func list(targetSignatures: [TargetSignature]) {
+        var totalSize: Int64 = 0
         for target in buildTargets(targetSignatures: targetSignatures) {
             target.updateMetadata()
+            totalSize += target.safeSize()
             environment.stdout(target.metadataDescription())
         }
+        
+        let formattedSize = Formatter.formattedSize(totalSize)
+        environment.stdout("Total XCode shit size: \(formattedSize)\n")
     }
 
     func remove(targetSignatures: [TargetSignature]) {
-        for target in buildTargets(targetSignatures: targetSignatures) {
+        var totalSize: Int64 = 0
+        buildTargets(targetSignatures: targetSignatures).filter { $0.signature.removable }.forEach { target in
             target.updateMetadata()
+            totalSize += target.safeSize()
             target.clean()
         }
+        
+        let formattedSize = Formatter.formattedSize(totalSize)
+        environment.stdout("Total cleaned: \(formattedSize)\n")
     }
 
     func buildTargets(targetSignatures: [TargetSignature]) -> [Target] {
@@ -35,40 +45,18 @@ class Cleaner {
         let entryBuilder = EntryBuilder(inspector: inspector)
         
         return targetSignatures.map { signature -> Target in
+            let target = Target(signature: signature,
+                                entryBuilder: entryBuilder,
+                                inspector: inspector,
+                                environment: environment)
+            
             switch signature.type {
-            case .derivedData :     return DerivedDataTarget(signature: signature,
-                                                             entryBuilder: entryBuilder,
-                                                             inspector: inspector,
-                                                             environment: environment)
-            case .archives :        return ArchivesTarget(signature: signature,
-                                                          entryBuilder: entryBuilder,
-                                                          inspector: inspector,
-                                                          environment: environment)
-            case .deviceSupport:    return DeviceSupportTarget(signature: signature,
-                                                               entryBuilder: entryBuilder,
-                                                               inspector: inspector,
-                                                               environment: environment)
-            case .coreSimulator:    return CoreSimulatorTarget(signature: signature,
-                                                               entryBuilder: entryBuilder,
-                                                               inspector: inspector,
-                                                               environment: environment)
-            case .iphoneSimulator:  return IPhoneSimulatorTarget(signature: signature,
-                                                                 entryBuilder: entryBuilder,
-                                                                 inspector: inspector,
-                                                                 environment: environment)
-            case .xcodeCaches:      return XCodeCachesTarget(signature: signature,
-                                                             entryBuilder: entryBuilder,
-                                                             inspector: inspector,
-                                                             environment: environment)
-            case .backup:           return BackupTarget(signature: signature,
-                                                        entryBuilder: entryBuilder,
-                                                        inspector: inspector,
-                                                        environment: environment)
-            case .docSets:          return DocSetsTarget(signature: signature,
-                                                         entryBuilder: entryBuilder,
-                                                         inspector: inspector,
-                                                         environment: environment)
+                case .archives:         target.filter = ArchivesFilter(entryBuilder: entryBuilder)
+                case .deviceSupport:    target.filter = DeviceSupportFilter()
+                default: ()
             }
+            
+            return target
         }
     }
     

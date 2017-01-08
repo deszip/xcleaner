@@ -20,14 +20,14 @@ enum TargetType {
     
     func name() -> String {
         switch self {
-            case .derivedData : return "Derived Data"
-            case .archives : return "XCode archives"
-            case .deviceSupport : return "Device support"
-            case .coreSimulator : return "Core simulator"
+            case .derivedData :     return "Derived Data"
+            case .archives :        return "XCode archives"
+            case .deviceSupport :   return "Device support"
+            case .coreSimulator :   return "Core simulator"
             case .iphoneSimulator : return "iPhone simulator"
-            case .xcodeCaches : return "XCode caches"
-            case .backup : return "iTunes backups"
-            case .docSets : return "DocSets"
+            case .xcodeCaches :     return "XCode caches"
+            case .backup :          return "iTunes backups"
+            case .docSets :         return "DocSets"
         }
     }
 }
@@ -46,22 +46,46 @@ struct TargetSignature: Equatable {
     static let docSetsPath              = "~/Library/Developer/Shared/Documentation/DocSets"
     
     let type: TargetType
+    let removable: Bool
     let urls: [URL]
-    
     
     init(type: TargetType) {
         self.type = type
+        
         switch type {
-        case .derivedData:      self.urls = [TargetSignature.urlForPath(TargetSignature.derivedDataPath)]
-        case .archives:         self.urls = [TargetSignature.urlForPath(TargetSignature.archivesPath)]
-        case .deviceSupport:    self.urls = [TargetSignature.urlForPath(TargetSignature.deviceSupportIOSPath),
-                                             TargetSignature.urlForPath(TargetSignature.deviceSupportWatchOSPath)]
-        case .coreSimulator:    self.urls = [TargetSignature.urlForPath(TargetSignature.coreSimulatorUserPath),
-                                             TargetSignature.urlForPath(TargetSignature.coreSimulatorSystemPath)]
-        case .iphoneSimulator:  self.urls = [TargetSignature.urlForPath(TargetSignature.iphoneSimulatorPath)]
-        case .xcodeCaches:      self.urls = [TargetSignature.urlForPath(TargetSignature.xcodeCachesPath)]
-        case .backup:           self.urls = [TargetSignature.urlForPath(TargetSignature.backupPath)]
-        case .docSets:          self.urls = [TargetSignature.urlForPath(TargetSignature.docSetsPath)]
+            case .derivedData:
+                self.urls = [TargetSignature.urlForPath(TargetSignature.derivedDataPath)]
+                self.removable = true
+            
+            case .archives:
+                self.urls = [TargetSignature.urlForPath(TargetSignature.archivesPath)]
+                self.removable = true
+            
+            case .deviceSupport:
+                self.urls = [TargetSignature.urlForPath(TargetSignature.deviceSupportIOSPath),
+                             TargetSignature.urlForPath(TargetSignature.deviceSupportWatchOSPath)]
+                self.removable = true
+            
+            case .coreSimulator:
+                self.urls = [TargetSignature.urlForPath(TargetSignature.coreSimulatorUserPath),
+                             TargetSignature.urlForPath(TargetSignature.coreSimulatorSystemPath)]
+                self.removable = false
+            
+            case .iphoneSimulator:
+                self.urls = [TargetSignature.urlForPath(TargetSignature.iphoneSimulatorPath)]
+                self.removable = false
+            
+            case .xcodeCaches:
+                self.urls = [TargetSignature.urlForPath(TargetSignature.xcodeCachesPath)]
+                self.removable = false
+            
+            case .backup:
+                self.urls = [TargetSignature.urlForPath(TargetSignature.backupPath)]
+                self.removable = false
+            
+            case .docSets:
+                self.urls = [TargetSignature.urlForPath(TargetSignature.docSetsPath)]
+                self.removable = false
         }
     }
     

@@ -1,25 +1,23 @@
 //
-//  ArchivesTarget.swift
+//  ArchivesFilter.swift
 //  xclean
 //
-//  Created by Deszip on 05/01/2017.
+//  Created by Deszip on 08/01/2017.
 //  Copyright © 2017 Deszip. All rights reserved.
 //
 
 import Foundation
 
-class ArchivesTarget: Target {
+class ArchivesFilter: TargetFilter {
+ 
+    private let entryBuilder: EntryBuilder
     
-    // MARK: - Target -
-
-    override func updateMetadata() {
-        entries = archivesList()
+    init(entryBuilder: EntryBuilder) {
+        self.entryBuilder = entryBuilder
     }
     
-    // MARK: - Private -
-    
-    private func archivesList() -> [Entry] {
-        return entryBuilder.entriesAtURLs(signature.urls, onlyDirectories: true).map { archiveDirectory -> [Entry] in
+    func filter(_ entries: [Entry]) -> [Entry] {
+        return entries.map { archiveDirectory -> [Entry] in
             self.entryBuilder.entriesAtURLs([archiveDirectory.url], onlyDirectories: false).filter({ archiveEntry -> Bool in
                 return archiveEntry.url.pathExtension == "xcarchive"
             })
@@ -28,5 +26,5 @@ class ArchivesTarget: Target {
             return left.size > right.size
         }
     }
-
+    
 }

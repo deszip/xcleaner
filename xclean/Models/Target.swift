@@ -15,9 +15,9 @@ class Target {
     let entryBuilder: EntryBuilder
     let inspector: Inspector
     let environment: Environment
-    
     let signature: TargetSignature
     
+    var filter: TargetFilter?
     var entries: [Entry] = []
     
     init(signature: TargetSignature, entryBuilder: EntryBuilder, inspector: Inspector, environment: Environment) {
@@ -31,10 +31,17 @@ class Target {
         entries = entryBuilder.entriesAtURLs(signature.urls, onlyDirectories: true).sorted { (left, right) -> Bool in
             return left.size > right.size
         }
+        
+        if let filter = self.filter {
+            entries = filter.filter(entries)
+        }
     }
     
     func metadataDescription() -> String {
-        var description = signature.type.name() + " total: " + Formatter.formattedSize(size: safeSize()) + "\n\n"
+        var description = signature.type.name() + " total: " + Formatter.formattedSize(safeSize()) + "\n"
+        description += "Pathes:\n\(signature.urls.map({ $0.path }).joined(separator: "\n"))"
+        description += "\n\n"
+        
         var components: [[String]] = []
         for projectEntry in entries {
             components.append(projectEntry.metadataDescription())

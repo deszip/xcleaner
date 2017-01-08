@@ -16,7 +16,7 @@ class Formatter {
         self.dateFormatter.dateFormat = "dd.MM.yyyy HH:mm:ss"
     }
     
-    class func formattedSize(size: Int64) -> String {
+    class func formattedSize(_ size: Int64) -> String {
         let byteCountFormatter = ByteCountFormatter()
         byteCountFormatter.allowedUnits = .useAll
         byteCountFormatter.countStyle = .file

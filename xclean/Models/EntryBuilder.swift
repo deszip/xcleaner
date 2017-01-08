@@ -35,7 +35,7 @@ class EntryBuilder {
         let entry = Entry(url: url)
         entry.displayName = url.lastPathComponent
         entry.size = inspector.sizeOfDirectory(url: url)
-        entry.formattedSize = Formatter.formattedSize(size: entry.size)
+        entry.formattedSize = Formatter.formattedSize(entry.size)
         
         let attributes = try! inspector.fileManager.attributesOfItem(atPath: url.path) as NSDictionary
         entry.accessDate = attributes.fileModificationDate() ?? Date()
