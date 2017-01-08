@@ -10,6 +10,12 @@ import Foundation
 
 class Formatter {
 
+    private let dateFormatter = DateFormatter()
+    
+    init() {
+        self.dateFormatter.dateFormat = "dd.MM.yyyy HH:mm:ss"
+    }
+    
     class func formattedSize(size: Int64) -> String {
         let byteCountFormatter = ByteCountFormatter()
         byteCountFormatter.allowedUnits = .useAll
@@ -25,6 +31,7 @@ class Formatter {
         }.joined(separator: "") + "\n"
     }
     
+    // TODO: Extract paddings calculation
     class func alignedStringComponents(_ components: [[String]]) -> String {
         let paddings = components.reduce([], { (paddings, line) in
             return line.map({ component -> Int in
@@ -44,8 +51,6 @@ class Formatter {
             })
         })
         
-        print(paddings)
-        
         let lines = components.map { (line) -> String in
             var lineString = ""
             line.enumerated().forEach({ (index, component) in
@@ -56,5 +61,9 @@ class Formatter {
         }
         
         return lines.joined(separator: "\n") + "\n\n"
+    }
+    
+    func formattedDate(_ date: Date) -> String {
+        return dateFormatter.string(from: date)
     }
 }

@@ -10,30 +10,4 @@ import Foundation
 
 class IPhoneSimulatorTarget: Target {
     
-    let signature: TargetSignature
-    let name: String = "iPhone Simulator"
-    
-    var entries: [Entry] = []
-    
-    init() {
-        self.signature = TargetSignature(type: TargetType.iphoneSimulator)
-    }
-    
-    // MARK: - Target -
-    
-    func updateMetadata() {
-        
-    }
-    
-    func metadataDescription() -> String {
-        return ""
-    }
-    
-    func safeSize() -> Int64 {
-        return 0
-    }
-    
-    func clean() {
-        
-    }
 }

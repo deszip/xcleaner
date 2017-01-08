@@ -28,6 +28,8 @@
 		0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F051E215157009CA999 /* EntryBuilder.swift */; };
 		0EC34F071E215159009CA999 /* EntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F051E215157009CA999 /* EntryBuilder.swift */; };
 		0EC7418A1E1D345C0008A630 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC741891E1D345C0008A630 /* main.swift */; };
+		0EDC37581E22656400A1B51F /* TargetSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC37571E22656400A1B51F /* TargetSignature.swift */; };
+		0EDC37591E22656400A1B51F /* TargetSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC37571E22656400A1B51F /* TargetSignature.swift */; };
 		0EDCC2F61E1D6C0400CCD82D /* OptionsParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC2F51E1D6C0400CCD82D /* OptionsParserTests.swift */; };
 		0EDCC2FE1E1E7C1E00CCD82D /* Cleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */; };
 		0EDCC2FF1E1E7C1E00CCD82D /* Cleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */; };
@@ -68,6 +70,7 @@
 		0EC34F051E215157009CA999 /* EntryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryBuilder.swift; sourceTree = "<group>"; };
 		0EC741861E1D345C0008A630 /* xclean */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xclean; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC741891E1D345C0008A630 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0EDC37571E22656400A1B51F /* TargetSignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetSignature.swift; sourceTree = "<group>"; };
 		0EDCC2E91E1D6ABF00CCD82D /* XCleanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCleanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDCC2ED1E1D6ABF00CCD82D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EDCC2F51E1D6C0400CCD82D /* OptionsParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsParserTests.swift; sourceTree = "<group>"; };
@@ -168,6 +171,7 @@
 				0EDCC3001E1E7C3100CCD82D /* Entry.swift */,
 				0EDCC3011E1E7C3100CCD82D /* Option.swift */,
 				0EC34F051E215157009CA999 /* EntryBuilder.swift */,
+				0EDC37571E22656400A1B51F /* TargetSignature.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,6 +291,7 @@
 				0EDCC3081E1E7C4100CCD82D /* DerivedDataTarget.swift in Sources */,
 				0EDCC3021E1E7C3100CCD82D /* Entry.swift in Sources */,
 				0EDCC2FE1E1E7C1E00CCD82D /* Cleaner.swift in Sources */,
+				0EDC37581E22656400A1B51F /* TargetSignature.swift in Sources */,
 				0E8C15951E1EA6A500E17883 /* IPhoneSimulatorTarget.swift in Sources */,
 				0E8C159E1E1EA74400E17883 /* DocSetsTarget.swift in Sources */,
 				0EDCC30A1E1E7C4100CCD82D /* Target.swift in Sources */,
@@ -311,6 +316,7 @@
 				0E8C15931E1EA65700E17883 /* DeviceSupportTarget.swift in Sources */,
 				0EDCC2FF1E1E7C1E00CCD82D /* Cleaner.swift in Sources */,
 				0E8C15921E1EA63E00E17883 /* CoreSimulatorTarget.swift in Sources */,
+				0EDC37591E22656400A1B51F /* TargetSignature.swift in Sources */,
 				0E8C15961E1EA6A500E17883 /* IPhoneSimulatorTarget.swift in Sources */,
 				0E8C159F1E1EA74400E17883 /* DocSetsTarget.swift in Sources */,
 				0EDCC30B1E1E7C4100CCD82D /* Target.swift in Sources */,

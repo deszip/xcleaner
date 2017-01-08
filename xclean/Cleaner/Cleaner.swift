@@ -36,16 +36,38 @@ class Cleaner {
         
         return targetSignatures.map { signature -> Target in
             switch signature.type {
-            case .derivedData :     return DerivedDataTarget(entryBuilder: entryBuilder,
+            case .derivedData :     return DerivedDataTarget(signature: signature,
+                                                             entryBuilder: entryBuilder,
                                                              inspector: inspector,
                                                              environment: environment)
-                case .archives :        return ArchivesTarget()
-                case .deviceSupport:    return DeviceSupportTarget()
-                case .coreSimulator:    return CoreSimulatorTarget()
-                case .iphoneSimulator:  return IPhoneSimulatorTarget()
-                case .xcodeCaches:      return XCodeCachesTarget()
-                case .backup:           return BackupTarget()
-                case .docSets:          return DocSetsTarget()
+            case .archives :        return ArchivesTarget(signature: signature,
+                                                          entryBuilder: entryBuilder,
+                                                          inspector: inspector,
+                                                          environment: environment)
+            case .deviceSupport:    return DeviceSupportTarget(signature: signature,
+                                                               entryBuilder: entryBuilder,
+                                                               inspector: inspector,
+                                                               environment: environment)
+            case .coreSimulator:    return CoreSimulatorTarget(signature: signature,
+                                                               entryBuilder: entryBuilder,
+                                                               inspector: inspector,
+                                                               environment: environment)
+            case .iphoneSimulator:  return IPhoneSimulatorTarget(signature: signature,
+                                                                 entryBuilder: entryBuilder,
+                                                                 inspector: inspector,
+                                                                 environment: environment)
+            case .xcodeCaches:      return XCodeCachesTarget(signature: signature,
+                                                             entryBuilder: entryBuilder,
+                                                             inspector: inspector,
+                                                             environment: environment)
+            case .backup:           return BackupTarget(signature: signature,
+                                                        entryBuilder: entryBuilder,
+                                                        inspector: inspector,
+                                                        environment: environment)
+            case .docSets:          return DocSetsTarget(signature: signature,
+                                                         entryBuilder: entryBuilder,
+                                                         inspector: inspector,
+                                                         environment: environment)
             }
         }
     }
