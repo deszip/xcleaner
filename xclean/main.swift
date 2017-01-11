@@ -32,6 +32,9 @@ func version() {
     print("0.0.1")
 }
 
+
+
+
 let environment = Environment()
 
 if environment.options.contains(Option.help) {
