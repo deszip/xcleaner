@@ -9,8 +9,7 @@
 import Foundation
 
 class Target {
-    // TODO: Set treshold from environmet options
-    private let outdatedTreshold: TimeInterval = 0
+    private var outdatedTreshold: TimeInterval = 0
     
     let entryBuilder: EntryBuilder
     let inspector: Inspector
@@ -25,11 +24,18 @@ class Target {
         self.entryBuilder = entryBuilder
         self.inspector = inspector
         self.environment = environment
+        
+        environment.options.forEach { nextOption in
+            switch nextOption {
+                case .timeout(let interval): self.outdatedTreshold = interval
+                default: ()
+            }
+        }
     }
     
     func updateMetadata() {
         // Get entries
-        entries = entryBuilder.entriesAtURLs(signature.urls, onlyDirectories: true)
+        entries = entryBuilder.entriesAtURLs(signature.urls, onlyDirectories: true).filter({ entryIsSafeToRemove($0) })
         
         // Apply filter
         if let filter = self.filter {
@@ -47,8 +53,12 @@ class Target {
     
     func metadataDescription() -> String {
         var description = signature.type.name() + " total: " + Formatter.formattedSize(safeSize()) + "\n"
-        description += "Pathes:\n\(signature.urls.map({ $0.path }).joined(separator: "\n"))"
+        description += "Pathes:\n\(signature.urls.map({ "\t" + $0.path }).joined(separator: "\n"))"
         description += "\n\n"
+        
+        if entries.count == 0 {
+            return description + "All clean. Nothing to remove.\n\n"
+        }
         
         var components: [[String]] = []
         for projectEntry in entries {
@@ -61,7 +71,7 @@ class Target {
     }
     
     func safeSize() -> Int64 {
-        return entries.filter({ entryIsSafeToRemove($0) }).reduce(0, { (size, entry) in
+        return entries.reduce(0, { (size, entry) in
             entry.size + size
         })
     }
@@ -70,7 +80,7 @@ class Target {
         entries.forEach { entry in
             if entryIsSafeToRemove(entry) {
                 do {
-                    //try inspector.fileManager.removeItem(at: nextEntry.url)
+                    try inspector.fileManager.removeItem(at: entry.url)
                     environment.stdout("Removing: \(entry.url.path)\n")
                 } catch {
                     environment.stderr("Unhandled error: \(error)")

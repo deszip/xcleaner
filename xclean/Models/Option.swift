@@ -10,15 +10,19 @@ import Foundation
 
 enum Option: Equatable {
     case help
+    case version
     case list([TargetSignature])
     case remove([TargetSignature])
+    case timeout(TimeInterval)
     case undefined
 
     init(option: String, value: String? = nil) {
         switch option {
             case "h": self = .help
+            case "v": self = .version
             case "l": self = .list(Option.signaturesForTarget(target: value))
             case "r": self = .remove(Option.signaturesForTarget(target: value))
+            case "t": self = .timeout(Double(value ?? "0") ?? 0)
             
             default: self = .undefined
         }
@@ -47,9 +51,11 @@ enum Option: Equatable {
 func ==(lhs: Option, rhs: Option) -> Bool {
     switch (lhs, rhs) {
         case (.help, .help) : return true
+        case (.version, .version) : return true
         case (.undefined, .undefined) : return true
         case (.list(let a), .list(let b)) where a == b: return true
         case (.remove(let a), .remove(let b)) where a == b: return true
+        case (.timeout(let a), .timeout(let b)) where a == b: return true
         default: return false
     }
 }

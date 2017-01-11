@@ -79,11 +79,15 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-r"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l"
             isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-l DerivedData -t 2607840"
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l foo"
