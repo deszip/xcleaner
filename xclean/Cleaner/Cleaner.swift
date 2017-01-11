@@ -44,7 +44,7 @@ class Cleaner {
         let inspector = Inspector(fileManager: FileManager.default)
         let entryBuilder = EntryBuilder(inspector: inspector)
         
-        return targetSignatures.map { signature -> Target in
+        return targetSignatures.filter({ $0.enabled }).map { signature -> Target in
             let target = Target(signature: signature,
                                 entryBuilder: entryBuilder,
                                 inspector: inspector,
@@ -53,6 +53,8 @@ class Cleaner {
             switch signature.type {
                 case .archives:         target.filter = ArchivesFilter(entryBuilder: entryBuilder)
                 case .deviceSupport:    target.filter = DeviceSupportFilter()
+                case .coreSimulator:    target.filter = CoreSimulatorFilter()
+                
                 default: ()
             }
             

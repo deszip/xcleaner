@@ -28,12 +28,20 @@ class Target {
     }
     
     func updateMetadata() {
-        entries = entryBuilder.entriesAtURLs(signature.urls, onlyDirectories: true).sorted { (left, right) -> Bool in
-            return left.size > right.size
-        }
+        // Get entries
+        entries = entryBuilder.entriesAtURLs(signature.urls, onlyDirectories: true)
         
+        // Apply filter
         if let filter = self.filter {
             entries = filter.filter(entries)
+        }
+        
+        // Calculate sizes for filtered entries
+        entries = entries.map { entry in
+            self.entryBuilder.fetchSize(entry: entry)
+            return entry
+        }.sorted { (left, right) -> Bool in
+            return left.size > right.size
         }
     }
     

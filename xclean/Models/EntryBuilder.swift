@@ -34,13 +34,16 @@ class EntryBuilder {
     func entryForURL(_ url: URL) -> Entry {
         let entry = Entry(url: url)
         entry.displayName = url.lastPathComponent
-        entry.size = inspector.sizeOfDirectory(url: url)
-        entry.formattedSize = Formatter.formattedSize(entry.size)
         
         let attributes = try! inspector.fileManager.attributesOfItem(atPath: url.path) as NSDictionary
         entry.accessDate = attributes.fileModificationDate() ?? Date()
         
         return entry
+    }
+    
+    func fetchSize(entry: Entry) {
+        entry.size = inspector.sizeOfDirectory(url: entry.url)
+        entry.formattedSize = Formatter.formattedSize(entry.size)
     }
     
 }

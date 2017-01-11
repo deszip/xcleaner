@@ -11,6 +11,8 @@
 		0E8C15B21E213F1800E17883 /* Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* Inspector.swift */; };
 		0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
 		0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
+		0E952D1A1E2676EA00129B13 /* CoreSimulatorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E952D191E2676EA00129B13 /* CoreSimulatorFilter.swift */; };
+		0E952D1B1E2676EA00129B13 /* CoreSimulatorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E952D191E2676EA00129B13 /* CoreSimulatorFilter.swift */; };
 		0EC34F031E214AC6009CA999 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F021E214AC6009CA999 /* Environment.swift */; };
 		0EC34F041E214AC8009CA999 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F021E214AC6009CA999 /* Environment.swift */; };
 		0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F051E215157009CA999 /* EntryBuilder.swift */; };
@@ -50,6 +52,7 @@
 /* Begin PBXFileReference section */
 		0E8C15B01E213F1800E17883 /* Inspector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspector.swift; sourceTree = "<group>"; };
 		0E8C15B41E21406D00E17883 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		0E952D191E2676EA00129B13 /* CoreSimulatorFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreSimulatorFilter.swift; sourceTree = "<group>"; };
 		0EC34F021E214AC6009CA999 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0EC34F051E215157009CA999 /* EntryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryBuilder.swift; sourceTree = "<group>"; };
 		0EC741861E1D345C0008A630 /* xclean */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xclean; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,9 +139,10 @@
 		0EDC37631E226EF900A1B51F /* Target Filters */ = {
 			isa = PBXGroup;
 			children = (
-				0EDC37641E226EF900A1B51F /* ArchivesFilter.swift */,
 				0EDC37651E226EF900A1B51F /* TragetFilter.swift */,
+				0EDC37641E226EF900A1B51F /* ArchivesFilter.swift */,
 				0EDC376A1E22713B00A1B51F /* DeviceSupportFilter.swift */,
+				0E952D191E2676EA00129B13 /* CoreSimulatorFilter.swift */,
 			);
 			path = "Target Filters";
 			sourceTree = "<group>";
@@ -163,11 +167,11 @@
 		0EDCC2FB1E1E7C0E00CCD82D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0EDC37571E22656400A1B51F /* TargetSignature.swift */,
 				0EDC37601E226EE500A1B51F /* Target.swift */,
 				0EDCC3001E1E7C3100CCD82D /* Entry.swift */,
 				0EDCC3011E1E7C3100CCD82D /* Option.swift */,
 				0EC34F051E215157009CA999 /* EntryBuilder.swift */,
-				0EDC37571E22656400A1B51F /* TargetSignature.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,6 +279,7 @@
 				0E8C15B11E213F1800E17883 /* Inspector.swift in Sources */,
 				0EDC37611E226EE500A1B51F /* Target.swift in Sources */,
 				0EC7418A1E1D345C0008A630 /* main.swift in Sources */,
+				0E952D1A1E2676EA00129B13 /* CoreSimulatorFilter.swift in Sources */,
 				0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */,
 				0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */,
 			);
@@ -295,6 +300,7 @@
 				0E8C15B21E213F1800E17883 /* Inspector.swift in Sources */,
 				0EDC37621E226EE500A1B51F /* Target.swift in Sources */,
 				0EDCC2F61E1D6C0400CCD82D /* OptionsParserTests.swift in Sources */,
+				0E952D1B1E2676EA00129B13 /* CoreSimulatorFilter.swift in Sources */,
 				0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */,
 				0EC34F071E215159009CA999 /* EntryBuilder.swift in Sources */,
 			);
