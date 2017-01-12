@@ -22,9 +22,7 @@ func help() {
         "-r <TARGET>    Removes files listed by -l\n" +
         "-t <TIMEOUT>   Sets interval for assuming file is old.\n" +
         "               -r and -l will process only files with last access date older than timeout\n" +
-        "-v             Print the version of the application\n" +
-        
-        "Please report issues to raf.rafiki@gmail.com\n"
+        "-v             Print the version of the application\n"
     )
 }
 
