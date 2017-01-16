@@ -15,8 +15,6 @@ enum TargetType {
     case coreSimulator
     case iphoneSimulator
     case xcodeCaches
-    case backup
-    case docSets
     
     func name() -> String {
         switch self {
@@ -26,8 +24,6 @@ enum TargetType {
             case .coreSimulator :   return "Core simulator"
             case .iphoneSimulator : return "iPhone simulator"
             case .xcodeCaches :     return "XCode caches"
-            case .backup :          return "iTunes backups"
-            case .docSets :         return "DocSets"
         }
     }
 }
@@ -42,8 +38,6 @@ struct TargetSignature: Equatable {
     static let coreSimulatorSystemPath  = "/Library/Developer/CoreSimulator"
     static let iphoneSimulatorPath      = "~/Library/Application Support/iPhone Simulator"
     static let xcodeCachesPath          = "~/Library/Caches/com.apple.dt.Xcode"
-    static let backupPath               = "~/Library/Application Support/MobileSync/Backup"
-    static let docSetsPath              = "~/Library/Developer/Shared/Documentation/DocSets"
     
     let type: TargetType
     let enabled: Bool
@@ -71,7 +65,8 @@ struct TargetSignature: Equatable {
                 self.enabled = true
             
             case .coreSimulator:
-                self.urls = [TargetSignature.urlForPath(TargetSignature.coreSimulatorUserPath)]
+                self.urls = [TargetSignature.urlForPath(TargetSignature.coreSimulatorUserPath),
+                             TargetSignature.urlForPath(TargetSignature.coreSimulatorSystemPath)]
                 self.removable = true
                 self.enabled = true
             
@@ -87,16 +82,6 @@ struct TargetSignature: Equatable {
                 self.urls = [TargetSignature.urlForPath(TargetSignature.xcodeCachesPath)]
                 self.removable = false
                 self.enabled = false
-            
-            case .backup:
-                self.urls = [TargetSignature.urlForPath(TargetSignature.backupPath)]
-                self.removable = false
-                self.enabled = false
-            
-            case .docSets:
-                self.urls = [TargetSignature.urlForPath(TargetSignature.docSetsPath)]
-                self.removable = false
-                self.enabled = false
         }
     }
     
@@ -106,9 +91,7 @@ struct TargetSignature: Equatable {
                 TargetSignature(type: TargetType.deviceSupport),
                 TargetSignature(type: TargetType.coreSimulator),
                 TargetSignature(type: TargetType.iphoneSimulator),
-                TargetSignature(type: TargetType.xcodeCaches),
-                TargetSignature(type: TargetType.backup),
-                TargetSignature(type: TargetType.docSets)]
+                TargetSignature(type: TargetType.xcodeCaches)]
     }
     
     private static func urlForPath(_ path: String) -> URL {

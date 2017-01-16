@@ -40,8 +40,6 @@ enum Option: Equatable {
             case "CoreSimulator" : return [TargetSignature(type: TargetType.coreSimulator)]
             case "iPhoneSimulator" : return [TargetSignature(type: TargetType.iphoneSimulator)]
             case "XCodeCaches" : return [TargetSignature(type: TargetType.xcodeCaches)]
-            case "Backup" : return [TargetSignature(type: TargetType.backup)]
-            case "DocSets" : return [TargetSignature(type: TargetType.docSets)]
             
             default : return TargetSignature.all()
         }
