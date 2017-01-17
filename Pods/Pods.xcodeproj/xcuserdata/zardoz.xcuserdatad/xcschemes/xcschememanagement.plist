@@ -4,25 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>XCleanTests.xcscheme</key>
+		<key>Nimble.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>xclean.xcscheme_^#shared#^_</key>
+		<key>Pods-XCleanTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-xclean.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0EC741851E1D345C0008A630</key>
+		<key>1321E318D10CFDC9F5B93A7952492CCD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0EDCC2E81E1D6ABF00CCD82D</key>
+		<key>D77EA504B90F573A8E117E6E34324CA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA4125E58350E2384D423F395E672ED2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

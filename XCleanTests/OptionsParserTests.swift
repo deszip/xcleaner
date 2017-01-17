@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Nimble
 
 class OptionsParserTests: XCTestCase {
 
@@ -27,50 +28,50 @@ class OptionsParserTests: XCTestCase {
     func testOptionsParsesSingleOption() {
         parser?.parse(arguments: ["/path/to/executable", "-l"])
         
-        XCTAssert(parser?.options.count == 1)
-        XCTAssert(parser?.options[0] == Option.list(TargetSignature.all()))
+        expect(self.parser?.options.count).to(equal(1))
+        expect(self.parser?.options[0]).to(equal(Option.list(TargetSignature.all())))
     }
 
     func testOptionsParsesSingleOptionWithValue() {
         parser?.parse(arguments: ["/path/to/executable", "-l", "DerivedData"])
-        
-        XCTAssert(parser?.options.count == 1)
-        XCTAssert(parser?.options[0] == Option.list([TargetSignature(type: TargetType.derivedData)]))
+
+        expect(self.parser?.options.count).to(equal(1))
+        expect(self.parser?.options[0]).to(equal(Option.list([TargetSignature(type: TargetType.derivedData)])))
     }
     
     func testOptionsParsesMultipleOptionsWithValue() {
         parser?.parse(arguments: ["/path/to/executable", "-l", "DerivedData", "-r", "Archives"])
         
-        XCTAssert(parser?.options.count == 2)
-        XCTAssert(parser?.options[0] == Option.list([TargetSignature(type: TargetType.derivedData)]))
-        XCTAssert(parser?.options[1] == Option.remove([TargetSignature(type: TargetType.archives)]))
+        expect(self.parser?.options.count).to(equal(2))
+        expect(self.parser?.options[0]).to(equal(Option.list([TargetSignature(type: TargetType.derivedData)])))
+        expect(self.parser?.options[1]).to(equal(Option.remove([TargetSignature(type: TargetType.archives)])))
     }
     
     func testOptionsParsesArgumentsWithoutExecutablePath() {
         parser?.parse(arguments: ["-l", "DerivedData"])
         
-        XCTAssert(parser?.options.count == 1)
-        XCTAssert(parser?.options[0] == Option.list([TargetSignature(type: TargetType.derivedData)]))
+        expect(self.parser?.options.count).to(equal(1))
+        expect(self.parser?.options[0]).to(equal(Option.list([TargetSignature(type: TargetType.derivedData)])))
     }
     
     func testOptionsParsesInvalidTarget() {
         parser?.parse(arguments: ["/path/to/executable", "-l", "foo"])
         
-        XCTAssert(parser?.options.count == 1)
-        XCTAssert(parser?.options[0] == Option.list(TargetSignature.all()))
+        expect(self.parser?.options.count).to(equal(1))
+        expect(self.parser?.options[0]).to(equal(Option.list(TargetSignature.all())))
     }
     
     func testOptionsParsesEmptyInput() {
         parser?.parse(arguments: [])
         
-        XCTAssert(parser?.options.count == 0)
+        expect(self.parser?.options.count).to(equal(0))
     }
     
     func testOptionsParsesInvalidInput() {
         parser?.parse(arguments: ["foo", "-bar", "baz", "-a", "10"])
         
-        XCTAssert(parser?.options.count == 2)
-        XCTAssert(parser?.options[0] == Option.undefined)
-        XCTAssert(parser?.options[1] == Option.undefined)
+        expect(self.parser?.options.count).to(equal(2))
+        expect(self.parser?.options[0]).to(equal(Option.undefined))
+        expect(self.parser?.options[1]).to(equal(Option.undefined))
     }
 }
