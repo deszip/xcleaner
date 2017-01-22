@@ -17,6 +17,7 @@ class Target {
     let signature: TargetSignature
     
     var filter: TargetFilter?
+    var cleaner: TargetCleaner?
     var entries: [Entry] = []
     
     init(signature: TargetSignature, entryBuilder: EntryBuilder, inspector: Inspector, environment: Environment) {
@@ -53,7 +54,7 @@ class Target {
     
     func metadataDescription() -> String {
         var description = signature.type.name() + " total: " + Formatter.formattedSize(safeSize()) + "\n"
-        description += "Pathes:\n\(signature.urls.map({ "\t" + $0.path }).joined(separator: "\n"))"
+        description += "Paths:\n\(signature.urls.map({ "\t" + $0.path }).joined(separator: "\n"))"
         description += "\n\n"
         
         if entries.count == 0 {
@@ -77,14 +78,20 @@ class Target {
     }
     
     func clean() {
-        entries.forEach { entry in
-            if entryIsSafeToRemove(entry) {
-                do {
-                    try inspector.fileManager.removeItem(at: entry.url)
-                    environment.stdout("Removing: \(entry.url.path)\n")
-                } catch {
-                    environment.stderr("Unhandled error: \(error)")
-                }
+        // Filter entries unsafe to clean
+        var safeEntries = entries.filter { self.entryIsSafeToRemove($0) }
+        
+        // Apply custom cleaner
+        if let cleaner = self.cleaner {
+            safeEntries = cleaner.clean(entries)
+        }
+        
+        safeEntries.forEach { entry in
+            do {
+                try inspector.fileManager.removeItem(at: entry.url)
+                environment.stdout("Removing: \(entry.url.path)\n")
+            } catch {
+                environment.stderr("Unhandled error: \(error)")
             }
         }
     }

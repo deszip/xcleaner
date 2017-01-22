@@ -13,6 +13,10 @@
 		0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
 		0E952D1A1E2676EA00129B13 /* CoreSimulatorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E952D191E2676EA00129B13 /* CoreSimulatorFilter.swift */; };
 		0E952D1B1E2676EA00129B13 /* CoreSimulatorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E952D191E2676EA00129B13 /* CoreSimulatorFilter.swift */; };
+		0E95B9991E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
+		0E95B99A1E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
+		0E95B99C1E351E6F00123074 /* CoreSimulatorCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B99B1E351E6F00123074 /* CoreSimulatorCleaner.swift */; };
+		0E95B99D1E351E6F00123074 /* CoreSimulatorCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B99B1E351E6F00123074 /* CoreSimulatorCleaner.swift */; };
 		0EC34F031E214AC6009CA999 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F021E214AC6009CA999 /* Environment.swift */; };
 		0EC34F041E214AC8009CA999 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F021E214AC6009CA999 /* Environment.swift */; };
 		0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F051E215157009CA999 /* EntryBuilder.swift */; };
@@ -55,6 +59,8 @@
 		0E8C15B01E213F1800E17883 /* Inspector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspector.swift; sourceTree = "<group>"; };
 		0E8C15B41E21406D00E17883 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		0E952D191E2676EA00129B13 /* CoreSimulatorFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreSimulatorFilter.swift; sourceTree = "<group>"; };
+		0E95B9981E35178700123074 /* TargetCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetCleaner.swift; sourceTree = "<group>"; };
+		0E95B99B1E351E6F00123074 /* CoreSimulatorCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreSimulatorCleaner.swift; sourceTree = "<group>"; };
 		0EC34F021E214AC6009CA999 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0EC34F051E215157009CA999 /* EntryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryBuilder.swift; sourceTree = "<group>"; };
 		0EC741861E1D345C0008A630 /* xclean */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xclean; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */,
+				0E95B9981E35178700123074 /* TargetCleaner.swift */,
+				0E95B99B1E351E6F00123074 /* CoreSimulatorCleaner.swift */,
 			);
 			path = Cleaner;
 			sourceTree = "<group>";
@@ -313,7 +321,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7AB8BFE49FE5401FA8827A90 /* [CP] Copy Pods Resources */ = {
@@ -373,7 +381,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -383,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E95B9991E35178700123074 /* TargetCleaner.swift in Sources */,
 				0EC34F031E214AC6009CA999 /* Environment.swift in Sources */,
 				0EDCC3041E1E7C3100CCD82D /* Option.swift in Sources */,
 				0EDC37681E226EF900A1B51F /* TragetFilter.swift in Sources */,
@@ -390,6 +399,7 @@
 				0EDCC2FE1E1E7C1E00CCD82D /* Cleaner.swift in Sources */,
 				0EDC376B1E22713B00A1B51F /* DeviceSupportFilter.swift in Sources */,
 				0EDC37581E22656400A1B51F /* TargetSignature.swift in Sources */,
+				0E95B99C1E351E6F00123074 /* CoreSimulatorCleaner.swift in Sources */,
 				0EDC37661E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
 				0E8C15B11E213F1800E17883 /* Inspector.swift in Sources */,
 				0EDC37611E226EE500A1B51F /* Target.swift in Sources */,
@@ -404,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E95B99A1E35178700123074 /* TargetCleaner.swift in Sources */,
 				0EDCC3051E1E7C3100CCD82D /* Option.swift in Sources */,
 				0EC34F041E214AC8009CA999 /* Environment.swift in Sources */,
 				0EDC37691E226EF900A1B51F /* TragetFilter.swift in Sources */,
@@ -411,6 +422,7 @@
 				0EDCC2FF1E1E7C1E00CCD82D /* Cleaner.swift in Sources */,
 				0EDC376C1E22713B00A1B51F /* DeviceSupportFilter.swift in Sources */,
 				0EDC37591E22656400A1B51F /* TargetSignature.swift in Sources */,
+				0E95B99D1E351E6F00123074 /* CoreSimulatorCleaner.swift in Sources */,
 				0EDC37671E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
 				0E8C15B21E213F1800E17883 /* Inspector.swift in Sources */,
 				0EDC37621E226EE500A1B51F /* Target.swift in Sources */,

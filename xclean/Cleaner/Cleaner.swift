@@ -54,6 +54,7 @@ class Cleaner {
                 case .archives:         target.filter = ArchivesFilter(entryBuilder: entryBuilder)
                 case .deviceSupport:    target.filter = DeviceSupportFilter()
                 case .coreSimulator:    target.filter = CoreSimulatorFilter()
+                                        target.cleaner = CoreSimulatorCleaner()
                 
                 default: ()
             }
