@@ -25,7 +25,7 @@ class Inspector {
         var totalSize: Int64 = 0
         try! directoryEnumerator.allObjects.forEach({ nextURL in
             let attributes = try fileManager.attributesOfItem(atPath: (nextURL as! URL).path) as NSDictionary
-            totalSize += attributes.fileSize().hashValue
+            totalSize += Int64(attributes.fileSize())
         })
         
         return totalSize
