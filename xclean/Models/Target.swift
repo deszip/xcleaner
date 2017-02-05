@@ -53,40 +53,54 @@ class Target {
     }
     
     func metadataDescription() -> String {
-        var description = signature.type.name() + " total: " + Formatter.formattedSize(safeSize()) + "\n"
+        // Basic description
+        let totalSize = safeSize()
+        var description = signature.type.name() + " total: " + Formatter.formattedSize(totalSize) + "\n"
         description += "Paths:\n\(signature.urls.map({ "\t" + $0.path }).joined(separator: "\n"))"
         description += "\n\n"
         
-        if entries.count == 0 {
-            return description + "All clean. Nothing to remove.\n\n"
+        // Chack if we have entries to clean
+        if entries.count > 0 {
+            var components: [[String]] = []
+            for projectEntry in entries {
+                components.append(projectEntry.metadataDescription())
+            }
+            
+            description += Formatter.alignedStringComponents(components)
         }
         
-        var components: [[String]] = []
-        for projectEntry in entries {
-            components.append(projectEntry.metadataDescription())
+        // Check if custom cleaner wants to clean something
+        if let cleaner = cleaner, cleaner.cleanedSize() > 0 {
+            description += "\n" + cleaner.cleanerDescription() + "\n"
         }
         
-        description += Formatter.alignedStringComponents(components)
+        // If nothing to clean
+        if totalSize == 0 {
+            description += "All clean. Nothing to remove.\n\n"
+        }
         
         return description
     }
     
     func safeSize() -> Int64 {
-        return entries.reduce(0, { (size, entry) in
+        var entriesSize = entries.reduce(0, { (size, entry) in
             entry.size + size
         })
+        
+        if let cleanerSize = cleaner?.cleanedSize() {
+            entriesSize += cleanerSize
+        }
+        
+        return entriesSize
     }
     
     func clean() {
-        // Filter entries unsafe to clean
-        var safeEntries = entries.filter { self.entryIsSafeToRemove($0) }
-        
         // Apply custom cleaner
         if let cleaner = self.cleaner {
-            safeEntries = cleaner.clean(entries)
+            entries = cleaner.clean(entries)
         }
         
-        safeEntries.forEach { entry in
+        entries.forEach { entry in
             do {
                 try inspector.fileManager.removeItem(at: entry.url)
                 environment.stdout("Removing: \(entry.url.path)\n")

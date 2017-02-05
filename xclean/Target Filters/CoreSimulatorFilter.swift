@@ -8,11 +8,6 @@
 
 import Foundation
 
-/*
- xcrun simctl remove unavailable
- xcrun simctl erase all
- */
-
 class CoreSimulatorFilter: TargetFilter {
     
     func filter(_ entries: [Entry]) -> [Entry] {

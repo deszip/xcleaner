@@ -10,4 +10,6 @@ import Foundation
 
 protocol TargetCleaner {
     func clean(_ entries: [Entry]) -> [Entry]
+    func cleanerDescription() -> String
+    func cleanedSize() -> Int64;
 }
