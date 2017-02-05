@@ -11,8 +11,7 @@ import Foundation
 class Target {
     private var outdatedTreshold: TimeInterval = 0
     
-    let entryBuilder: EntryBuilder
-    let inspector: Inspector
+    let fileManager: XCFileManager
     let environment: Environment
     let signature: TargetSignature
     
@@ -20,10 +19,9 @@ class Target {
     var cleaner: TargetCleaner?
     var entries: [Entry] = []
     
-    init(signature: TargetSignature, entryBuilder: EntryBuilder, inspector: Inspector, environment: Environment) {
+    init(signature: TargetSignature, fileManager: XCFileManager, environment: Environment) {
         self.signature = signature
-        self.entryBuilder = entryBuilder
-        self.inspector = inspector
+        self.fileManager = fileManager
         self.environment = environment
         
         environment.options.forEach { nextOption in
@@ -36,7 +34,7 @@ class Target {
     
     func updateMetadata() {
         // Get entries
-        entries = entryBuilder.entriesAtURLs(signature.urls, onlyDirectories: true).filter({ entryIsSafeToRemove($0) })
+        entries = fileManager.entriesAtURLs(signature.urls, onlyDirectories: true).filter({ entryIsSafeToRemove($0) })
         
         // Apply filter
         if let filter = self.filter {
@@ -50,7 +48,7 @@ class Target {
         
         // Calculate sizes for filtered entries
         entries = entries.map { entry in
-            self.entryBuilder.fetchSize(entry: entry)
+            self.fileManager.fetchSize(entry: entry)
             return entry
         }.sorted { (left, right) -> Bool in
             return left.size > right.size
@@ -104,18 +102,11 @@ class Target {
     func clean() {
         // Call custom cleaner
         if let cleaner = self.cleaner {
-            entries = cleaner.clean()
+            cleaner.clean()
         }
         
         // Drop target entries
-        entries.forEach { entry in
-            do {
-                try inspector.fileManager.removeItem(at: entry.url)
-                environment.stdout("Removing: \(entry.url.path)\n")
-            } catch {
-                environment.stderr("Unhandled error: \(error)")
-            }
-        }
+        entries.forEach { fileManager.removeEntry($0) }
     }
     
     func entryIsSafeToRemove(_ entry: Entry) -> Bool {

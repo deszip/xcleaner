@@ -10,7 +10,7 @@ import Foundation
 
 protocol TargetCleaner {
     func processEntries(_ entries: [Entry]) -> [Entry]
-    func clean() -> [Entry]
+    func clean()
     func entriesDescription() -> String
     func entriesSize() -> Int64
 }

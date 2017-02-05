@@ -10,9 +10,9 @@ import Foundation
 
 class EntryBuilder {
     
-    private let inspector: Inspector
+    private let inspector: XCFileManager
     
-    init(inspector: Inspector) {
+    init(inspector: XCFileManager) {
         self.inspector = inspector
     }
     

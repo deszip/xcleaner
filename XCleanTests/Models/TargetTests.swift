@@ -52,9 +52,8 @@ class TargetTests: XCTestCase {
         
         let signature = TargetSignature(type: TargetType.derivedData)
         fileManagerMock = FileManagerMock()
-        let inspector = Inspector(fileManager: fileManagerMock!)
-        let entryBuilder = EntryBuilder(inspector: inspector)
-        target = Target(signature: signature, entryBuilder: entryBuilder, inspector: inspector, environment: Environment())
+        let fileManager = XCFileManager(fileManager: fileManagerMock!)
+        target = Target(signature: signature, fileManager: fileManager, environment: Environment())
     }
     
     override func tearDown() {

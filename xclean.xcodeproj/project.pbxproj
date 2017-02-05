@@ -11,14 +11,18 @@
 		0E0E31341E4656430070B896 /* OptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E31331E4656430070B896 /* OptionTests.swift */; };
 		0E0E31361E4662D10070B896 /* TargetSignatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E31351E4662D10070B896 /* TargetSignatureTests.swift */; };
 		0E0E31381E4665090070B896 /* TargetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E31371E4665090070B896 /* TargetTests.swift */; };
-		0E8C15B11E213F1800E17883 /* Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* Inspector.swift */; };
-		0E8C15B21E213F1800E17883 /* Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* Inspector.swift */; };
+		0E0E313B1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E313A1E47A4BF0070B896 /* CoreSimulatorCleaner.swift */; };
+		0E0E313C1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E313A1E47A4BF0070B896 /* CoreSimulatorCleaner.swift */; };
+		0E0E313E1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E313D1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift */; };
+		0E0E313F1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E313D1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift */; };
+		0E0E31411E47A5FA0070B896 /* SimulatorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E31401E47A5FA0070B896 /* SimulatorValidator.swift */; };
+		0E0E31421E47A5FA0070B896 /* SimulatorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E31401E47A5FA0070B896 /* SimulatorValidator.swift */; };
+		0E8C15B11E213F1800E17883 /* XCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* XCFileManager.swift */; };
+		0E8C15B21E213F1800E17883 /* XCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* XCFileManager.swift */; };
 		0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
 		0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
 		0E95B9991E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
 		0E95B99A1E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
-		0E95B99C1E351E6F00123074 /* CoreSimulatorCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B99B1E351E6F00123074 /* CoreSimulatorCleaner.swift */; };
-		0E95B99D1E351E6F00123074 /* CoreSimulatorCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B99B1E351E6F00123074 /* CoreSimulatorCleaner.swift */; };
 		0EC34F031E214AC6009CA999 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F021E214AC6009CA999 /* Environment.swift */; };
 		0EC34F041E214AC8009CA999 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F021E214AC6009CA999 /* Environment.swift */; };
 		0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F051E215157009CA999 /* EntryBuilder.swift */; };
@@ -61,10 +65,12 @@
 		0E0E31331E4656430070B896 /* OptionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionTests.swift; sourceTree = "<group>"; };
 		0E0E31351E4662D10070B896 /* TargetSignatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetSignatureTests.swift; sourceTree = "<group>"; };
 		0E0E31371E4665090070B896 /* TargetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTests.swift; sourceTree = "<group>"; };
-		0E8C15B01E213F1800E17883 /* Inspector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspector.swift; sourceTree = "<group>"; };
+		0E0E313A1E47A4BF0070B896 /* CoreSimulatorCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreSimulatorCleaner.swift; sourceTree = "<group>"; };
+		0E0E313D1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorAppsAnalyzer.swift; sourceTree = "<group>"; };
+		0E0E31401E47A5FA0070B896 /* SimulatorValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorValidator.swift; sourceTree = "<group>"; };
+		0E8C15B01E213F1800E17883 /* XCFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCFileManager.swift; sourceTree = "<group>"; };
 		0E8C15B41E21406D00E17883 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		0E95B9981E35178700123074 /* TargetCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetCleaner.swift; sourceTree = "<group>"; };
-		0E95B99B1E351E6F00123074 /* CoreSimulatorCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreSimulatorCleaner.swift; sourceTree = "<group>"; };
 		0EC34F021E214AC6009CA999 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0EC34F051E215157009CA999 /* EntryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryBuilder.swift; sourceTree = "<group>"; };
 		0EC741861E1D345C0008A630 /* xclean */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xclean; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +124,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0E0E31391E47A4BF0070B896 /* Core Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				0E0E313A1E47A4BF0070B896 /* CoreSimulatorCleaner.swift */,
+				0E0E313D1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift */,
+				0E0E31401E47A5FA0070B896 /* SimulatorValidator.swift */,
+			);
+			path = "Core Simulator";
+			sourceTree = "<group>";
+		};
 		0E8C15B31E21406100E17883 /* Output */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC741891E1D345C0008A630 /* main.swift */,
-				0E8C15B01E213F1800E17883 /* Inspector.swift */,
+				0E8C15B01E213F1800E17883 /* XCFileManager.swift */,
 				0EDCC2FA1E1E7C0E00CCD82D /* Cleaner */,
 				0EDCC2FB1E1E7C0E00CCD82D /* Models */,
 				0EDC37631E226EF900A1B51F /* Target Filters */,
@@ -192,7 +208,7 @@
 			children = (
 				0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */,
 				0E95B9981E35178700123074 /* TargetCleaner.swift */,
-				0E95B99B1E351E6F00123074 /* CoreSimulatorCleaner.swift */,
+				0E0E31391E47A4BF0070B896 /* Core Simulator */,
 			);
 			path = Cleaner;
 			sourceTree = "<group>";
@@ -404,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0E313E1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */,
 				0E95B9991E35178700123074 /* TargetCleaner.swift in Sources */,
 				0EC34F031E214AC6009CA999 /* Environment.swift in Sources */,
 				0EDCC3041E1E7C3100CCD82D /* Option.swift in Sources */,
@@ -412,10 +429,11 @@
 				0EDCC2FE1E1E7C1E00CCD82D /* Cleaner.swift in Sources */,
 				0EDC376B1E22713B00A1B51F /* DeviceSupportFilter.swift in Sources */,
 				0EDC37581E22656400A1B51F /* TargetSignature.swift in Sources */,
-				0E95B99C1E351E6F00123074 /* CoreSimulatorCleaner.swift in Sources */,
+				0E0E313B1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */,
 				0EDC37661E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
-				0E8C15B11E213F1800E17883 /* Inspector.swift in Sources */,
+				0E8C15B11E213F1800E17883 /* XCFileManager.swift in Sources */,
 				0EDC37611E226EE500A1B51F /* Target.swift in Sources */,
+				0E0E31411E47A5FA0070B896 /* SimulatorValidator.swift in Sources */,
 				0EC7418A1E1D345C0008A630 /* main.swift in Sources */,
 				0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */,
 				0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */,
@@ -435,14 +453,16 @@
 				0EDCC2FF1E1E7C1E00CCD82D /* Cleaner.swift in Sources */,
 				0EDC376C1E22713B00A1B51F /* DeviceSupportFilter.swift in Sources */,
 				0EDC37591E22656400A1B51F /* TargetSignature.swift in Sources */,
-				0E95B99D1E351E6F00123074 /* CoreSimulatorCleaner.swift in Sources */,
+				0E0E31421E47A5FA0070B896 /* SimulatorValidator.swift in Sources */,
 				0EDC37671E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
-				0E8C15B21E213F1800E17883 /* Inspector.swift in Sources */,
+				0E8C15B21E213F1800E17883 /* XCFileManager.swift in Sources */,
+				0E0E313C1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */,
 				0EDC37621E226EE500A1B51F /* Target.swift in Sources */,
 				0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */,
 				0E0E31361E4662D10070B896 /* TargetSignatureTests.swift in Sources */,
 				0EC34F071E215159009CA999 /* EntryBuilder.swift in Sources */,
 				0E0E31321E46561D0070B896 /* OptionsParserTests.swift in Sources */,
+				0E0E313F1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */,
 				0E0E31381E4665090070B896 /* TargetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

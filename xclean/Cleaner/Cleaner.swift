@@ -41,19 +41,15 @@ class Cleaner {
     }
 
     func buildTargets(targetSignatures: [TargetSignature]) -> [Target] {
-        let inspector = Inspector(fileManager: FileManager.default)
-        let entryBuilder = EntryBuilder(inspector: inspector)
+        let fileManager = XCFileManager(fileManager: FileManager.default)
         
         return targetSignatures.filter({ $0.enabled }).map { signature -> Target in
-            let target = Target(signature: signature,
-                                entryBuilder: entryBuilder,
-                                inspector: inspector,
-                                environment: environment)
+            let target = Target(signature: signature, fileManager: fileManager, environment: environment)
             
             switch signature.type {
-                case .archives:         target.filter = ArchivesFilter(entryBuilder: entryBuilder)
+                case .archives:         target.filter = ArchivesFilter(fileManager: fileManager)
                 case .deviceSupport:    target.filter = DeviceSupportFilter()
-                case .coreSimulator:    target.cleaner = CoreSimulatorCleaner(inspector: inspector, entryBuilder: entryBuilder)
+                case .coreSimulator:    target.cleaner = CoreSimulatorCleaner(fileManager: fileManager)
                 
                 default: ()
             }

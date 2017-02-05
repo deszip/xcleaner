@@ -10,15 +10,15 @@ import Foundation
 
 class ArchivesFilter: TargetFilter {
  
-    private let entryBuilder: EntryBuilder
+    private let fileManager: XCFileManager
     
-    init(entryBuilder: EntryBuilder) {
-        self.entryBuilder = entryBuilder
+    init(fileManager: XCFileManager) {
+        self.fileManager = fileManager
     }
     
     func filter(_ entries: [Entry]) -> [Entry] {
         return entries.map { archiveDirectory -> [Entry] in
-            self.entryBuilder.entriesAtURLs([archiveDirectory.url], onlyDirectories: false).filter({ archiveEntry -> Bool in
+            self.fileManager.entriesAtURLs([archiveDirectory.url], onlyDirectories: false).filter({ archiveEntry -> Bool in
                 return archiveEntry.url.pathExtension == "xcarchive"
             })
         }.flatMap { $0 }
