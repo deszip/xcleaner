@@ -53,8 +53,7 @@ class Cleaner {
             switch signature.type {
                 case .archives:         target.filter = ArchivesFilter(entryBuilder: entryBuilder)
                 case .deviceSupport:    target.filter = DeviceSupportFilter()
-                case .coreSimulator:    target.filter = CoreSimulatorFilter()
-                                        target.cleaner = CoreSimulatorCleaner()
+                case .coreSimulator:    target.cleaner = CoreSimulatorCleaner(inspector: inspector, entryBuilder: entryBuilder)
                 
                 default: ()
             }

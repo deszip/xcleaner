@@ -95,11 +95,11 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l DerivedData"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l CoreSimulator"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l DeviceSupport"

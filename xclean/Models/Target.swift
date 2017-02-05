@@ -71,7 +71,7 @@ class Target {
         
         // Check if custom cleaner wants to clean something
         if let cleaner = cleaner, cleaner.cleanedSize() > 0 {
-            description += "\n" + cleaner.cleanerDescription() + "\n"
+            description += "\n" + cleaner.cleanerDescription(entries) + "\n"
         }
         
         // If nothing to clean

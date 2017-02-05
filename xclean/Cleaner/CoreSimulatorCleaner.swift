@@ -10,10 +10,18 @@ import Foundation
 
 class CoreSimulatorCleaner: TargetCleaner {
     
+    private let inspector: Inspector
+    private let entryBuilder: EntryBuilder
+    
+    init(inspector: Inspector, entryBuilder: EntryBuilder) {
+        self.inspector = inspector
+        self.entryBuilder = entryBuilder
+    }
+    
     // MARK: - TargetCleaner -
     
-    func cleanerDescription() -> String {
-        return "Found \(unavailableSimulators()) unavailable simulators\n"
+    func cleanerDescription(_ entries: [Entry]) -> String {
+        return "Found \(unavailableSimulators()) unavailable simulators\nFound \(outdatedApps(simulatorEntries: entries).count) unused apps"
     }
     
     func cleanedSize() -> Int64 {
@@ -112,8 +120,20 @@ class CoreSimulatorCleaner: TargetCleaner {
             - add app entry and data entry to the list
          */
         
+        var apps: [Entry] = []
         
-        return []
+        simulatorEntries.forEach { simulatorEntry in
+            let appURL = simulatorEntry.url.appendingPathComponent("/data/Containers/Bundle/Application/")
+            if inspector.fileManager.fileExists(atPath: appURL.path) {
+                let appEntries = entryBuilder.entriesAtURLs([appURL], onlyDirectories: true).filter { appEntry -> Bool in
+                    Date().timeIntervalSince(appEntry.accessDate) >= 3600 * 24
+                }
+                
+                apps.append(contentsOf: appEntries)
+            }
+        }
+        
+        return apps
     }
     
 }

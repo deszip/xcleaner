@@ -2,4 +2,86 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "xclean/Cleaner/CoreSimulatorCleaner.swift"
+            timestampString = "508000450.250632"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "outdatedApps(simulatorEntries:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "xclean/Cleaner/CoreSimulatorCleaner.swift"
+            timestampString = "508000481.391306"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "outdatedApps(simulatorEntries:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "xclean.CoreSimulatorCleaner.(outdatedApps in _969C59FF339C00BBD13BE511334AE2FA) (simulatorEntries : Swift.Array&lt;xclean.Entry&gt;) -&gt; Swift.Array&lt;xclean.Entry&gt;"
+                  moduleName = "xclean"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zardoz/Projects/Objective/MacOS/xclean-source/xclean/Cleaner/CoreSimulatorCleaner.swift"
+                  timestampString = "508000626.308649"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "xclean.CoreSimulatorCleaner.((outdatedApps in _969C59FF339C00BBD13BE511334AE2FA) (simulatorEntries : Swift.Array&lt;xclean.Entry&gt;) -&gt; Swift.Array&lt;xclean.Entry&gt;).(closure #1)"
+                  moduleName = "xclean"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zardoz/Projects/Objective/MacOS/xclean-source/xclean/Cleaner/CoreSimulatorCleaner.swift"
+                  timestampString = "508000626.310582"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "xclean/Models/Target.swift"
+            timestampString = "508000565.658654"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "updateMetadata()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
