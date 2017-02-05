@@ -15,8 +15,6 @@
 		0E8C15B21E213F1800E17883 /* Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* Inspector.swift */; };
 		0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
 		0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
-		0E952D1A1E2676EA00129B13 /* CoreSimulatorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E952D191E2676EA00129B13 /* CoreSimulatorFilter.swift */; };
-		0E952D1B1E2676EA00129B13 /* CoreSimulatorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E952D191E2676EA00129B13 /* CoreSimulatorFilter.swift */; };
 		0E95B9991E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
 		0E95B99A1E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
 		0E95B99C1E351E6F00123074 /* CoreSimulatorCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B99B1E351E6F00123074 /* CoreSimulatorCleaner.swift */; };
@@ -65,7 +63,6 @@
 		0E0E31371E4665090070B896 /* TargetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTests.swift; sourceTree = "<group>"; };
 		0E8C15B01E213F1800E17883 /* Inspector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspector.swift; sourceTree = "<group>"; };
 		0E8C15B41E21406D00E17883 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
-		0E952D191E2676EA00129B13 /* CoreSimulatorFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreSimulatorFilter.swift; sourceTree = "<group>"; };
 		0E95B9981E35178700123074 /* TargetCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetCleaner.swift; sourceTree = "<group>"; };
 		0E95B99B1E351E6F00123074 /* CoreSimulatorCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreSimulatorCleaner.swift; sourceTree = "<group>"; };
 		0EC34F021E214AC6009CA999 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -177,7 +174,6 @@
 				0EDC37651E226EF900A1B51F /* TragetFilter.swift */,
 				0EDC37641E226EF900A1B51F /* ArchivesFilter.swift */,
 				0EDC376A1E22713B00A1B51F /* DeviceSupportFilter.swift */,
-				0E952D191E2676EA00129B13 /* CoreSimulatorFilter.swift */,
 			);
 			path = "Target Filters";
 			sourceTree = "<group>";
@@ -421,7 +417,6 @@
 				0E8C15B11E213F1800E17883 /* Inspector.swift in Sources */,
 				0EDC37611E226EE500A1B51F /* Target.swift in Sources */,
 				0EC7418A1E1D345C0008A630 /* main.swift in Sources */,
-				0E952D1A1E2676EA00129B13 /* CoreSimulatorFilter.swift in Sources */,
 				0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */,
 				0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */,
 			);
@@ -444,7 +439,6 @@
 				0EDC37671E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
 				0E8C15B21E213F1800E17883 /* Inspector.swift in Sources */,
 				0EDC37621E226EE500A1B51F /* Target.swift in Sources */,
-				0E952D1B1E2676EA00129B13 /* CoreSimulatorFilter.swift in Sources */,
 				0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */,
 				0E0E31361E4662D10070B896 /* TargetSignatureTests.swift in Sources */,
 				0EC34F071E215159009CA999 /* EntryBuilder.swift in Sources */,

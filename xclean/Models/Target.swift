@@ -43,6 +43,11 @@ class Target {
             entries = filter.filter(entries)
         }
         
+        // Update cleaner
+        if let cleaner = cleaner {
+            entries = cleaner.processEntries(entries)
+        }
+        
         // Calculate sizes for filtered entries
         entries = entries.map { entry in
             self.entryBuilder.fetchSize(entry: entry)
@@ -59,7 +64,7 @@ class Target {
         description += "Paths:\n\(signature.urls.map({ "\t" + $0.path }).joined(separator: "\n"))"
         description += "\n\n"
         
-        // Chack if we have entries to clean
+        // Check if we have entries to clean
         if entries.count > 0 {
             var components: [[String]] = []
             for projectEntry in entries {
@@ -70,8 +75,8 @@ class Target {
         }
         
         // Check if custom cleaner wants to clean something
-        if let cleaner = cleaner, cleaner.cleanedSize() > 0 {
-            description += "\n" + cleaner.cleanerDescription(entries) + "\n"
+        if let cleaner = cleaner, cleaner.entriesSize() > 0 {
+            description += "\n" + cleaner.entriesDescription() + "\n"
         }
         
         // If nothing to clean
@@ -83,11 +88,13 @@ class Target {
     }
     
     func safeSize() -> Int64 {
+        // Count target entries
         var entriesSize = entries.reduce(0, { (size, entry) in
             entry.size + size
         })
         
-        if let cleanerSize = cleaner?.cleanedSize() {
+        // Ask cleaner for size
+        if let cleanerSize = cleaner?.entriesSize() {
             entriesSize += cleanerSize
         }
         
@@ -95,11 +102,12 @@ class Target {
     }
     
     func clean() {
-        // Apply custom cleaner
+        // Call custom cleaner
         if let cleaner = self.cleaner {
-            entries = cleaner.clean(entries)
+            entries = cleaner.clean()
         }
         
+        // Drop target entries
         entries.forEach { entry in
             do {
                 try inspector.fileManager.removeItem(at: entry.url)

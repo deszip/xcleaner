@@ -13,6 +13,9 @@ class CoreSimulatorCleaner: TargetCleaner {
     private let inspector: Inspector
     private let entryBuilder: EntryBuilder
     
+    private var targetEntries: [Entry] = []
+    private var appsEntries: [Entry] = []
+    
     init(inspector: Inspector, entryBuilder: EntryBuilder) {
         self.inspector = inspector
         self.entryBuilder = entryBuilder
@@ -20,18 +23,29 @@ class CoreSimulatorCleaner: TargetCleaner {
     
     // MARK: - TargetCleaner -
     
-    func cleanerDescription(_ entries: [Entry]) -> String {
-        return "Found \(unavailableSimulators()) unavailable simulators\nFound \(outdatedApps(simulatorEntries: entries).count) unused apps"
-    }
-    
-    func cleanedSize() -> Int64 {
-        return Int64((16 * 1024 * 1024) * unavailableSimulators())
-    }
-    
-    func clean(_ entries: [Entry]) -> [Entry] {
-        removeUnavailable()
+    func processEntries(_ entries: [Entry]) -> [Entry] {
+        targetEntries = entries
+        appsEntries = outdatedApps(simulatorEntries: entries)
         
-        return outdatedApps(simulatorEntries: entries)
+        let unavailableHashes = unavailableSimulatorHashes()
+        let unavailableSimulators = entries.filter { unavailableHashes.contains($0.url.lastPathComponent) }
+        
+        return unavailableSimulators + appsEntries
+    }
+    
+    func entriesDescription() -> String {
+        return "Found \(unavailableSimulatorHashes().count) unavailable simulators\n\n"
+    }
+    
+    func entriesSize() -> Int64 {
+        return Int64((16 * 1024 * 1024) * unavailableSimulatorHashes().count)
+    }
+    
+    func clean() -> [Entry] {
+        removeUnavailable()
+        removeApps()
+        
+        return outdatedApps(simulatorEntries: targetEntries)
     }
     
     // MARK: - Private -
@@ -54,7 +68,7 @@ class CoreSimulatorCleaner: TargetCleaner {
         */
     }
     
-    private func unavailableSimulators() -> UInt64 {
+    private func unavailableSimulatorHashes() -> [String] {
         let process = Process()
         process.launchPath = "/usr/bin/xcrun"
         process.arguments = ["simctl", "list"]
@@ -99,10 +113,14 @@ class CoreSimulatorCleaner: TargetCleaner {
                 }
             })
             
-            return UInt64(hashes.count)
+            return hashes
         }
         
-        return 0
+        return []
+    }
+    
+    private func removeApps() {
+        // Remove apps entries
     }
     
     private func outdatedApps(simulatorEntries: [Entry]) -> [Entry] {
