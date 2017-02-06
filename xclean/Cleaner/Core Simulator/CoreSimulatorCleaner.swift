@@ -17,10 +17,10 @@ class CoreSimulatorCleaner: TargetCleaner {
     private var targetEntries: [Entry] = []
     private var appsEntries: [Entry] = []
     
-    init(fileManager: XCFileManager) {
+    init(fileManager: XCFileManager, timeout: TimeInterval = 0, appName: String? = nil) {
         self.fileManager = fileManager
         self.simulatorValidator = SimulatorValidator()
-        self.appsAnalyzer = SimulatorAppsAnalyzer(fileManager: fileManager)
+        self.appsAnalyzer = SimulatorAppsAnalyzer(fileManager: fileManager, timeout: timeout, appName: appName)
     }
     
     // MARK: - TargetCleaner -

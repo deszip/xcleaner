@@ -49,7 +49,19 @@ class Cleaner {
             switch signature.type {
                 case .archives:         target.filter = ArchivesFilter(fileManager: fileManager)
                 case .deviceSupport:    target.filter = DeviceSupportFilter()
-                case .coreSimulator:    target.cleaner = CoreSimulatorCleaner(fileManager: fileManager)
+                case .coreSimulator:
+                    var appCleanTimeout: TimeInterval = 3600 * 24
+                    var appPattern: String? = nil
+                    environment.options.forEach { nextOption in
+                        switch nextOption {
+                            case .timeout(let timeout): appCleanTimeout = timeout
+                            case .pattern(let pattern): appPattern = pattern
+                            
+                            default: ()
+                        }
+                    }
+
+                    target.cleaner = CoreSimulatorCleaner(fileManager: fileManager, timeout: appCleanTimeout, appName: appPattern)
                 
                 default: ()
             }

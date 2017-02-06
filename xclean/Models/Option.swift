@@ -14,6 +14,7 @@ enum Option: Equatable {
     case list([TargetSignature])
     case remove([TargetSignature])
     case timeout(TimeInterval)
+    case pattern(String?)
     case undefined
 
     init(option: String, value: String? = nil) {
@@ -23,6 +24,7 @@ enum Option: Equatable {
             case "l": self = .list(Option.signaturesForTarget(target: value))
             case "r": self = .remove(Option.signaturesForTarget(target: value))
             case "t": self = .timeout(Double(value ?? "0") ?? 0)
+            case "a": self = .pattern(value)
             
             default: self = .undefined
         }

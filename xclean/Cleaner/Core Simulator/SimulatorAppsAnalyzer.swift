@@ -11,12 +11,16 @@ import Foundation
 class SimulatorAppsAnalyzer {
     
     private let fileManager: XCFileManager
+    private let appCleanTimeout: TimeInterval
+    private let appName: String?
     
-    init(fileManager: XCFileManager) {
+    init(fileManager: XCFileManager, timeout: TimeInterval = 0, appName: String? = nil) {
         self.fileManager = fileManager
+        self.appCleanTimeout = timeout
+        self.appName = appName
     }
     
-    func outdatedApps(simulatorEntries: [Entry], timeout: TimeInterval = 0, appName: String? = nil) -> [Entry] {
+    func outdatedApps(simulatorEntries: [Entry]) -> [Entry] {
         var apps: [Entry] = []
         var documentEntries: [Entry] = []
         
@@ -25,7 +29,7 @@ class SimulatorAppsAnalyzer {
             let appsURL = simulatorEntry.url.appendingPathComponent("/data/Containers/Bundle/Application/")
             if fileManager.fileExists(atURL: appsURL) {
                 // Filter apps
-                let appEntries = filter(applications(atURL: appsURL), timeout: timeout, appName: appName)
+                let appEntries = filter(applications(atURL: appsURL))
                 
                 // Iterate filtered apps in simulator, check for app data
                 appEntries.forEach { appEntry in
@@ -49,9 +53,9 @@ class SimulatorAppsAnalyzer {
         return appEntries
     }
     
-    private func filter(_ entries: [Entry], timeout: TimeInterval = 0, appName: String? = nil) -> [Entry] {
+    private func filter(_ entries: [Entry]) -> [Entry] {
         return entries.filter { entry -> Bool in
-            let outdated = Date().timeIntervalSince(entry.accessDate) >= timeout
+            let outdated = Date().timeIntervalSince(entry.accessDate) >= appCleanTimeout
             var nameMatch = true
             if appName != nil {
                 nameMatch = entry.displayName == appName

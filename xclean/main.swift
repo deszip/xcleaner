@@ -52,6 +52,7 @@ environment.options.forEach { nextOption in
         case .list(let signatures): cleaner.list(targetSignatures: signatures)
         case .remove(let signatures): cleaner.remove(targetSignatures: signatures)
         case .timeout(_): ()
+        case .pattern(_): ()
         
         default: help()
     }
