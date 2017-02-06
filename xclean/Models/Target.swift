@@ -65,8 +65,8 @@ class Target {
         // Check if we have entries to clean
         if entries.count > 0 {
             var components: [[String]] = []
-            for projectEntry in entries {
-                components.append(projectEntry.metadataDescription())
+            for targetEntry in entries {
+                components.append(targetEntry.metadataDescription())
             }
             
             description += Formatter.alignedStringComponents(components)

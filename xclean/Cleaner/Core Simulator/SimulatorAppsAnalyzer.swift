@@ -16,42 +16,21 @@ class SimulatorAppsAnalyzer {
         self.fileManager = fileManager
     }
     
-    func outdatedApps(simulatorEntries: [Entry]) -> [Entry] {
-        /*
-         For each entry:
-         + check that path data/Containers/Bundle/Application/ exists
-         + get entries at that path - it's apps in simulator
-         + filter outdated entries
-         - set display name for entry to app name
-         
-             For each app entry:
-             - open .com.apple.mobile_container_manager.metadata.plist
-             - get value for MCMMetadataIdentifier - app bundle ID
-             - get entries at data/Containers/Data/Application
-             - find data entry with .com.apple.mobile_container_manager.metadata.plist -> MCMMetadataIdentifier matching app bundle ID
-             - add app entry and data entry to the list
-         */
-        
+    func outdatedApps(simulatorEntries: [Entry], timeout: TimeInterval = 0, appName: String? = nil) -> [Entry] {
         var apps: [Entry] = []
         var documentEntries: [Entry] = []
         
+        // Iterate simulators
         simulatorEntries.forEach { simulatorEntry in
-            let appURL = simulatorEntry.url.appendingPathComponent("/data/Containers/Bundle/Application/")
-            if fileManager.fileExists(atURL: appURL) {
-                let appEntries = fileManager.entriesAtURLs([appURL], onlyDirectories: true).filter {
-                    Date().timeIntervalSince($0.accessDate) >= 3600 * 24
-                }
+            let appsURL = simulatorEntry.url.appendingPathComponent("/data/Containers/Bundle/Application/")
+            if fileManager.fileExists(atURL: appsURL) {
+                // Filter apps
+                let appEntries = filter(applications(atURL: appsURL), timeout: timeout, appName: appName)
                 
+                // Iterate filtered apps in simulator, check for app data
                 appEntries.forEach { appEntry in
-                    appEntry.displayName = appDisplayName(appEntry)
-                    
-                    // Get bundle ID
-                    let infoPlistURL = appEntry.url.appendingPathComponent("/.com.apple.mobile_container_manager.metadata.plist")
-                    if let appInfo = NSDictionary(contentsOf: infoPlistURL),
-                       let bundleID = appInfo["MCMMetadataIdentifier"] as? String,
-                       let documentEntry = documentsEntryForApp(_appEntry: appEntry, bundleID: bundleID) {
-                        documentEntries.append(documentEntry)
-                    }
+                    let bundleID = appBundleID(appEntry)
+                    documentEntries.append(contentsOf: documentEntriesForSimulator(simulatorEntry, bundleID: bundleID))
                 }
                 
                 apps.append(contentsOf: appEntries)
@@ -61,12 +40,57 @@ class SimulatorAppsAnalyzer {
         return apps + documentEntries
     }
     
+    // MARK: - Tools -
+    
+    private func applications(atURL url: URL) -> [Entry] {
+        let appEntries =  fileManager.entriesAtURLs([url], onlyDirectories: true)
+        appEntries.forEach { $0.displayName = appDisplayName($0) }
+        
+        return appEntries
+    }
+    
+    private func filter(_ entries: [Entry], timeout: TimeInterval = 0, appName: String? = nil) -> [Entry] {
+        return entries.filter { entry -> Bool in
+            let outdated = Date().timeIntervalSince(entry.accessDate) >= timeout
+            var nameMatch = true
+            if appName != nil {
+                nameMatch = entry.displayName == appName
+            }
+            
+            return outdated && nameMatch
+        }
+    }
+    
     private func appDisplayName(_ entry: Entry) -> String {
+        let appEntries = fileManager.entriesAtURLs([entry.url], onlyDirectories: false).filter { nextEntry -> Bool in
+            nextEntry.url.pathExtension == "app"
+        }
+        
+        if appEntries.count > 0 {
+            return appEntries[0].url.deletingPathExtension().lastPathComponent
+        }
+        
         return entry.url.lastPathComponent
     }
     
-    private func documentsEntryForApp(_appEntry: Entry, bundleID: String) -> Entry? {
-        return nil
+    private func appBundleID(_ entry: Entry) -> String {
+        let infoPlistURL = entry.url.appendingPathComponent("/.com.apple.mobile_container_manager.metadata.plist")
+        if let appInfo = NSDictionary(contentsOf: infoPlistURL),
+            let bundleID = appInfo["MCMMetadataIdentifier"] as? String {
+            return bundleID
+        }
+        
+        return "unknown"
+    }
+    
+    private func documentEntriesForSimulator(_ simEntry: Entry, bundleID: String) -> [Entry] {
+        let dataURL = simEntry.url.appendingPathComponent("data/Containers/Data/Application/")
+        let dataEntries = fileManager.entriesAtURLs([dataURL], onlyDirectories: true).filter { appBundleID($0) == bundleID }
+        dataEntries.forEach { dataEntry in
+            dataEntry.displayName = "\(bundleID) data"
+        }
+        
+        return dataEntries
     }
     
 } 
