@@ -68,7 +68,7 @@ class OptionsParserTests: XCTestCase {
     }
     
     func testOptionsParsesInvalidInput() {
-        parser?.parse(arguments: ["foo", "-bar", "baz", "-a", "10"])
+        parser?.parse(arguments: ["foo", "-bar", "baz", "-x", "10"])
         
         expect(self.parser?.options.count).to(equal(2))
         expect(self.parser?.options[0]).to(equal(Option.undefined))
