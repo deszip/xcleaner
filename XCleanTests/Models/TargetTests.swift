@@ -9,23 +9,29 @@
 import XCTest
 import Nimble
 
-class FileManagerMock: FileManager {
+// MARK: - Mocks -
+
+class FileManagerMock: XCFileManager {
     
-    var stubbedURLs: [URL: UInt64] = [:]
+    var stubbedURLs: [URL: Int64] = [:]
     
-    override func contentsOfDirectory(at url: URL, includingPropertiesForKeys keys: [URLResourceKey]?, options mask: FileManager.DirectoryEnumerationOptions = []) throws -> [URL] {
-        return Array(stubbedURLs.keys)
+    override func sizeOfDirectory(url: URL) -> Int64 { return 0 }
+    
+    override func fileExists(atURL url: URL) -> Bool { return true }
+    
+    override func removeEntry(_ entry: Entry) { }
+    
+    override func entriesAtURLs(_ urls: [URL], onlyDirectories: Bool) -> [Entry] {
+        return stubbedURLs.map({ (url, size) -> Entry in
+            let entry = Entry(url: url)
+            entry.size = size
+            entry.accessDate = Date()
+            
+            return entry
+        })
     }
     
-    override func fileExists(atPath path: String, isDirectory: UnsafeMutablePointer<ObjCBool>?) -> Bool {
-        isDirectory?.initialize(to: ObjCBool(true), count: 1)
-        return true
-    }
-    
-    override func attributesOfItem(atPath path: String) throws -> [FileAttributeKey : Any] {
-        return [FileAttributeKey.size : stubbedURLs[URL(fileURLWithPath: path)] as Any]
-    }
-    
+    override func fetchSize(entry: Entry) { }
 }
 
 class FilterMock : TargetFilter {
@@ -41,6 +47,8 @@ class FilterMock : TargetFilter {
     }
 }
 
+// MARK: - Tests -
+
 class TargetTests: XCTestCase {
 
     var fileManagerMock: FileManagerMock?
@@ -50,10 +58,9 @@ class TargetTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        let signature = TargetSignature(type: TargetType.derivedData)
-        fileManagerMock = FileManagerMock()
-        let fileManager = XCFileManager(fileManager: fileManagerMock!)
-        target = Target(signature: signature, fileManager: fileManager, environment: Environment())
+        let signature = TargetSignature(type: TargetType.deviceSupport)
+        fileManagerMock = FileManagerMock(fileManager: FileManager.default)
+        target = Target(signature: signature, fileManager: fileManagerMock!, environment: Environment())
     }
     
     override func tearDown() {
@@ -80,14 +87,19 @@ class TargetTests: XCTestCase {
         expect(self.target?.entries.count).to(equal(0))
     }
     
-    /*
     func testTargetSortsEntriesBySize() {
         fileManagerMock?.stubbedURLs = [URL(fileURLWithPath: "/tmp/foo") : 10, URL(fileURLWithPath: "/tmp/bar") : 20]
+        filterMock.shouldFail = false
         
         target?.updateMetadata()
         
         expect(self.target?.entries[0].size).to(equal(20))
         expect(self.target?.entries[1].size).to(equal(10))
+    }
+    
+    /*
+    func testTargetUpdatesEntrySize() {
+        
     }
     */
     

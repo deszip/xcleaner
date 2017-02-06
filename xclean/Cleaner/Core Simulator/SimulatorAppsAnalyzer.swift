@@ -69,4 +69,4 @@ class SimulatorAppsAnalyzer {
         return nil
     }
     
-}
+} 
