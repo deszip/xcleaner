@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Entry {
+class Entry: CustomStringConvertible {
     
     private let formatter: Formatter = Formatter()
     let url: URL
@@ -26,4 +26,9 @@ class Entry {
     func metadataDescription() -> [String] {
         return [displayName, formattedSize, formatter.formattedDate(accessDate)]
     }
+    
+    var description: String {
+        return "\(url): \(displayName)"
+    }
+    
 }

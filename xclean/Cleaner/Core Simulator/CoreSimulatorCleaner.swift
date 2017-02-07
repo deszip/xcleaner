@@ -53,7 +53,7 @@ class CoreSimulatorCleaner: TargetCleaner {
     private func removeUnavailable() {
         let process = Process()
         process.launchPath = "/usr/bin/xcrun"
-        process.arguments = ["simctl", "remove", "unavailable"]
+        process.arguments = ["simctl", "delete", "unavailable"]
         
         let pipe = Pipe()
         process.standardOutput = pipe
