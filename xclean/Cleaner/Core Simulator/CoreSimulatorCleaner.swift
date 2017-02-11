@@ -9,13 +9,18 @@
 import Foundation
 
 class CoreSimulatorCleaner: TargetCleaner {
-    
     private let fileManager: XCFileManager
     private let simulatorValidator: SimulatorValidator
     private let appsAnalyzer: SimulatorAppsAnalyzer
     
     private var targetEntries: [Entry] = []
     private var appsEntries: [Entry] = []
+    
+    init(fileManager: XCFileManager, urls: [URL], timeout: TimeInterval = 0, appName: String? = nil) {
+        self.fileManager = fileManager
+        self.simulatorValidator = SimulatorValidator()
+        self.appsAnalyzer = SimulatorAppsAnalyzer(fileManager: fileManager, timeout: timeout, appName: appName)
+    }
     
     init(fileManager: XCFileManager, timeout: TimeInterval = 0, appName: String? = nil) {
         self.fileManager = fileManager

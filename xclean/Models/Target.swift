@@ -19,7 +19,11 @@ class Target {
     var cleaner: TargetCleaner?
     var entries: [Entry] = []
     
+    let defaultCleaner: TargetCleaner
+    
     init(signature: TargetSignature, fileManager: XCFileManager, environment: Environment) {
+        self.defaultCleaner = DefaultCleaner(fileManager: fileManager, urls: signature.urls)
+        
         self.signature = signature
         self.fileManager = fileManager
         self.environment = environment
