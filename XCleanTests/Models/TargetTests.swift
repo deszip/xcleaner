@@ -72,8 +72,6 @@ class TargetTests: XCTestCase {
     func testTargetStoresEntriesForURLs() {
         fileManagerMock?.stubbedURLs = [URL(fileURLWithPath: "/tmp/foo") : 0]
         
-        target?.updateMetadata()
-        
         expect(self.target?.entries.count).to(equal(1))
     }
 
@@ -82,8 +80,6 @@ class TargetTests: XCTestCase {
         fileManagerMock?.stubbedURLs = [URL(fileURLWithPath: "/tmp/foo") : 0]
         target?.filter = filterMock
         
-        target?.updateMetadata()
-        
         expect(self.target?.entries.count).to(equal(0))
     }
     
@@ -91,7 +87,8 @@ class TargetTests: XCTestCase {
         fileManagerMock?.stubbedURLs = [URL(fileURLWithPath: "/tmp/foo") : 10, URL(fileURLWithPath: "/tmp/bar") : 20]
         filterMock.shouldFail = false
         
-        target?.updateMetadata()
+        let signature = TargetSignature(type: TargetType.deviceSupport)
+        target = Target(signature: signature, fileManager: fileManagerMock!, environment: Environment())
         
         expect(self.target?.entries[0].size).to(equal(20))
         expect(self.target?.entries[1].size).to(equal(10))
