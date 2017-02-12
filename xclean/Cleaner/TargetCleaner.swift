@@ -9,10 +9,10 @@
 import Foundation
 
 protocol TargetCleaner {
-    
-    init(fileManager: XCFileManager, urls: [URL])
-    
-    func processEntries(_ entries: [Entry]) -> [Entry]
+
+    init(fileManager: XCFileManager, urls: [URL], environment: Environment)
+
+    func filterEntries(filter: TargetFilter) -> [Entry]
     func clean()
     func entriesDescription() -> String
     func entriesSize() -> Int64
@@ -21,19 +21,40 @@ protocol TargetCleaner {
 class DefaultCleaner: TargetCleaner {
     
     private let fileManager: XCFileManager
-    private let entries: [Entry]
+    private var entries: [Entry]
+    private let environment: Environment
     
-    required init(fileManager: XCFileManager, urls: [URL]) {
+    required init(fileManager: XCFileManager, urls: [URL], environment: Environment) {
         self.fileManager = fileManager
         self.entries = fileManager.entriesAtURLs(urls, onlyDirectories: true)
+        self.environment = environment
+        
+        // Get timeout value
+        var timeout: TimeInterval = 0
+        environment.options.forEach { nextOption in
+            switch nextOption {
+                case .timeout(let timeoutValue): timeout = timeoutValue
+                default: ()
+            }
+        }
+        
+        // Sort and filter
+        self.entries = entries.filter { entry -> Bool in
+            Date().timeIntervalSince(entry.accessDate) >= timeout
+        }.map { entry in
+            self.fileManager.fetchSize(entry: entry)
+            return entry
+        }.sorted { (left, right) -> Bool in
+            return left.size > right.size
+        }
     }
     
-    func processEntries(_ entries: [Entry]) -> [Entry] {
-        return entries
+    func filterEntries(filter: TargetFilter) -> [Entry] {
+        return filter.filter(entries)
     }
     
     func clean() {
-        
+        print("Clean: \(entries)")
     }
     
     func entriesDescription() -> String {
@@ -51,7 +72,7 @@ class DefaultCleaner: TargetCleaner {
     }
     
     func entriesSize() -> Int64 {
-        return 0
+        return entries.reduce(0, { $0 + $1.size } )
     }
     
 }

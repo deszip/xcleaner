@@ -11,13 +11,11 @@ import Foundation
 class SimulatorAppsAnalyzer {
     
     private let fileManager: XCFileManager
-    private let appCleanTimeout: TimeInterval
-    private let appName: String?
+    var appCleanTimeout: TimeInterval = 0
+    var appName: String? = nil
     
-    init(fileManager: XCFileManager, timeout: TimeInterval = 0, appName: String? = nil) {
+    init(fileManager: XCFileManager) {
         self.fileManager = fileManager
-        self.appCleanTimeout = timeout
-        self.appName = appName
     }
     
     func outdatedApps(simulatorEntries: [Entry]) -> [Entry] {

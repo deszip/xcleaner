@@ -10,42 +10,67 @@ import Foundation
 
 class CoreSimulatorCleaner: TargetCleaner {
     private let fileManager: XCFileManager
+    private let environment: Environment
     private let simulatorValidator: SimulatorValidator
     private let appsAnalyzer: SimulatorAppsAnalyzer
     
     private var targetEntries: [Entry] = []
     private var appsEntries: [Entry] = []
     
-    init(fileManager: XCFileManager, urls: [URL], timeout: TimeInterval = 0, appName: String? = nil) {
+    required init(fileManager: XCFileManager, urls: [URL], environment: Environment) {
         self.fileManager = fileManager
+        self.environment = environment
         self.simulatorValidator = SimulatorValidator()
-        self.appsAnalyzer = SimulatorAppsAnalyzer(fileManager: fileManager, timeout: timeout, appName: appName)
-    }
-    
-    init(fileManager: XCFileManager, timeout: TimeInterval = 0, appName: String? = nil) {
-        self.fileManager = fileManager
-        self.simulatorValidator = SimulatorValidator()
-        self.appsAnalyzer = SimulatorAppsAnalyzer(fileManager: fileManager, timeout: timeout, appName: appName)
+        self.appsAnalyzer = SimulatorAppsAnalyzer(fileManager: fileManager)
+        
+        // Get options from environemnt
+        var timeout: TimeInterval = 0
+        var appPattern: String? = nil
+
+        environment.options.forEach { nextOption in
+            switch nextOption {
+                case .timeout(let timeoutValue): timeout = timeoutValue
+                case .pattern(let pattern): appPattern = pattern
+                default: ()
+            }
+        }
+        
+        self.appsAnalyzer.appCleanTimeout = timeout
+        self.appsAnalyzer.appName = appPattern
+        
+        // Apps entries
+        self.targetEntries = fileManager.entriesAtURLs(urls, onlyDirectories: true)
+        self.appsEntries = appsAnalyzer.outdatedApps(simulatorEntries: targetEntries)
+        self.appsEntries.forEach { self.fileManager.fetchSize(entry: $0) }
+        self.appsEntries.sort { (left, right) -> Bool in
+            left.size > right.size
+        }
     }
     
     // MARK: - TargetCleaner -
     
-    func processEntries(_ entries: [Entry]) -> [Entry] {
-        targetEntries = entries
-        appsEntries = appsAnalyzer.outdatedApps(simulatorEntries: entries)
-        
-        let unavailableHashes = simulatorValidator.unavailableSimulatorHashes()
-        let unavailableSimulators = entries.filter { unavailableHashes.contains($0.url.lastPathComponent) }
-        
-        return unavailableSimulators + appsEntries
+    internal func filterEntries(filter: TargetFilter) -> [Entry] {
+        return filter.filter(appsEntries)
     }
     
     func entriesDescription() -> String {
-        return "Found \(simulatorValidator.unavailableSimulatorHashes().count) unavailable simulators\n\n"
+        var description = "Found \(simulatorValidator.unavailableSimulatorHashes().count) unavailable simulators\n\n"
+        
+        if appsEntries.count > 0 {
+            var components: [[String]] = []
+            for appEntry in appsEntries {
+                components.append(appEntry.metadataDescription())
+            }
+            
+            description += Formatter.alignedStringComponents(components)
+        }
+        
+        return description
     }
     
     func entriesSize() -> Int64 {
-        return Int64((16 * 1024 * 1024) * simulatorValidator.unavailableSimulatorHashes().count)
+        let appsSize = appsEntries.reduce(0, { $0 + $1.size } )
+        return Int64((16 * 1024 * 1024) * simulatorValidator.unavailableSimulatorHashes().count) + appsSize
     }
     
     func clean() {
@@ -74,6 +99,7 @@ class CoreSimulatorCleaner: TargetCleaner {
     }
     
     private func removeApps() {
+        print("Removing: \(appsEntries)")
         //appsEntries.forEach { self.fileManager.removeEntry($0) }
     }
     

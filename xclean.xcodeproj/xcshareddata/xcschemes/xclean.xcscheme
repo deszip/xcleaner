@@ -78,12 +78,16 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-l CoreSimulator -a FootVid"
+            argument = "-l Archives"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-l CoreSimulator -a Chuze"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l DerivedData -t 2607840"
@@ -99,7 +103,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l CoreSimulator"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l DeviceSupport"
