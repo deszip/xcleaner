@@ -14,16 +14,18 @@ class Target {
     let environment: Environment
     let signature: TargetSignature
     
-    var filter: TargetFilter? {
-        willSet {
-            if let newFilter = newValue {
-                self.entries = self.cleaner.filterEntries(filter: newFilter)
-            }
+    var entries: [Entry] {
+        get {
+            return self.cleaner.entries
         }
     }
     
+    var filter: TargetFilter? {
+        willSet {
+            self.cleaner.filter = newValue
+        }
+    }
     var cleaner: TargetCleaner
-    var entries: [Entry] = []
     
     init(signature: TargetSignature, fileManager: XCFileManager, environment: Environment) {
         self.cleaner = DefaultCleaner(fileManager: fileManager, urls: signature.urls, environment: environment)
@@ -34,23 +36,11 @@ class Target {
     }
     
     func metadataDescription() -> String {
-        // Basic description
+        // Basic description, does not deal with entries
         let totalSize = safeSize()
         var description = signature.type.name() + " total: " + Formatter.formattedSize(totalSize) + "\n"
         description += "Paths:\n\(signature.urls.map({ "\t" + $0.path }).joined(separator: "\n"))"
         description += "\n\n"
-        
-        // Check if we have entries to clean
-        /*
-        if entries.count > 0 {
-            var components: [[String]] = []
-            for targetEntry in entries {
-                components.append(targetEntry.metadataDescription())
-            }
-            
-            description += Formatter.alignedStringComponents(components)
-        }
-        */
         
         // Check if custom cleaner wants to clean something
         if cleaner.entriesSize() > 0 {

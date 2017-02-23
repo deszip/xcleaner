@@ -9,6 +9,13 @@
 import Foundation
 
 class CoreSimulatorCleaner: TargetCleaner {
+    internal var entries: [Entry] {
+        get {
+            return self.appsEntries
+        }
+    }
+    internal var filter: TargetFilter?
+
     private let fileManager: XCFileManager
     private let environment: Environment
     private let simulatorValidator: SimulatorValidator
@@ -88,7 +95,7 @@ class CoreSimulatorCleaner: TargetCleaner {
         let pipe = Pipe()
         process.standardOutput = pipe
         
-        process.launch()
+        //process.launch()
 
         /*
         let outputHandle = pipe.fileHandleForReading

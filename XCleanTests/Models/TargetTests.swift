@@ -70,7 +70,10 @@ class TargetTests: XCTestCase {
     }
 
     func testTargetStoresEntriesForURLs() {
-        fileManagerMock?.stubbedURLs = [URL(fileURLWithPath: "/tmp/foo") : 0]
+        fileManagerMock?.stubbedURLs = [URL(fileURLWithPath: "/tmp/foo") : 30]
+        
+        let signature = TargetSignature(type: TargetType.deviceSupport)
+        target = Target(signature: signature, fileManager: fileManagerMock!, environment: Environment())
         
         expect(self.target?.entries.count).to(equal(1))
     }

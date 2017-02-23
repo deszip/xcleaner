@@ -12,16 +12,20 @@ protocol TargetCleaner {
 
     init(fileManager: XCFileManager, urls: [URL], environment: Environment)
 
-    func filterEntries(filter: TargetFilter) -> [Entry]
     func clean()
     func entriesDescription() -> String
     func entriesSize() -> Int64
+    
+    var filter: TargetFilter? { get set }
+    var entries: [Entry] { get }
 }
 
 class DefaultCleaner: TargetCleaner {
     
+    internal var filter: TargetFilter?
+    
     private let fileManager: XCFileManager
-    private var entries: [Entry]
+    private(set) var entries: [Entry]
     private let environment: Environment
     
     required init(fileManager: XCFileManager, urls: [URL], environment: Environment) {
@@ -49,17 +53,14 @@ class DefaultCleaner: TargetCleaner {
         }
     }
     
-    func filterEntries(filter: TargetFilter) -> [Entry] {
-        return filter.filter(entries)
-    }
-    
     func clean() {
-        print("Clean: \(entries)")
+        print("Clean: \(filteredEntries())")
     }
     
     func entriesDescription() -> String {
         var description = ""
-        if entries.count > 0 {
+        
+        if filteredEntries().count > 0 {
             var components: [[String]] = []
             for targetEntry in entries {
                 components.append(targetEntry.metadataDescription())
@@ -73,6 +74,14 @@ class DefaultCleaner: TargetCleaner {
     
     func entriesSize() -> Int64 {
         return entries.reduce(0, { $0 + $1.size } )
+    }
+    
+    private func filteredEntries() -> [Entry] {
+        if let filter = self.filter {
+            return filter.filter(self.entries)
+        }
+        
+        return self.entries
     }
     
 }
