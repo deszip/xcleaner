@@ -42,7 +42,7 @@ class Cleaner {
         let fileManager = XCFileManager(fileManager: FileManager.default)
         
         return targetSignatures.filter({ $0.enabled }).map { signature -> Target in
-            let target = Target(signature: signature, fileManager: fileManager, environment: environment)
+            let target = Target(signature: signature, environment: environment)
             
             switch signature.type {
                 case .archives:         target.filter = ArchivesFilter(fileManager: fileManager)

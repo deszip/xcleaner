@@ -10,7 +10,6 @@ import Foundation
 
 class Target {
 
-    let fileManager: XCFileManager
     let environment: Environment
     let signature: TargetSignature
     
@@ -27,11 +26,16 @@ class Target {
     }
     var cleaner: TargetCleaner
     
-    init(signature: TargetSignature, fileManager: XCFileManager, environment: Environment) {
-        self.cleaner = DefaultCleaner(fileManager: fileManager, urls: signature.urls, environment: environment)
+    init(signature: TargetSignature, environment: Environment, cleaner: TargetCleaner? = nil) {
+        if let customCleaner = cleaner {
+            self.cleaner = customCleaner
+        } else {
+            self.cleaner = DefaultCleaner(fileManager: XCFileManager(fileManager: FileManager.default),
+                                          urls: signature.urls,
+                                          environment: environment)
+        }
         
         self.signature = signature
-        self.fileManager = fileManager
         self.environment = environment
     }
     

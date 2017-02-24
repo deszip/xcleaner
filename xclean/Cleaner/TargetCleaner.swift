@@ -73,7 +73,7 @@ class DefaultCleaner: TargetCleaner {
     }
     
     func entriesSize() -> Int64 {
-        return entries.reduce(0, { $0 + $1.size } )
+        return filteredEntries().reduce(0, { $0 + $1.size } )
     }
     
     private func filteredEntries() -> [Entry] {

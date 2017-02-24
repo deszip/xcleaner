@@ -47,12 +47,42 @@ class FilterMock : TargetFilter {
     }
 }
 
+class TargetCleanerMock : TargetCleaner {
+    required init(fileManager: XCFileManager, urls: [URL], environment: Environment) {}
+    
+    var cleanCalled: Bool = false
+    func clean() {
+        cleanCalled = true
+    }
+    
+    var entriesDescriptionCalled: Bool = false
+    var entriesDescriptionValue = ""
+    func entriesDescription() -> String {
+        entriesDescriptionCalled = true
+        return entriesDescriptionValue
+    }
+    
+    var entriesSizeCalled: Bool = false
+    var entriesSizeValue: Int64 = 0
+    func entriesSize() -> Int64 {
+        entriesSizeCalled = true
+        return entriesSizeValue
+    }
+    
+    var filter: TargetFilter?
+    
+    var entriesValue: [Entry] = []
+    var entries: [Entry] { get { return entriesValue } }
+}
+
 // MARK: - Tests -
 
 class TargetTests: XCTestCase {
 
     var fileManagerMock: FileManagerMock?
     var filterMock: FilterMock = FilterMock()
+    var cleanerMock: TargetCleanerMock?
+    
     var target: Target?
     
     override func setUp() {
@@ -60,7 +90,9 @@ class TargetTests: XCTestCase {
         
         let signature = TargetSignature(type: TargetType.deviceSupport)
         fileManagerMock = FileManagerMock(fileManager: FileManager.default)
-        target = Target(signature: signature, fileManager: fileManagerMock!, environment: Environment())
+        cleanerMock = TargetCleanerMock(fileManager: self.fileManagerMock!, urls: [], environment: Environment())
+        
+        target = Target(signature: signature, environment: Environment(), cleaner: cleanerMock)
     }
     
     override func tearDown() {
@@ -69,38 +101,44 @@ class TargetTests: XCTestCase {
         super.tearDown()
     }
 
-    func testTargetStoresEntriesForURLs() {
-        fileManagerMock?.stubbedURLs = [URL(fileURLWithPath: "/tmp/foo") : 30]
+    func testTargetAsksCleanerForDescriptionIfEntriesSizeNotZero() {
+        cleanerMock!.entriesSizeValue = 42
         
-        let signature = TargetSignature(type: TargetType.deviceSupport)
-        target = Target(signature: signature, fileManager: fileManagerMock!, environment: Environment())
+        let _ = target?.metadataDescription()
         
-        expect(self.target?.entries.count).to(equal(1))
-    }
-
-    func testTargetAppliesFilter() {
-        filterMock.shouldFail = true
-        fileManagerMock?.stubbedURLs = [URL(fileURLWithPath: "/tmp/foo") : 0]
-        target?.filter = filterMock
-        
-        expect(self.target?.entries.count).to(equal(0))
+        expect(self.cleanerMock!.entriesDescriptionCalled).to(equal(true))
     }
     
-    func testTargetSortsEntriesBySize() {
-        fileManagerMock?.stubbedURLs = [URL(fileURLWithPath: "/tmp/foo") : 10, URL(fileURLWithPath: "/tmp/bar") : 20]
-        filterMock.shouldFail = false
+    func testTargetDoesntAskCleanerForDescriptionIfEntriesSizeIsZero() {
+        let _ = target?.metadataDescription()
         
-        let signature = TargetSignature(type: TargetType.deviceSupport)
-        target = Target(signature: signature, fileManager: fileManagerMock!, environment: Environment())
-        
-        expect(self.target?.entries[0].size).to(equal(20))
-        expect(self.target?.entries[1].size).to(equal(10))
+        expect(self.cleanerMock!.entriesDescriptionCalled).to(equal(false))
     }
     
-    /*
-    func testTargetUpdatesEntrySize() {
+    func testTargetReturnsCleanerSize() {
+        cleanerMock?.entriesSizeValue = 42
         
+        expect(self.target!.safeSize()).to(equal(cleanerMock!.entriesSize()))
     }
-    */
+    
+    func testTargetCallsCleanOnCleaner() {
+        target!.clean()
+        
+        expect(self.cleanerMock!.cleanCalled).to(equal(true))
+    }
+    
+    func testTargetReturnCleanerEntries() {
+        let entryURL = URL(fileURLWithPath: "/")
+        let entry = Entry(url: entryURL)
+        cleanerMock!.entriesValue = [entry]
+        
+        expect(self.target!.entries[0].url).to(equal(entry.url))
+    }
+    
+    func testTargetAssignsFIlterToCleaner() {
+        target!.filter = filterMock
+        
+        expect(self.cleanerMock!.filter).to(beIdenticalTo(self.filterMock))
+    }
     
 }
