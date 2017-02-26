@@ -50,22 +50,5 @@ class Environment {
         
         exit(EXIT_FAILURE)
     }
-    
-    func option(option: Option) -> Option? {
-        let filtered = options.filter({ nextOption -> Bool in
-            nextOption.test( { (testedOption) -> Bool in
-                if case testedOption = option {
-                    return true
-                }
-                return false
-            })
-        })
-        
-        if filtered.count > 0 {
-            return filtered[0]
-        }
-        
-        return nil
-    }
- 
+
 }

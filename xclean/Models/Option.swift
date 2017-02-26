@@ -48,12 +48,6 @@ enum Option: Equatable {
     }
 }
 
-extension Option {
-    func test(_ validator: (Option) -> Bool) -> Bool {
-        return validator(self)
-    }
-}
-
 func ==(lhs: Option, rhs: Option) -> Bool {
     switch (lhs, rhs) {
         case (.help, .help) : return true
