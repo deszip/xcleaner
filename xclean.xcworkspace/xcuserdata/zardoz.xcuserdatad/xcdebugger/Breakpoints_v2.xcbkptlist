@@ -138,7 +138,7 @@
                   moduleName = "xclean"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zardoz/Projects/Objective/MacOS/xclean-source/xclean/Cleaner/Core%20Simulator/SimulatorAppsAnalyzer.swift"
-                  timestampString = "509564185.547814"
+                  timestampString = "509898097.307277"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "26"
@@ -153,7 +153,7 @@
                   moduleName = "xclean"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zardoz/Projects/Objective/MacOS/xclean-source/xclean/Cleaner/Core%20Simulator/SimulatorAppsAnalyzer.swift"
-                  timestampString = "509564185.54971"
+                  timestampString = "509898097.309234"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
@@ -192,6 +192,70 @@
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "outdatedApps(simulatorEntries:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "xclean/Cleaner/TargetCleaner.swift"
+            timestampString = "509897763.04197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "entriesDescription()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "xclean/Cleaner/TargetCleaner.swift"
+            timestampString = "509897763.04197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "init(fileManager:urls:environment:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "xclean/Models/Target.swift"
+            timestampString = "509897402.732572"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "init(signature:environment:cleaner:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "xclean/Models/Target.swift"
+            timestampString = "509897452.367023"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "metadataDescription()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

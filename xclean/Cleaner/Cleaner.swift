@@ -10,9 +10,9 @@ import Foundation
 
 class Cleaner {
     
-    private let environment: Environment
+    private let environment: EnvironmentInteractor
     
-    init(environment: Environment) {
+    init(environment: EnvironmentInteractor) {
         self.environment = environment
     }
     

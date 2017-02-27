@@ -10,7 +10,7 @@ import Foundation
 
 protocol TargetCleaner {
 
-    init(fileManager: XCFileManager, urls: [URL], environment: Environment)
+    init(fileManager: XCFileManager, urls: [URL], environment: EnvironmentInteractor)
 
     func clean()
     func entriesDescription() -> String
@@ -22,13 +22,19 @@ protocol TargetCleaner {
 
 class DefaultCleaner: TargetCleaner {
     
-    internal var filter: TargetFilter?
+    internal var filter: TargetFilter? {
+        didSet {
+            if let newFilter = self.filter {
+                self.entries = newFilter.filter(self.entries)
+            }
+        }
+    }
     
     private let fileManager: XCFileManager
     private(set) var entries: [Entry]
-    private let environment: Environment
+    private let environment: EnvironmentInteractor
     
-    required init(fileManager: XCFileManager, urls: [URL], environment: Environment) {
+    required init(fileManager: XCFileManager, urls: [URL], environment: EnvironmentInteractor) {
         self.fileManager = fileManager
         self.entries = fileManager.entriesAtURLs(urls, onlyDirectories: true)
         self.environment = environment
@@ -54,13 +60,13 @@ class DefaultCleaner: TargetCleaner {
     }
     
     func clean() {
-        print("Clean: \(filteredEntries())")
+        print("Clean: \(entries)")
     }
     
     func entriesDescription() -> String {
         var description = ""
         
-        if filteredEntries().count > 0 {
+        if entries.count > 0 {
             var components: [[String]] = []
             for targetEntry in entries {
                 components.append(targetEntry.metadataDescription())
@@ -73,15 +79,7 @@ class DefaultCleaner: TargetCleaner {
     }
     
     func entriesSize() -> Int64 {
-        return filteredEntries().reduce(0, { $0 + $1.size } )
+        return entries.reduce(0, { $0 + $1.size } )
     }
-    
-    private func filteredEntries() -> [Entry] {
-        if let filter = self.filter {
-            return filter.filter(self.entries)
-        }
-        
-        return self.entries
-    }
-    
+
 }

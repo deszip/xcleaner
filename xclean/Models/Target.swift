@@ -10,7 +10,7 @@ import Foundation
 
 class Target {
 
-    let environment: Environment
+    let environment: EnvironmentInteractor
     let signature: TargetSignature
     
     var entries: [Entry] {
@@ -26,7 +26,7 @@ class Target {
     }
     var cleaner: TargetCleaner
     
-    init(signature: TargetSignature, environment: Environment, cleaner: TargetCleaner? = nil) {
+    init(signature: TargetSignature, environment: EnvironmentInteractor, cleaner: TargetCleaner? = nil) {
         if let customCleaner = cleaner {
             self.cleaner = customCleaner
         } else {

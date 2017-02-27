@@ -17,14 +17,14 @@ class CoreSimulatorCleaner: TargetCleaner {
     internal var filter: TargetFilter?
 
     private let fileManager: XCFileManager
-    private let environment: Environment
+    private let environment: EnvironmentInteractor
     private let simulatorValidator: SimulatorValidator
     private let appsAnalyzer: SimulatorAppsAnalyzer
     
     private var targetEntries: [Entry] = []
     private var appsEntries: [Entry] = []
     
-    required init(fileManager: XCFileManager, urls: [URL], environment: Environment) {
+    required init(fileManager: XCFileManager, urls: [URL], environment: EnvironmentInteractor) {
         self.fileManager = fileManager
         self.environment = environment
         self.simulatorValidator = SimulatorValidator()

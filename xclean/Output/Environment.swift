@@ -8,7 +8,15 @@
 
 import Foundation
 
-class Environment {
+protocol EnvironmentInteractor {
+    func stdout(_ string: String)
+    func stderr(_ string: String)
+    func terminate(success: Bool)
+    
+    var options: [Option] { get }
+}
+
+class Environment: EnvironmentInteractor {
     
     private let parser: OptionsParser
     private let stdoutHandle: FileHandle
@@ -29,12 +37,6 @@ class Environment {
         if let data = string.data(using: String.Encoding.utf8) {
             stdoutHandle.write(data)
         }
-    }
-    
-    func stdout(_ components: [String], padding: Int) {
-        stdout(components.map { item -> String in
-            item.padding(toLength: padding, withPad: " ", startingAt: item.lengthOfBytes(using: String.Encoding.utf8))
-        }.joined(separator: ""))
     }
     
     func stderr(_ string: String) {
