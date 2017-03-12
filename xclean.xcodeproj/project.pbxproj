@@ -46,8 +46,14 @@
 		0EDCC2FF1E1E7C1E00CCD82D /* Cleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */; };
 		0EDCC3021E1E7C3100CCD82D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC3001E1E7C3100CCD82D /* Entry.swift */; };
 		0EDCC3031E1E7C3100CCD82D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC3001E1E7C3100CCD82D /* Entry.swift */; };
-		0EDCC3041E1E7C3100CCD82D /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC3011E1E7C3100CCD82D /* Option.swift */; };
-		0EDCC3051E1E7C3100CCD82D /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC3011E1E7C3100CCD82D /* Option.swift */; };
+		0EDCC3041E1E7C3100CCD82D /* _Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC3011E1E7C3100CCD82D /* _Option.swift */; };
+		0EDCC3051E1E7C3100CCD82D /* _Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC3011E1E7C3100CCD82D /* _Option.swift */; };
+		0EF879351E6474D50065515E /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879311E6474D50065515E /* CommandLine.swift */; };
+		0EF879371E6474D50065515E /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879331E6474D50065515E /* Option.swift */; };
+		0EF879381E6474D50065515E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879341E6474D50065515E /* StringExtensions.swift */; };
+		0EF879391E6474E40065515E /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879311E6474D50065515E /* CommandLine.swift */; };
+		0EF8793A1E6474E40065515E /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879331E6474D50065515E /* Option.swift */; };
+		0EF8793B1E6474E40065515E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879341E6474D50065515E /* StringExtensions.swift */; };
 		5BCEA9AA119CAA412E925860 /* Pods_xclean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75D05C56D4DA95C1A6A95E9 /* Pods_xclean.framework */; };
 		994DACFB1C2F8F938396E317 /* Pods_XCleanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135F33A5DAA963672C66A044 /* Pods_XCleanTests.framework */; };
 /* End PBXBuildFile section */
@@ -92,7 +98,10 @@
 		0EDCC2ED1E1D6ABF00CCD82D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cleaner.swift; sourceTree = "<group>"; };
 		0EDCC3001E1E7C3100CCD82D /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
-		0EDCC3011E1E7C3100CCD82D /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		0EDCC3011E1E7C3100CCD82D /* _Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Option.swift; sourceTree = "<group>"; };
+		0EF879311E6474D50065515E /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
+		0EF879331E6474D50065515E /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		0EF879341E6474D50065515E /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		135F33A5DAA963672C66A044 /* Pods_XCleanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCleanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3A6B4490835724BD6753B1 /* Pods-XCleanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCleanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCleanTests/Pods-XCleanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		63AAE0F64F15DB89B576B01E /* Pods-xclean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xclean.release.xcconfig"; path = "Pods/Target Support Files/Pods-xclean/Pods-xclean.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +215,7 @@
 		0EC741981E1D62CA0008A630 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				0EF879301E6474D50065515E /* CommandLineKit */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -247,10 +257,20 @@
 				0EDC37571E22656400A1B51F /* TargetSignature.swift */,
 				0EDC37601E226EE500A1B51F /* Target.swift */,
 				0EDCC3001E1E7C3100CCD82D /* Entry.swift */,
-				0EDCC3011E1E7C3100CCD82D /* Option.swift */,
+				0EDCC3011E1E7C3100CCD82D /* _Option.swift */,
 				0EC34F051E215157009CA999 /* EntryBuilder.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0EF879301E6474D50065515E /* CommandLineKit */ = {
+			isa = PBXGroup;
+			children = (
+				0EF879311E6474D50065515E /* CommandLine.swift */,
+				0EF879331E6474D50065515E /* Option.swift */,
+				0EF879341E6474D50065515E /* StringExtensions.swift */,
+			);
+			path = CommandLineKit;
 			sourceTree = "<group>";
 		};
 		153A145B4491E325C294BAAB /* Frameworks */ = {
@@ -451,18 +471,21 @@
 				0E0E313E1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */,
 				0E95B9991E35178700123074 /* TargetCleaner.swift in Sources */,
 				0EC34F031E214AC6009CA999 /* Environment.swift in Sources */,
-				0EDCC3041E1E7C3100CCD82D /* Option.swift in Sources */,
+				0EDCC3041E1E7C3100CCD82D /* _Option.swift in Sources */,
 				0EDC37681E226EF900A1B51F /* TragetFilter.swift in Sources */,
 				0EDCC3021E1E7C3100CCD82D /* Entry.swift in Sources */,
+				0EF8793A1E6474E40065515E /* Option.swift in Sources */,
 				0EDCC2FE1E1E7C1E00CCD82D /* Cleaner.swift in Sources */,
 				0EDC376B1E22713B00A1B51F /* DeviceSupportFilter.swift in Sources */,
 				0EDC37581E22656400A1B51F /* TargetSignature.swift in Sources */,
 				0E0E313B1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */,
 				0EDC37661E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
+				0EF8793B1E6474E40065515E /* StringExtensions.swift in Sources */,
 				0E8C15B11E213F1800E17883 /* XCFileManager.swift in Sources */,
 				0EDC37611E226EE500A1B51F /* Target.swift in Sources */,
 				0E0E31411E47A5FA0070B896 /* SimulatorValidator.swift in Sources */,
 				0EC7418A1E1D345C0008A630 /* main.swift in Sources */,
+				0EF879391E6474E40065515E /* CommandLine.swift in Sources */,
 				0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */,
 				0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */,
 			);
@@ -474,7 +497,7 @@
 			files = (
 				0E0E31341E4656430070B896 /* OptionTests.swift in Sources */,
 				0E95B99A1E35178700123074 /* TargetCleaner.swift in Sources */,
-				0EDCC3051E1E7C3100CCD82D /* Option.swift in Sources */,
+				0EDCC3051E1E7C3100CCD82D /* _Option.swift in Sources */,
 				0EC34F041E214AC8009CA999 /* Environment.swift in Sources */,
 				0EDC37691E226EF900A1B51F /* TragetFilter.swift in Sources */,
 				0EB18E141E62CBB300476876 /* TargetCleanerMock.swift in Sources */,
@@ -487,10 +510,13 @@
 				0EDC37671E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
 				0E8C15B21E213F1800E17883 /* XCFileManager.swift in Sources */,
 				0E0E313C1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */,
+				0EF879351E6474D50065515E /* CommandLine.swift in Sources */,
 				0EDC37621E226EE500A1B51F /* Target.swift in Sources */,
 				0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */,
 				0E0E31361E4662D10070B896 /* TargetSignatureTests.swift in Sources */,
 				0EC34F071E215159009CA999 /* EntryBuilder.swift in Sources */,
+				0EF879371E6474D50065515E /* Option.swift in Sources */,
+				0EF879381E6474D50065515E /* StringExtensions.swift in Sources */,
 				0E0E31321E46561D0070B896 /* OptionsParserTests.swift in Sources */,
 				0EB18E0D1E62CB1E00476876 /* DefaultCleanerTests.swift in Sources */,
 				0E0E313F1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */,

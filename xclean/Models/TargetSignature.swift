@@ -94,6 +94,33 @@ struct TargetSignature: Equatable {
                 TargetSignature(type: TargetType.xcodeCaches)]
     }
     
+    static func signaturesForOption(_ option: MultiStringOption) -> [TargetSignature] {
+        let targetNames = option.value ?? []
+        var signatures = targetNames.flatMap { TargetSignature.signaturesForTarget(target: $0) }
+        if signatures.count == 0 {
+            signatures = TargetSignature.all()
+        }
+        
+        return signatures
+    }
+    
+    static func signaturesForTarget(target: String?) -> TargetSignature? {
+        guard let target = target else {
+            return nil
+        }
+        
+        switch target {
+            case "DerivedData" : return TargetSignature(type: TargetType.derivedData)
+            case "Archives" : return TargetSignature(type: TargetType.archives)
+            case "DeviceSupport" : return TargetSignature(type: TargetType.deviceSupport)
+            case "CoreSimulator" : return TargetSignature(type: TargetType.coreSimulator)
+            case "iPhoneSimulator" : return TargetSignature(type: TargetType.iphoneSimulator)
+            case "XCodeCaches" : return TargetSignature(type: TargetType.xcodeCaches)
+            
+            default: return nil
+        }
+    }
+    
     private static func urlForPath(_ path: String) -> URL {
         let expandedPath = NSString(string: (path as NSString).expandingTildeInPath) as String
         return URL(fileURLWithPath: expandedPath, isDirectory: true)

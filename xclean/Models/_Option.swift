@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum Option: Equatable {
+/*
+enum Option_: Equatable {
     case help
     case version
     case list([TargetSignature])
@@ -87,4 +88,5 @@ class OptionsParser {
     
     
 }
+*/
 

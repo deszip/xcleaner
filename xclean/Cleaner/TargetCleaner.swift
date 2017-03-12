@@ -39,16 +39,8 @@ class DefaultCleaner: TargetCleaner {
         self.entries = fileManager.entriesAtURLs(urls, onlyDirectories: true)
         self.environment = environment
         
-        // Get timeout value
-        var timeout: TimeInterval = 0
-        environment.options.forEach { nextOption in
-            switch nextOption {
-                case .timeout(let timeoutValue): timeout = timeoutValue
-                default: ()
-            }
-        }
-        
         // Sort and filter
+        var timeout: TimeInterval = TimeInterval(environment.timeoutOption.value ?? 0)
         self.entries = entries.filter { entry -> Bool in
             Date().timeIntervalSince(entry.accessDate) >= timeout
         }.map { entry in

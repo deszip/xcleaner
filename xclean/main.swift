@@ -31,31 +31,26 @@ func version() {
 }
 
 
-
-
 let environment = Environment()
 
-if environment.options.contains(Option.help) {
+if environment.helpOption.wasSet {
     help()
     environment.terminate()
 }
 
-if environment.options.contains(Option.version) {
+if environment.versionOption.wasSet {
     version()
     environment.terminate()
 }
 
 let cleaner = Cleaner(environment: environment)
 
-environment.options.forEach { nextOption in
-    switch nextOption {
-        case .list(let signatures): cleaner.list(targetSignatures: signatures)
-        case .remove(let signatures): cleaner.remove(targetSignatures: signatures)
-        case .timeout(_): ()
-        case .pattern(_): ()
-        
-        default: help()
-    }
+if environment.listOption.wasSet {
+    cleaner.list(targetSignatures: TargetSignature.signaturesForOption(environment.listOption))
+}
+
+if environment.removeOption.wasSet {
+    cleaner.remove(targetSignatures: TargetSignature.signaturesForOption(environment.removeOption))
 }
 
 environment.terminate()

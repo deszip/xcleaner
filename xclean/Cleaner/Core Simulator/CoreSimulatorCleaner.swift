@@ -31,19 +31,8 @@ class CoreSimulatorCleaner: TargetCleaner {
         self.appsAnalyzer = SimulatorAppsAnalyzer(fileManager: fileManager)
         
         // Get options from environemnt
-        var timeout: TimeInterval = 0
-        var appPattern: String? = nil
-
-        environment.options.forEach { nextOption in
-            switch nextOption {
-                case .timeout(let timeoutValue): timeout = timeoutValue
-                case .pattern(let pattern): appPattern = pattern
-                default: ()
-            }
-        }
-        
-        self.appsAnalyzer.appCleanTimeout = timeout
-        self.appsAnalyzer.appName = appPattern
+        self.appsAnalyzer.appCleanTimeout = TimeInterval(environment.timeoutOption.value ?? 0)
+        self.appsAnalyzer.appName = environment.appOption.value ?? nil
         
         // Apps entries
         self.targetEntries = fileManager.entriesAtURLs(urls, onlyDirectories: true)

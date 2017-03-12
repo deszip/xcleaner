@@ -79,11 +79,11 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l Archives"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l CoreSimulator -a Chuze"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l"
