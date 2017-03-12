@@ -15,6 +15,7 @@ class TargetTests: XCTestCase {
     var fileManagerMock: FileManagerMock?
     var filterMock: FilterMock = FilterMock()
     var cleanerMock: TargetCleanerMock?
+    var environmentMock: EnvironmentMock = EnvironmentMock()
     
     var target: Target?
     
@@ -23,9 +24,9 @@ class TargetTests: XCTestCase {
         
         let signature = TargetSignature(type: TargetType.deviceSupport)
         fileManagerMock = FileManagerMock(fileManager: FileManager.default)
-        cleanerMock = TargetCleanerMock(fileManager: self.fileManagerMock!, urls: [], environment: Environment())
+        cleanerMock = TargetCleanerMock(fileManager: self.fileManagerMock!, urls: [], environment: environmentMock)
         
-        target = Target(signature: signature, environment: Environment(), cleaner: cleanerMock)
+        target = Target(signature: signature, environment: environmentMock, cleaner: cleanerMock)
     }
     
     override func tearDown() {

@@ -40,7 +40,7 @@ class DefaultCleaner: TargetCleaner {
         self.environment = environment
         
         // Sort and filter
-        var timeout: TimeInterval = TimeInterval(environment.timeoutOption.value ?? 0)
+        let timeout: TimeInterval = TimeInterval(environment.timeoutOption.value ?? 0)
         self.entries = entries.filter { entry -> Bool in
             Date().timeIntervalSince(entry.accessDate) >= timeout
         }.map { entry in
