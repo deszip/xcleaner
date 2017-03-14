@@ -8,12 +8,6 @@
 
 import Foundation
 
-// MARK: - Processing input -
-
-func version() {
-    print("0.0.1")
-}
-
 let environment = Environment()
 
 if environment.helpOption.wasSet {
@@ -22,7 +16,7 @@ if environment.helpOption.wasSet {
 }
 
 if environment.versionOption.wasSet {
-    version()
+    environment.printVersion()
     environment.terminate()
 }
 

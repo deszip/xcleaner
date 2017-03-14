@@ -102,6 +102,10 @@ class Environment: EnvironmentInteractor {
         )
     }
     
+    func printVersion() {
+        stdout("0.0.1\n")
+    }
+    
     func stdout(_ string: String) {
         if let data = string.data(using: String.Encoding.utf8) {
             stdoutHandle.write(data)

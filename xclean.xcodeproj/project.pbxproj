@@ -35,6 +35,7 @@
 		0EC3DC191E785B27006370FD /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DC131E785B27006370FD /* Option.swift */; };
 		0EC3DC1A1E785B27006370FD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DC141E785B27006370FD /* StringExtensions.swift */; };
 		0EC3DC1B1E785B27006370FD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DC141E785B27006370FD /* StringExtensions.swift */; };
+		0EC3DC1D1E786390006370FD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EC3DC1C1E786390006370FD /* Info.plist */; };
 		0EC5950C1E7594B000DF77D7 /* EnvironmentMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC5950B1E7594B000DF77D7 /* EnvironmentMock.swift */; };
 		0EC7418A1E1D345C0008A630 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC741891E1D345C0008A630 /* main.swift */; };
 		0EDC37581E22656400A1B51F /* TargetSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC37571E22656400A1B51F /* TargetSignature.swift */; };
@@ -85,6 +86,7 @@
 		0EC3DC111E785B27006370FD /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
 		0EC3DC131E785B27006370FD /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		0EC3DC141E785B27006370FD /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		0EC3DC1C1E786390006370FD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EC5950B1E7594B000DF77D7 /* EnvironmentMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentMock.swift; sourceTree = "<group>"; };
 		0EC741861E1D345C0008A630 /* xclean */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xclean; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC741891E1D345C0008A630 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		0EC741881E1D345C0008A630 /* xclean */ = {
 			isa = PBXGroup;
 			children = (
+				0EC3DC1C1E786390006370FD /* Info.plist */,
 				0EC741891E1D345C0008A630 /* main.swift */,
 				0E8C15B01E213F1800E17883 /* XCFileManager.swift */,
 				0EDCC2FA1E1E7C0E00CCD82D /* Cleaner */,
@@ -373,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC3DC1D1E786390006370FD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +615,8 @@
 			baseConfigurationReference = 7ACBB6C9673F2C0F4F02901A /* Pods-xclean.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = R623GA6E42;
+				INFOPLIST_FILE = "$(SRCROOT)/xclean/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -621,6 +627,8 @@
 			baseConfigurationReference = 63AAE0F64F15DB89B576B01E /* Pods-xclean.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = R623GA6E42;
+				INFOPLIST_FILE = "$(SRCROOT)/xclean/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
