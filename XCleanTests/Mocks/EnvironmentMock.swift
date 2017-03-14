@@ -25,12 +25,10 @@ class EnvironmentMock: EnvironmentInteractor {
         listOption = MultiStringOption(shortFlag: "l",
                                        longFlag: "list",
                                        helpMessage: "Lists target stats.")
-        listOption.defaultValue = []
         
         removeOption = MultiStringOption(shortFlag: "r",
                                          longFlag: "remove",
                                          helpMessage: "Cleans targets.")
-        removeOption.defaultValue = []
         
         timeoutOption = IntOption(shortFlag: "t",
                                   longFlag: "timeout",
