@@ -308,7 +308,7 @@ public class CommandLine {
       if flagWithArg.isEmpty {
         continue
       }
-
+      
       /* Remove attached argument from flag */
       let splitFlag = flagWithArg.split(by: argumentAttacher, maxSplits: 1)
       let flag = splitFlag[0]

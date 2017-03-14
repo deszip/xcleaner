@@ -40,46 +40,34 @@ class Environment: EnvironmentInteractor {
         let cli = CommandLine()
         
         listOption = MultiStringOption(shortFlag: "l",
-                                    longFlag: "list",
-                                    helpMessage: "Lists target stats.")
-        listOption.defaultValue = []
+                                       longFlag: "list",
+                                       helpMessage: "Lists target stats.")
         
         removeOption = MultiStringOption(shortFlag: "r",
-                                  longFlag: "remove",
-                                  helpMessage: "Cleans targets.")
-        removeOption.defaultValue = []
+                                         longFlag: "remove",
+                                         helpMessage: "Cleans targets.")
         
         timeoutOption = IntOption(shortFlag: "t",
                                   longFlag: "timeout",
                                   helpMessage: "Sets timeout.")
         
         appOption = StringOption(shortFlag: "a",
-                                  longFlag: "app",
-                                  helpMessage: "Sets app name.")
+                                 longFlag: "app",
+                                 helpMessage: "Sets app name.")
         
         
         helpOption = BoolOption(shortFlag: "h",
-                              longFlag: "help",
-                              helpMessage: "Prints a help message.")
+                                longFlag: "help",
+                                helpMessage: "Prints a help message.")
         
         versionOption = BoolOption(shortFlag: "v",
-                                      longFlag: "version",
-                                      helpMessage: "Print app version.")
+                                   longFlag: "version",
+                                   helpMessage: "Print app version.")
         
         cli.addOptions(listOption, removeOption, timeoutOption, appOption, helpOption, versionOption)
         
         do {
             try cli.parse()
-            
-            // Debug
-            print("List: \(listOption.value)")
-            print("Remove: \(removeOption.value)")
-            print("Timeout: \(timeoutOption.value)")
-            print("App: \(appOption.value)")
-            
-            print("Help: \(helpOption.value)")
-            print("Version: \(versionOption.value)")
-            
         } catch {
             cli.printUsage(error)
             exit(EX_USAGE)

@@ -29,6 +29,12 @@
 		0EC34F041E214AC8009CA999 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F021E214AC6009CA999 /* Environment.swift */; };
 		0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F051E215157009CA999 /* EntryBuilder.swift */; };
 		0EC34F071E215159009CA999 /* EntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC34F051E215157009CA999 /* EntryBuilder.swift */; };
+		0EC3DC151E785B27006370FD /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DC111E785B27006370FD /* CommandLine.swift */; };
+		0EC3DC161E785B27006370FD /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DC111E785B27006370FD /* CommandLine.swift */; };
+		0EC3DC181E785B27006370FD /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DC131E785B27006370FD /* Option.swift */; };
+		0EC3DC191E785B27006370FD /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DC131E785B27006370FD /* Option.swift */; };
+		0EC3DC1A1E785B27006370FD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DC141E785B27006370FD /* StringExtensions.swift */; };
+		0EC3DC1B1E785B27006370FD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DC141E785B27006370FD /* StringExtensions.swift */; };
 		0EC5950C1E7594B000DF77D7 /* EnvironmentMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC5950B1E7594B000DF77D7 /* EnvironmentMock.swift */; };
 		0EC7418A1E1D345C0008A630 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC741891E1D345C0008A630 /* main.swift */; };
 		0EDC37581E22656400A1B51F /* TargetSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC37571E22656400A1B51F /* TargetSignature.swift */; };
@@ -45,12 +51,6 @@
 		0EDCC2FF1E1E7C1E00CCD82D /* Cleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */; };
 		0EDCC3021E1E7C3100CCD82D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC3001E1E7C3100CCD82D /* Entry.swift */; };
 		0EDCC3031E1E7C3100CCD82D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC3001E1E7C3100CCD82D /* Entry.swift */; };
-		0EF879351E6474D50065515E /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879311E6474D50065515E /* CommandLine.swift */; };
-		0EF879371E6474D50065515E /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879331E6474D50065515E /* Option.swift */; };
-		0EF879381E6474D50065515E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879341E6474D50065515E /* StringExtensions.swift */; };
-		0EF879391E6474E40065515E /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879311E6474D50065515E /* CommandLine.swift */; };
-		0EF8793A1E6474E40065515E /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879331E6474D50065515E /* Option.swift */; };
-		0EF8793B1E6474E40065515E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF879341E6474D50065515E /* StringExtensions.swift */; };
 		5BCEA9AA119CAA412E925860 /* Pods_xclean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75D05C56D4DA95C1A6A95E9 /* Pods_xclean.framework */; };
 		994DACFB1C2F8F938396E317 /* Pods_XCleanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135F33A5DAA963672C66A044 /* Pods_XCleanTests.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +82,9 @@
 		0EB18E131E62CBB300476876 /* TargetCleanerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetCleanerMock.swift; sourceTree = "<group>"; };
 		0EC34F021E214AC6009CA999 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0EC34F051E215157009CA999 /* EntryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryBuilder.swift; sourceTree = "<group>"; };
+		0EC3DC111E785B27006370FD /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
+		0EC3DC131E785B27006370FD /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		0EC3DC141E785B27006370FD /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		0EC5950B1E7594B000DF77D7 /* EnvironmentMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentMock.swift; sourceTree = "<group>"; };
 		0EC741861E1D345C0008A630 /* xclean */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xclean; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC741891E1D345C0008A630 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -94,9 +97,6 @@
 		0EDCC2ED1E1D6ABF00CCD82D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cleaner.swift; sourceTree = "<group>"; };
 		0EDCC3001E1E7C3100CCD82D /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
-		0EF879311E6474D50065515E /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
-		0EF879331E6474D50065515E /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
-		0EF879341E6474D50065515E /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		135F33A5DAA963672C66A044 /* Pods_XCleanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCleanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3A6B4490835724BD6753B1 /* Pods-XCleanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCleanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCleanTests/Pods-XCleanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		63AAE0F64F15DB89B576B01E /* Pods-xclean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xclean.release.xcconfig"; path = "Pods/Target Support Files/Pods-xclean/Pods-xclean.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +172,16 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		0EC3DC101E785B27006370FD /* CommandLineKit */ = {
+			isa = PBXGroup;
+			children = (
+				0EC3DC111E785B27006370FD /* CommandLine.swift */,
+				0EC3DC131E785B27006370FD /* Option.swift */,
+				0EC3DC141E785B27006370FD /* StringExtensions.swift */,
+			);
+			path = CommandLineKit;
+			sourceTree = "<group>";
+		};
 		0EC7417D1E1D345C0008A630 = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +219,7 @@
 		0EC741981E1D62CA0008A630 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				0EF879301E6474D50065515E /* CommandLineKit */,
+				0EC3DC101E785B27006370FD /* CommandLineKit */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -254,16 +264,6 @@
 				0EC34F051E215157009CA999 /* EntryBuilder.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		0EF879301E6474D50065515E /* CommandLineKit */ = {
-			isa = PBXGroup;
-			children = (
-				0EF879311E6474D50065515E /* CommandLine.swift */,
-				0EF879331E6474D50065515E /* Option.swift */,
-				0EF879341E6474D50065515E /* StringExtensions.swift */,
-			);
-			path = CommandLineKit;
 			sourceTree = "<group>";
 		};
 		153A145B4491E325C294BAAB /* Frameworks */ = {
@@ -466,20 +466,20 @@
 				0EC34F031E214AC6009CA999 /* Environment.swift in Sources */,
 				0EDC37681E226EF900A1B51F /* TragetFilter.swift in Sources */,
 				0EDCC3021E1E7C3100CCD82D /* Entry.swift in Sources */,
-				0EF8793A1E6474E40065515E /* Option.swift in Sources */,
 				0EDCC2FE1E1E7C1E00CCD82D /* Cleaner.swift in Sources */,
 				0EDC376B1E22713B00A1B51F /* DeviceSupportFilter.swift in Sources */,
 				0EDC37581E22656400A1B51F /* TargetSignature.swift in Sources */,
 				0E0E313B1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */,
 				0EDC37661E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
-				0EF8793B1E6474E40065515E /* StringExtensions.swift in Sources */,
 				0E8C15B11E213F1800E17883 /* XCFileManager.swift in Sources */,
 				0EDC37611E226EE500A1B51F /* Target.swift in Sources */,
 				0E0E31411E47A5FA0070B896 /* SimulatorValidator.swift in Sources */,
 				0EC7418A1E1D345C0008A630 /* main.swift in Sources */,
-				0EF879391E6474E40065515E /* CommandLine.swift in Sources */,
+				0EC3DC151E785B27006370FD /* CommandLine.swift in Sources */,
 				0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */,
+				0EC3DC181E785B27006370FD /* Option.swift in Sources */,
 				0EC34F061E215157009CA999 /* EntryBuilder.swift in Sources */,
+				0EC3DC1A1E785B27006370FD /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,21 +495,21 @@
 				0EDCC2FF1E1E7C1E00CCD82D /* Cleaner.swift in Sources */,
 				0EB18E101E62CB7500476876 /* FileManagerMock.swift in Sources */,
 				0EDC376C1E22713B00A1B51F /* DeviceSupportFilter.swift in Sources */,
+				0EC3DC161E785B27006370FD /* CommandLine.swift in Sources */,
 				0EDC37591E22656400A1B51F /* TargetSignature.swift in Sources */,
 				0E0E31421E47A5FA0070B896 /* SimulatorValidator.swift in Sources */,
 				0EDC37671E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
 				0E8C15B21E213F1800E17883 /* XCFileManager.swift in Sources */,
 				0E0E313C1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */,
-				0EF879351E6474D50065515E /* CommandLine.swift in Sources */,
 				0EDC37621E226EE500A1B51F /* Target.swift in Sources */,
 				0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */,
+				0EC3DC191E785B27006370FD /* Option.swift in Sources */,
 				0E0E31361E4662D10070B896 /* TargetSignatureTests.swift in Sources */,
 				0EC34F071E215159009CA999 /* EntryBuilder.swift in Sources */,
-				0EF879371E6474D50065515E /* Option.swift in Sources */,
-				0EF879381E6474D50065515E /* StringExtensions.swift in Sources */,
 				0EC5950C1E7594B000DF77D7 /* EnvironmentMock.swift in Sources */,
 				0EB18E0D1E62CB1E00476876 /* DefaultCleanerTests.swift in Sources */,
 				0E0E313F1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */,
+				0EC3DC1B1E785B27006370FD /* StringExtensions.swift in Sources */,
 				0E0E31381E4665090070B896 /* TargetTests.swift in Sources */,
 				0EB18E121E62CB9100476876 /* FilterMock.swift in Sources */,
 			);

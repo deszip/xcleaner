@@ -22,6 +22,7 @@ public class Option {
   public let shortFlag: String?
   public let longFlag: String?
   public let required: Bool
+  public let couldBeEmpty: Bool
   public let helpMessage: String
 
   /** True if the option was set when parsing command-line arguments */
@@ -44,7 +45,7 @@ public class Option {
     }
   }
 
-  internal init(_ shortFlag: String?, _ longFlag: String?, _ required: Bool, _ helpMessage: String) {
+  internal init(_ shortFlag: String?, _ longFlag: String?, _ required: Bool, _ couldBeEmpty: Bool, _ helpMessage: String) {
     if let sf = shortFlag {
       assert(sf.characters.count == 1, "Short flag must be a single character")
       assert(Int(sf) == nil && sf.toDouble() == nil, "Short flag cannot be a numeric value")
@@ -58,6 +59,7 @@ public class Option {
     self.longFlag = longFlag
     self.helpMessage = helpMessage
     self.required = required
+    self.couldBeEmpty = couldBeEmpty
   }
 
   /* The optional casts in these initalizers force them to call the private initializer. Without
@@ -65,18 +67,18 @@ public class Option {
    */
 
   /** Initializes a new Option that has both long and short flags. */
-  public convenience init(shortFlag: String, longFlag: String, required: Bool = false, helpMessage: String) {
-    self.init(shortFlag as String?, longFlag, required, helpMessage)
+  public convenience init(shortFlag: String, longFlag: String, required: Bool = false, couldBeEmpty: Bool = true, helpMessage: String) {
+    self.init(shortFlag as String?, longFlag, required, couldBeEmpty, helpMessage)
   }
 
   /** Initializes a new Option that has only a short flag. */
-  public convenience init(shortFlag: String, required: Bool = false, helpMessage: String) {
-    self.init(shortFlag as String?, nil, required, helpMessage)
+  public convenience init(shortFlag: String, required: Bool = false, couldBeEmpty: Bool = true, helpMessage: String) {
+    self.init(shortFlag as String?, nil, required, couldBeEmpty, helpMessage)
   }
 
   /** Initializes a new Option that has only a long flag. */
-  public convenience init(longFlag: String, required: Bool = false, helpMessage: String) {
-    self.init(nil, longFlag as String?, required, helpMessage)
+  public convenience init(longFlag: String, required: Bool = false, couldBeEmpty: Bool = true, helpMessage: String) {
+    self.init(nil, longFlag as String?, required, couldBeEmpty, helpMessage)
   }
 
   func flagMatch(_ flag: String) -> Bool {
@@ -222,7 +224,6 @@ public class StringOption: Option {
 
 /**  An option that accepts one or more string values. */
 public class MultiStringOption: Option {
-  var defaultValue: [String]? = nil
   private var _value: [String]?
 
   public var value: [String]? {
@@ -243,13 +244,14 @@ public class MultiStringOption: Option {
 
   override func setValue(_ values: [String]) -> Bool {
     if values.count == 0 {
-        if self.defaultValue != nil {
-            _value = defaultValue
-        } else {
-          return false
-        }
+      if self.couldBeEmpty {
+        _value = []
+        return true
+      } else {
+        return false
+      }
     }
-
+    
     _value = values
     return true
   }
@@ -274,23 +276,23 @@ public class EnumOption<T:RawRepresentable>: Option where T.RawValue == String {
    * of Xcode 7 beta 2.
    */
 
-  internal override init(_ shortFlag: String?, _ longFlag: String?, _ required: Bool, _ helpMessage: String) {
-    super.init(shortFlag, longFlag, required, helpMessage)
+  internal override init(_ shortFlag: String?, _ longFlag: String?, _ required: Bool, _ couldBeEmpty: Bool, _ helpMessage: String) {
+    super.init(shortFlag, longFlag, required, couldBeEmpty, helpMessage)
   }
 
   /** Initializes a new Option that has both long and short flags. */
-  public convenience init(shortFlag: String, longFlag: String, required: Bool = false, helpMessage: String) {
-    self.init(shortFlag as String?, longFlag, required, helpMessage)
+  public convenience init(shortFlag: String, longFlag: String, required: Bool = false, couldBeEmpty: Bool = true, helpMessage: String) {
+    self.init(shortFlag as String?, longFlag, required, couldBeEmpty, helpMessage)
   }
 
   /** Initializes a new Option that has only a short flag. */
-  public convenience init(shortFlag: String, required: Bool = false, helpMessage: String) {
-    self.init(shortFlag as String?, nil, required, helpMessage)
+  public convenience init(shortFlag: String, required: Bool = false, couldBeEmpty: Bool = true, helpMessage: String) {
+    self.init(shortFlag as String?, nil, required, couldBeEmpty, helpMessage)
   }
 
   /** Initializes a new Option that has only a long flag. */
-  public convenience init(longFlag: String, required: Bool = false, helpMessage: String) {
-    self.init(nil, longFlag as String?, required, helpMessage)
+  public convenience init(longFlag: String, required: Bool = false, couldBeEmpty: Bool = true, helpMessage: String) {
+    self.init(nil, longFlag as String?, required, couldBeEmpty, helpMessage)
   }
 
   override func setValue(_ values: [String]) -> Bool {
