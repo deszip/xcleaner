@@ -78,6 +78,10 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "-t"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "-l Archives"
             isEnabled = "NO">
          </CommandLineArgument>
@@ -87,7 +91,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l DerivedData -t 2607840"
