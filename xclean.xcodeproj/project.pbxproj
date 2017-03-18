@@ -13,13 +13,20 @@
 		0E0E313C1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E313A1E47A4BF0070B896 /* CoreSimulatorCleaner.swift */; };
 		0E0E313E1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E313D1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift */; };
 		0E0E313F1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E313D1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift */; };
-		0E0E31411E47A5FA0070B896 /* SimulatorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E31401E47A5FA0070B896 /* SimulatorValidator.swift */; };
-		0E0E31421E47A5FA0070B896 /* SimulatorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E31401E47A5FA0070B896 /* SimulatorValidator.swift */; };
+		0E0E31411E47A5FA0070B896 /* SimulatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E31401E47A5FA0070B896 /* SimulatorController.swift */; };
+		0E0E31421E47A5FA0070B896 /* SimulatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E31401E47A5FA0070B896 /* SimulatorController.swift */; };
 		0E4BDFE41E7D5034008DFE60 /* SimulatorAppsAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4BDFE31E7D5034008DFE60 /* SimulatorAppsAnalyzerTests.swift */; };
 		0E8C15B11E213F1800E17883 /* XCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* XCFileManager.swift */; };
 		0E8C15B21E213F1800E17883 /* XCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* XCFileManager.swift */; };
 		0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
 		0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
+		0E8F93441E7DF9090024AF70 /* ProcessInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F93431E7DF9090024AF70 /* ProcessInteractor.swift */; };
+		0E8F93451E7DF9090024AF70 /* ProcessInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F93431E7DF9090024AF70 /* ProcessInteractor.swift */; };
+		0E8F93471E7DF92D0024AF70 /* SimctlInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F93461E7DF92D0024AF70 /* SimctlInteractor.swift */; };
+		0E8F93481E7DF92D0024AF70 /* SimctlInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F93461E7DF92D0024AF70 /* SimctlInteractor.swift */; };
+		0E8F934A1E7DFA9C0024AF70 /* SimulatorControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F93491E7DFA9C0024AF70 /* SimulatorControllerTests.swift */; };
+		0E8F934C1E7DFD530024AF70 /* SimctlInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F934B1E7DFD530024AF70 /* SimctlInteractorMock.swift */; };
+		0E8F934D1E7DFD530024AF70 /* SimctlInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F934B1E7DFD530024AF70 /* SimctlInteractorMock.swift */; };
 		0E95B9991E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
 		0E95B99A1E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
 		0EB18E0D1E62CB1E00476876 /* DefaultCleanerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB18E0C1E62CB1E00476876 /* DefaultCleanerTests.swift */; };
@@ -74,10 +81,14 @@
 		0E0E31371E4665090070B896 /* TargetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTests.swift; sourceTree = "<group>"; };
 		0E0E313A1E47A4BF0070B896 /* CoreSimulatorCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreSimulatorCleaner.swift; sourceTree = "<group>"; };
 		0E0E313D1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorAppsAnalyzer.swift; sourceTree = "<group>"; };
-		0E0E31401E47A5FA0070B896 /* SimulatorValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorValidator.swift; sourceTree = "<group>"; };
+		0E0E31401E47A5FA0070B896 /* SimulatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorController.swift; sourceTree = "<group>"; };
 		0E4BDFE31E7D5034008DFE60 /* SimulatorAppsAnalyzerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorAppsAnalyzerTests.swift; sourceTree = "<group>"; };
 		0E8C15B01E213F1800E17883 /* XCFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCFileManager.swift; sourceTree = "<group>"; };
 		0E8C15B41E21406D00E17883 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		0E8F93431E7DF9090024AF70 /* ProcessInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessInteractor.swift; sourceTree = "<group>"; };
+		0E8F93461E7DF92D0024AF70 /* SimctlInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimctlInteractor.swift; sourceTree = "<group>"; };
+		0E8F93491E7DFA9C0024AF70 /* SimulatorControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorControllerTests.swift; sourceTree = "<group>"; };
+		0E8F934B1E7DFD530024AF70 /* SimctlInteractorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimctlInteractorMock.swift; sourceTree = "<group>"; };
 		0E95B9981E35178700123074 /* TargetCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetCleaner.swift; sourceTree = "<group>"; };
 		0EB18E0C1E62CB1E00476876 /* DefaultCleanerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCleanerTests.swift; sourceTree = "<group>"; };
 		0EB18E0F1E62CB7500476876 /* FileManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
@@ -143,7 +154,7 @@
 			children = (
 				0E0E313A1E47A4BF0070B896 /* CoreSimulatorCleaner.swift */,
 				0E0E313D1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift */,
-				0E0E31401E47A5FA0070B896 /* SimulatorValidator.swift */,
+				0E0E31401E47A5FA0070B896 /* SimulatorController.swift */,
 			);
 			path = "Core Simulator";
 			sourceTree = "<group>";
@@ -152,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				0E4BDFE31E7D5034008DFE60 /* SimulatorAppsAnalyzerTests.swift */,
+				0E8F93491E7DFA9C0024AF70 /* SimulatorControllerTests.swift */,
 			);
 			path = CoreSimulator;
 			sourceTree = "<group>";
@@ -161,6 +173,8 @@
 			children = (
 				0E8C15B41E21406D00E17883 /* Formatter.swift */,
 				0EC34F021E214AC6009CA999 /* Environment.swift */,
+				0E8F93431E7DF9090024AF70 /* ProcessInteractor.swift */,
+				0E8F93461E7DF92D0024AF70 /* SimctlInteractor.swift */,
 			);
 			path = Output;
 			sourceTree = "<group>";
@@ -181,6 +195,7 @@
 				0EB18E111E62CB9100476876 /* FilterMock.swift */,
 				0EB18E131E62CBB300476876 /* TargetCleanerMock.swift */,
 				0EC5950B1E7594B000DF77D7 /* EnvironmentMock.swift */,
+				0E8F934B1E7DFD530024AF70 /* SimctlInteractorMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -478,17 +493,20 @@
 			files = (
 				0E0E313E1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */,
 				0E95B9991E35178700123074 /* TargetCleaner.swift in Sources */,
+				0E8F93471E7DF92D0024AF70 /* SimctlInteractor.swift in Sources */,
 				0EC34F031E214AC6009CA999 /* Environment.swift in Sources */,
 				0EDC37681E226EF900A1B51F /* TragetFilter.swift in Sources */,
 				0EDCC3021E1E7C3100CCD82D /* Entry.swift in Sources */,
 				0EDCC2FE1E1E7C1E00CCD82D /* Cleaner.swift in Sources */,
 				0EDC376B1E22713B00A1B51F /* DeviceSupportFilter.swift in Sources */,
+				0E8F934C1E7DFD530024AF70 /* SimctlInteractorMock.swift in Sources */,
 				0EDC37581E22656400A1B51F /* TargetSignature.swift in Sources */,
+				0E8F93441E7DF9090024AF70 /* ProcessInteractor.swift in Sources */,
 				0E0E313B1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */,
 				0EDC37661E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
 				0E8C15B11E213F1800E17883 /* XCFileManager.swift in Sources */,
 				0EDC37611E226EE500A1B51F /* Target.swift in Sources */,
-				0E0E31411E47A5FA0070B896 /* SimulatorValidator.swift in Sources */,
+				0E0E31411E47A5FA0070B896 /* SimulatorController.swift in Sources */,
 				0EC7418A1E1D345C0008A630 /* main.swift in Sources */,
 				0EC3DC151E785B27006370FD /* CommandLine.swift in Sources */,
 				0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */,
@@ -502,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8F934D1E7DFD530024AF70 /* SimctlInteractorMock.swift in Sources */,
 				0E95B99A1E35178700123074 /* TargetCleaner.swift in Sources */,
 				0EC34F041E214AC8009CA999 /* Environment.swift in Sources */,
 				0EDC37691E226EF900A1B51F /* TragetFilter.swift in Sources */,
@@ -512,11 +531,14 @@
 				0EDC376C1E22713B00A1B51F /* DeviceSupportFilter.swift in Sources */,
 				0EC3DC161E785B27006370FD /* CommandLine.swift in Sources */,
 				0EDC37591E22656400A1B51F /* TargetSignature.swift in Sources */,
-				0E0E31421E47A5FA0070B896 /* SimulatorValidator.swift in Sources */,
+				0E0E31421E47A5FA0070B896 /* SimulatorController.swift in Sources */,
+				0E8F93451E7DF9090024AF70 /* ProcessInteractor.swift in Sources */,
 				0EDC37671E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
 				0E4BDFE41E7D5034008DFE60 /* SimulatorAppsAnalyzerTests.swift in Sources */,
 				0E8C15B21E213F1800E17883 /* XCFileManager.swift in Sources */,
 				0E0E313C1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */,
+				0E8F934A1E7DFA9C0024AF70 /* SimulatorControllerTests.swift in Sources */,
+				0E8F93481E7DF92D0024AF70 /* SimctlInteractor.swift in Sources */,
 				0EDC37621E226EE500A1B51F /* Target.swift in Sources */,
 				0E8C15B61E21406D00E17883 /* Formatter.swift in Sources */,
 				0EC3DC191E785B27006370FD /* Option.swift in Sources */,

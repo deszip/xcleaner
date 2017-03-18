@@ -18,7 +18,7 @@ class CoreSimulatorCleaner: TargetCleaner {
 
     private let fileManager: XCFileManager
     private let environment: EnvironmentInteractor
-    private let simulatorValidator: SimulatorValidator
+    private let simulatorController: SimulatorController
     private let appsAnalyzer: SimulatorAppsAnalyzer
     
     private var targetEntries: [Entry] = []
@@ -27,7 +27,7 @@ class CoreSimulatorCleaner: TargetCleaner {
     required init(fileManager: XCFileManager, urls: [URL], environment: EnvironmentInteractor) {
         self.fileManager = fileManager
         self.environment = environment
-        self.simulatorValidator = SimulatorValidator()
+        self.simulatorController = SimulatorController()
         self.appsAnalyzer = SimulatorAppsAnalyzer(fileManager: fileManager)
         
         // Get options from environemnt
@@ -50,7 +50,7 @@ class CoreSimulatorCleaner: TargetCleaner {
     }
     
     func entriesDescription() -> String {
-        var description = "Found \(simulatorValidator.unavailableSimulatorHashes().count) unavailable simulators\n\n"
+        var description = "Found \(simulatorController.unavailableSimulatorHashes().count) unavailable simulators\n\n"
         
         if appsEntries.count > 0 {
             var components: [[String]] = []
@@ -66,7 +66,7 @@ class CoreSimulatorCleaner: TargetCleaner {
     
     func entriesSize() -> Int64 {
         let appsSize = appsEntries.reduce(0, { $0 + $1.size } )
-        return Int64((16 * 1024 * 1024) * simulatorValidator.unavailableSimulatorHashes().count) + appsSize
+        return Int64((16 * 1024 * 1024) * simulatorController.unavailableSimulatorHashes().count) + appsSize
     }
     
     func clean() {
@@ -77,21 +77,7 @@ class CoreSimulatorCleaner: TargetCleaner {
     // MARK: - Private -
     
     private func removeUnavailable() {
-        let process = Process()
-        process.launchPath = "/usr/bin/xcrun"
-        process.arguments = ["simctl", "delete", "unavailable"]
-        
-        let pipe = Pipe()
-        process.standardOutput = pipe
-        
-        //process.launch()
-
-        /*
-        let outputHandle = pipe.fileHandleForReading
-        if let output = String(data: outputHandle.readDataToEndOfFile(), encoding: String.Encoding.utf8) {
-            // TODO: get output for cleaner
-        }
-        */
+        simulatorController.cleanUnavailable()
     }
     
     private func removeApps() {
