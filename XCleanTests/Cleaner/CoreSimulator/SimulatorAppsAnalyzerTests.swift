@@ -36,12 +36,7 @@ class SimulatorAppsAnalyzerTests: XCTestCase {
     }
     
     func testAnalyazerIgnoresDefaultFilterValues() {
-        let simURL = URL(fileURLWithPath: "foo")
-        let appsURL = simURL.appendingPathComponent("/data/Containers/Bundle/Application/")
-        let fakeSimEntry = Entry(url: simURL)
-        let fakeAppEntry = Entry(url: appsURL.appendingPathComponent("Bar.app"))
-        fileManagerMock.stubbedURLs = [appsURL : 42]
-        fileManagerMock.stubbedEntries = [fakeAppEntry.url : 42]
+        let fakeSimEntry = stubApp("Bar")
         
         analyzer?.appCleanTimeout = 0
         analyzer?.appName = nil
@@ -50,4 +45,46 @@ class SimulatorAppsAnalyzerTests: XCTestCase {
         expect(apps!.count).to(equal(2))
     }
     
+    func testAnalyazerFiltersByName() {
+        let fakeSimEntry = stubApp("Bar")
+        
+        analyzer?.appCleanTimeout = 0
+        analyzer?.appName = "Baz"
+        let apps: [Entry]? = analyzer?.outdatedApps(simulatorEntries: [fakeSimEntry])
+        
+        expect(apps!.count).to(equal(0))
+    }
+    
+    func testAnalyazerFiltersByDate() {
+        let date = Date().addingTimeInterval(-3600)
+        let fakeSimEntry = stubApp("Bar", accessDate: date)
+        
+        analyzer?.appCleanTimeout = 4000
+        analyzer?.appName = nil
+        let apps: [Entry]? = analyzer?.outdatedApps(simulatorEntries: [fakeSimEntry])
+        
+        expect(apps!.count).to(equal(0))
+    }
+    
+    func testAnalyzerGetsAppName() {
+        let fakeSimEntry = stubApp("Bar")
+        
+        let app: Entry = (analyzer?.outdatedApps(simulatorEntries: [fakeSimEntry])[0])!
+        
+        expect(app.displayName).to(equal("Bar"))
+    }
+    
+    // MARK: - Tools -
+    
+    private func stubApp(_ name: String, accessDate: Date = Date()) -> Entry {
+        let simURL = URL(fileURLWithPath: "foo")
+        let appsURL = simURL.appendingPathComponent("/data/Containers/Bundle/Application/")
+        let fakeSimEntry = Entry(url: simURL)
+        let fakeAppEntry = Entry(url: appsURL.appendingPathComponent("\(name).app"))
+        fileManagerMock.stubbedAccessDate = accessDate
+        fileManagerMock.stubbedURLs = [appsURL : 42]
+        fileManagerMock.stubbedEntries = [fakeAppEntry.url : 42]
+        
+        return fakeSimEntry
+    }
 }

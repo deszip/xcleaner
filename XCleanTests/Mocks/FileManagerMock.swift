@@ -10,13 +10,14 @@ import Foundation
 
 class FileManagerMock: XCFileManager {
     
+    var stubbedAccessDate: Date = Date()
     var stubbedURLs: [URL: Int64] = [:]
     var stubbedEntries: [URL: Int64] = [:]
     
     override func sizeOfDirectory(url: URL) -> Int64 { return 0 }
     
     override func fileExists(atURL url: URL) -> Bool {
-        if let index = stubbedURLs.index(forKey: url) {
+        if (stubbedURLs.index(forKey: url) != nil) {
             return true
         }
         
@@ -29,7 +30,7 @@ class FileManagerMock: XCFileManager {
         return stubbedEntries.map({ (url, size) -> Entry in
             let entry = Entry(url: url)
             entry.size = size
-            entry.accessDate = Date()
+            entry.accessDate = stubbedAccessDate
             
             return entry
         })
