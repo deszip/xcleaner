@@ -15,6 +15,7 @@
 		0E0E313F1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E313D1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift */; };
 		0E0E31411E47A5FA0070B896 /* SimulatorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E31401E47A5FA0070B896 /* SimulatorValidator.swift */; };
 		0E0E31421E47A5FA0070B896 /* SimulatorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E31401E47A5FA0070B896 /* SimulatorValidator.swift */; };
+		0E4BDFE41E7D5034008DFE60 /* SimulatorAppsAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4BDFE31E7D5034008DFE60 /* SimulatorAppsAnalyzerTests.swift */; };
 		0E8C15B11E213F1800E17883 /* XCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* XCFileManager.swift */; };
 		0E8C15B21E213F1800E17883 /* XCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B01E213F1800E17883 /* XCFileManager.swift */; };
 		0E8C15B51E21406D00E17883 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C15B41E21406D00E17883 /* Formatter.swift */; };
@@ -74,6 +75,7 @@
 		0E0E313A1E47A4BF0070B896 /* CoreSimulatorCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreSimulatorCleaner.swift; sourceTree = "<group>"; };
 		0E0E313D1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorAppsAnalyzer.swift; sourceTree = "<group>"; };
 		0E0E31401E47A5FA0070B896 /* SimulatorValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorValidator.swift; sourceTree = "<group>"; };
+		0E4BDFE31E7D5034008DFE60 /* SimulatorAppsAnalyzerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorAppsAnalyzerTests.swift; sourceTree = "<group>"; };
 		0E8C15B01E213F1800E17883 /* XCFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCFileManager.swift; sourceTree = "<group>"; };
 		0E8C15B41E21406D00E17883 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		0E95B9981E35178700123074 /* TargetCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetCleaner.swift; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 			path = "Core Simulator";
 			sourceTree = "<group>";
 		};
+		0E4BDFE21E7D5023008DFE60 /* CoreSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				0E4BDFE31E7D5034008DFE60 /* SimulatorAppsAnalyzerTests.swift */,
+			);
+			path = CoreSimulator;
+			sourceTree = "<group>";
+		};
 		0E8C15B31E21406100E17883 /* Output */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +168,7 @@
 		0EB18E0B1E62CA9B00476876 /* Cleaner */ = {
 			isa = PBXGroup;
 			children = (
+				0E4BDFE21E7D5023008DFE60 /* CoreSimulator */,
 				0EB18E0C1E62CB1E00476876 /* DefaultCleanerTests.swift */,
 			);
 			path = Cleaner;
@@ -503,6 +514,7 @@
 				0EDC37591E22656400A1B51F /* TargetSignature.swift in Sources */,
 				0E0E31421E47A5FA0070B896 /* SimulatorValidator.swift in Sources */,
 				0EDC37671E226EF900A1B51F /* ArchivesFilter.swift in Sources */,
+				0E4BDFE41E7D5034008DFE60 /* SimulatorAppsAnalyzerTests.swift in Sources */,
 				0E8C15B21E213F1800E17883 /* XCFileManager.swift in Sources */,
 				0E0E313C1E47A4BF0070B896 /* CoreSimulatorCleaner.swift in Sources */,
 				0EDC37621E226EE500A1B51F /* Target.swift in Sources */,

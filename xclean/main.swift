@@ -9,6 +9,7 @@
 import Foundation
 
 let environment = Environment()
+let cleaner = Cleaner(environment: environment)
 
 if environment.helpOption.wasSet {
     environment.printUsage()
@@ -19,8 +20,6 @@ if environment.versionOption.wasSet {
     environment.printVersion()
     environment.terminate()
 }
-
-let cleaner = Cleaner(environment: environment)
 
 if environment.listOption.wasSet {
     cleaner.list(targetSignatures: TargetSignature.signaturesForOption(environment.listOption))

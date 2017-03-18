@@ -11,15 +11,22 @@ import Foundation
 class FileManagerMock: XCFileManager {
     
     var stubbedURLs: [URL: Int64] = [:]
+    var stubbedEntries: [URL: Int64] = [:]
     
     override func sizeOfDirectory(url: URL) -> Int64 { return 0 }
     
-    override func fileExists(atURL url: URL) -> Bool { return true }
+    override func fileExists(atURL url: URL) -> Bool {
+        if let index = stubbedURLs.index(forKey: url) {
+            return true
+        }
+        
+        return false
+    }
     
     override func removeEntry(_ entry: Entry) { }
     
     override func entriesAtURLs(_ urls: [URL], onlyDirectories: Bool) -> [Entry] {
-        return stubbedURLs.map({ (url, size) -> Entry in
+        return stubbedEntries.map({ (url, size) -> Entry in
             let entry = Entry(url: url)
             entry.size = size
             entry.accessDate = Date()

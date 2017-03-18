@@ -43,7 +43,7 @@ class DefaultCleaner: TargetCleaner {
         let timeout: TimeInterval = TimeInterval(environment.timeoutOption.value ?? 0)
         self.entries = entries.filter { entry -> Bool in
             Date().timeIntervalSince(entry.accessDate) >= timeout
-        }.map { entry in
+        }.map { entry in 
             self.fileManager.fetchSize(entry: entry)
             return entry
         }.sorted { (left, right) -> Bool in
