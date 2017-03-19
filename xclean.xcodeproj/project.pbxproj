@@ -27,6 +27,11 @@
 		0E8F934A1E7DFA9C0024AF70 /* SimulatorControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F93491E7DFA9C0024AF70 /* SimulatorControllerTests.swift */; };
 		0E8F934C1E7DFD530024AF70 /* SimctlInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F934B1E7DFD530024AF70 /* SimctlInteractorMock.swift */; };
 		0E8F934D1E7DFD530024AF70 /* SimctlInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F934B1E7DFD530024AF70 /* SimctlInteractorMock.swift */; };
+		0E8F93501E7E96CC0024AF70 /* simctl_stub_multiple_unavailable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F934F1E7E96CC0024AF70 /* simctl_stub_multiple_unavailable.txt */; };
+		0E8F93521E7E9CCF0024AF70 /* simctl_stub_one_unavailable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F93511E7E9CCF0024AF70 /* simctl_stub_one_unavailable.txt */; };
+		0E8F93541E7E9D070024AF70 /* simctl_stub_mixed_unavailable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F93531E7E9D070024AF70 /* simctl_stub_mixed_unavailable.txt */; };
+		0E8F93561E7E9DCA0024AF70 /* simctl_stub_no_unavailable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F93551E7E9DCA0024AF70 /* simctl_stub_no_unavailable.txt */; };
+		0E8F93581E7E9DF60024AF70 /* simctl_stub_invalid.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F93571E7E9DF60024AF70 /* simctl_stub_invalid.txt */; };
 		0E95B9991E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
 		0E95B99A1E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
 		0EB18E0D1E62CB1E00476876 /* DefaultCleanerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB18E0C1E62CB1E00476876 /* DefaultCleanerTests.swift */; };
@@ -89,6 +94,11 @@
 		0E8F93461E7DF92D0024AF70 /* SimctlInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimctlInteractor.swift; sourceTree = "<group>"; };
 		0E8F93491E7DFA9C0024AF70 /* SimulatorControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorControllerTests.swift; sourceTree = "<group>"; };
 		0E8F934B1E7DFD530024AF70 /* SimctlInteractorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimctlInteractorMock.swift; sourceTree = "<group>"; };
+		0E8F934F1E7E96CC0024AF70 /* simctl_stub_multiple_unavailable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simctl_stub_multiple_unavailable.txt; sourceTree = "<group>"; };
+		0E8F93511E7E9CCF0024AF70 /* simctl_stub_one_unavailable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simctl_stub_one_unavailable.txt; sourceTree = "<group>"; };
+		0E8F93531E7E9D070024AF70 /* simctl_stub_mixed_unavailable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simctl_stub_mixed_unavailable.txt; sourceTree = "<group>"; };
+		0E8F93551E7E9DCA0024AF70 /* simctl_stub_no_unavailable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simctl_stub_no_unavailable.txt; sourceTree = "<group>"; };
+		0E8F93571E7E9DF60024AF70 /* simctl_stub_invalid.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simctl_stub_invalid.txt; sourceTree = "<group>"; };
 		0E95B9981E35178700123074 /* TargetCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetCleaner.swift; sourceTree = "<group>"; };
 		0EB18E0C1E62CB1E00476876 /* DefaultCleanerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCleanerTests.swift; sourceTree = "<group>"; };
 		0EB18E0F1E62CB7500476876 /* FileManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
@@ -179,6 +189,18 @@
 			path = Output;
 			sourceTree = "<group>";
 		};
+		0E8F934E1E7E968C0024AF70 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				0E8F934F1E7E96CC0024AF70 /* simctl_stub_multiple_unavailable.txt */,
+				0E8F93511E7E9CCF0024AF70 /* simctl_stub_one_unavailable.txt */,
+				0E8F93531E7E9D070024AF70 /* simctl_stub_mixed_unavailable.txt */,
+				0E8F93551E7E9DCA0024AF70 /* simctl_stub_no_unavailable.txt */,
+				0E8F93571E7E9DF60024AF70 /* simctl_stub_invalid.txt */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 		0EB18E0B1E62CA9B00476876 /* Cleaner */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +288,7 @@
 		0EDCC2EA1E1D6ABF00CCD82D /* XCleanTests */ = {
 			isa = PBXGroup;
 			children = (
+				0E8F934E1E7E968C0024AF70 /* Stubs */,
 				0EB18E0E1E62CB5300476876 /* Mocks */,
 				0EB18E0B1E62CA9B00476876 /* Cleaner */,
 				0E0E31301E46561D0070B896 /* Models */,
@@ -402,7 +425,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8F93521E7E9CCF0024AF70 /* simctl_stub_one_unavailable.txt in Resources */,
 				0EC3DC1D1E786390006370FD /* Info.plist in Resources */,
+				0E8F93561E7E9DCA0024AF70 /* simctl_stub_no_unavailable.txt in Resources */,
+				0E8F93501E7E96CC0024AF70 /* simctl_stub_multiple_unavailable.txt in Resources */,
+				0E8F93581E7E9DF60024AF70 /* simctl_stub_invalid.txt in Resources */,
+				0E8F93541E7E9D070024AF70 /* simctl_stub_mixed_unavailable.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
