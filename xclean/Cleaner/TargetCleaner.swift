@@ -53,6 +53,7 @@ class DefaultCleaner: TargetCleaner {
     
     func clean() {
         print("Clean: \(entries)")
+        //entries.forEach { self.fileManager.removeEntry($0) }
     }
     
     func entriesDescription() -> String {
