@@ -26,6 +26,11 @@ class SimulatorControllerTests: XCTestCase {
         super.tearDown()
     }
 
+    func testControllerCallsCleanOnInteractor() {
+        self.controller?.cleanUnavailable()
+        expect(self.simctlMock.cleanCalled).to(beTrue())
+    }
+    
     func testControllerHandlesEmptyOutput() {
         expect(self.controller?.unavailableSimulatorHashes().count).to(equal(0))
     }
@@ -44,6 +49,10 @@ class SimulatorControllerTests: XCTestCase {
     
     func testControllerHandlesNoUnavailable() {
         validateSimctlStub(SimctlStub.noUnavailable())
+    }
+    
+    func testControllerHandlesEmptyUnavailableSection() {
+        validateSimctlStub(SimctlStub.emptySection())
     }
     
     func testControllerHandlesInvalidSimctlOutput() {

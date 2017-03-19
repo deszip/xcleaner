@@ -32,6 +32,7 @@
 		0E8F93541E7E9D070024AF70 /* simctl_stub_mixed_unavailable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F93531E7E9D070024AF70 /* simctl_stub_mixed_unavailable.txt */; };
 		0E8F93561E7E9DCA0024AF70 /* simctl_stub_no_unavailable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F93551E7E9DCA0024AF70 /* simctl_stub_no_unavailable.txt */; };
 		0E8F93581E7E9DF60024AF70 /* simctl_stub_invalid.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F93571E7E9DF60024AF70 /* simctl_stub_invalid.txt */; };
+		0E8F935A1E7EA05D0024AF70 /* simctl_stub_empty_unavailable_section.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F93591E7EA05D0024AF70 /* simctl_stub_empty_unavailable_section.txt */; };
 		0E95B9991E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
 		0E95B99A1E35178700123074 /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95B9981E35178700123074 /* TargetCleaner.swift */; };
 		0EB18E0D1E62CB1E00476876 /* DefaultCleanerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB18E0C1E62CB1E00476876 /* DefaultCleanerTests.swift */; };
@@ -99,6 +100,7 @@
 		0E8F93531E7E9D070024AF70 /* simctl_stub_mixed_unavailable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simctl_stub_mixed_unavailable.txt; sourceTree = "<group>"; };
 		0E8F93551E7E9DCA0024AF70 /* simctl_stub_no_unavailable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simctl_stub_no_unavailable.txt; sourceTree = "<group>"; };
 		0E8F93571E7E9DF60024AF70 /* simctl_stub_invalid.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simctl_stub_invalid.txt; sourceTree = "<group>"; };
+		0E8F93591E7EA05D0024AF70 /* simctl_stub_empty_unavailable_section.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simctl_stub_empty_unavailable_section.txt; sourceTree = "<group>"; };
 		0E95B9981E35178700123074 /* TargetCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetCleaner.swift; sourceTree = "<group>"; };
 		0EB18E0C1E62CB1E00476876 /* DefaultCleanerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCleanerTests.swift; sourceTree = "<group>"; };
 		0EB18E0F1E62CB7500476876 /* FileManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				0E8F93531E7E9D070024AF70 /* simctl_stub_mixed_unavailable.txt */,
 				0E8F93551E7E9DCA0024AF70 /* simctl_stub_no_unavailable.txt */,
 				0E8F93571E7E9DF60024AF70 /* simctl_stub_invalid.txt */,
+				0E8F93591E7EA05D0024AF70 /* simctl_stub_empty_unavailable_section.txt */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				0EC3DC1D1E786390006370FD /* Info.plist in Resources */,
 				0E8F93561E7E9DCA0024AF70 /* simctl_stub_no_unavailable.txt in Resources */,
 				0E8F93501E7E96CC0024AF70 /* simctl_stub_multiple_unavailable.txt in Resources */,
+				0E8F935A1E7EA05D0024AF70 /* simctl_stub_empty_unavailable_section.txt in Resources */,
 				0E8F93581E7E9DF60024AF70 /* simctl_stub_invalid.txt in Resources */,
 				0E8F93541E7E9D070024AF70 /* simctl_stub_mixed_unavailable.txt in Resources */,
 			);
