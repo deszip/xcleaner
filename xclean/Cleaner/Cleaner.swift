@@ -38,7 +38,7 @@ class Cleaner {
         environment.stdout("Total cleaned: \(formattedSize)\n")
     }
 
-    func buildTargets(targetSignatures: [TargetSignature]) -> [Target] {
+    private func buildTargets(targetSignatures: [TargetSignature]) -> [Target] {
         let fileManager = XCFileManager(fileManager: FileManager.default)
         
         return targetSignatures.filter({ $0.enabled }).map { signature -> Target in
@@ -51,6 +51,36 @@ class Cleaner {
                                                                               urls: signature.urls,
                                                                               environment: environment)
                 
+                default: ()
+            }
+            
+            return target
+        }
+    }
+    
+}
+
+class TargetBuilder {
+    
+    private let fileManager: XCFileManager
+    private let environment: EnvironmentInteractor
+    
+    init(fileManager: XCFileManager, environment: EnvironmentInteractor) {
+        self.fileManager = fileManager
+        self.environment = environment
+    }
+    
+    func buildTargets(targetSignatures: [TargetSignature]) -> [Target] {
+        return targetSignatures.filter({ $0.enabled }).map { signature -> Target in
+            let target = Target(signature: signature, environment: environment)
+            
+            switch signature.type {
+                case .archives:         target.filter = ArchivesFilter(fileManager: fileManager)
+                case .deviceSupport:    target.filter = DeviceSupportFilter()
+                case .coreSimulator:    target.cleaner = CoreSimulatorCleaner(fileManager: fileManager,
+                                                                              urls: signature.urls,
+                                                                              environment: environment)
+                    
                 default: ()
             }
             
