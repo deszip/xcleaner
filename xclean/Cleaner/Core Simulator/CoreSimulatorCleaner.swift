@@ -59,6 +59,7 @@ class CoreSimulatorCleaner: TargetCleaner {
             }
             
             description += Formatter.alignedStringComponents(components)
+            description += "\n\n"
         }
         
         return description

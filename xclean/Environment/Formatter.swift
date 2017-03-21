@@ -25,14 +25,12 @@ class Formatter {
         return formattedSize
     }
     
-    class func alignedStringComponents(_ components: [String], padding: Int) -> String {
-        return components.map { item -> String in
-            item.padding(toLength: padding, withPad: " ", startingAt: 0)
-        }.joined(separator: "") + "\n"
+    func formattedDate(_ date: Date) -> String {
+        return dateFormatter.string(from: date)
     }
     
-    // TODO: Extract paddings calculation
-    class func alignedStringComponents(_ components: [[String]]) -> String {
+    class func alignedStringComponents(_ components: [[String]], minimumHorizontalSpacing: Int = 5) -> String {
+        // Get paddings
         let paddings = components.reduce([], { (paddings, line) in
             return line.map({ component -> Int in
                 let length = component.lengthOfBytes(using: String.Encoding.utf8)
@@ -51,19 +49,23 @@ class Formatter {
             })
         })
         
+        // Format lines
         let lines = components.map { (line) -> String in
             var lineString = ""
             line.enumerated().forEach({ (index, component) in
-                lineString += component.padding(toLength: paddings[index] + 5, withPad: " ", startingAt: 0)
+                let trimmedCharacters = CharacterSet.controlCharacters.union(CharacterSet.illegalCharacters).union(CharacterSet.newlines)
+                let cleanComponent = component.components(separatedBy: trimmedCharacters).joined()
+                if index == line.count - 1 {
+                    lineString += cleanComponent
+                } else {
+                    lineString += cleanComponent.padding(toLength: paddings[index] + minimumHorizontalSpacing, withPad: " ", startingAt: 0)
+                }
             })
             
             return lineString
         }
         
-        return lines.joined(separator: "\n") + "\n\n"
+        return lines.joined(separator: "\n")
     }
-    
-    func formattedDate(_ date: Date) -> String {
-        return dateFormatter.string(from: date)
-    }
+
 }
