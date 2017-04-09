@@ -30,9 +30,7 @@ class Target {
         if let customCleaner = cleaner {
             self.cleaner = customCleaner
         } else {
-            self.cleaner = DefaultCleaner(fileManager: XCFileManager(fileManager: FileManager.default),
-                                          urls: signature.urls,
-                                          environment: environment)
+            self.cleaner = DefaultCleaner(urls: signature.urls, environment: environment)
         }
         
         self.signature = signature

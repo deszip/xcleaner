@@ -68,6 +68,8 @@
 		0EDCC2FF1E1E7C1E00CCD82D /* Cleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */; };
 		0EDCC3021E1E7C3100CCD82D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC3001E1E7C3100CCD82D /* Entry.swift */; };
 		0EDCC3031E1E7C3100CCD82D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCC3001E1E7C3100CCD82D /* Entry.swift */; };
+		0EE7D4111E9A67AA00472966 /* TargetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7D4101E9A67AA00472966 /* TargetBuilder.swift */; };
+		0EE7D4121E9A685000472966 /* TargetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7D4101E9A67AA00472966 /* TargetBuilder.swift */; };
 		5BCEA9AA119CAA412E925860 /* Pods_xclean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75D05C56D4DA95C1A6A95E9 /* Pods_xclean.framework */; };
 		994DACFB1C2F8F938396E317 /* Pods_XCleanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135F33A5DAA963672C66A044 /* Pods_XCleanTests.framework */; };
 /* End PBXBuildFile section */
@@ -128,6 +130,7 @@
 		0EDCC2ED1E1D6ABF00CCD82D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cleaner.swift; sourceTree = "<group>"; };
 		0EDCC3001E1E7C3100CCD82D /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		0EE7D4101E9A67AA00472966 /* TargetBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetBuilder.swift; sourceTree = "<group>"; };
 		135F33A5DAA963672C66A044 /* Pods_XCleanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCleanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3A6B4490835724BD6753B1 /* Pods-XCleanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCleanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCleanTests/Pods-XCleanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		63AAE0F64F15DB89B576B01E /* Pods-xclean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xclean.release.xcconfig"; path = "Pods/Target Support Files/Pods-xclean/Pods-xclean.release.xcconfig"; sourceTree = "<group>"; };
@@ -337,6 +340,7 @@
 				0EDCC2FD1E1E7C1E00CCD82D /* Cleaner.swift */,
 				0E95B9981E35178700123074 /* TargetCleaner.swift */,
 				0E0E31391E47A4BF0070B896 /* Core Simulator */,
+				0EE7D4101E9A67AA00472966 /* TargetBuilder.swift */,
 			);
 			path = Cleaner;
 			sourceTree = "<group>";
@@ -557,6 +561,7 @@
 				0E0E313E1E47A4F30070B896 /* SimulatorAppsAnalyzer.swift in Sources */,
 				0E95B9991E35178700123074 /* TargetCleaner.swift in Sources */,
 				0E8F93621E7EB5CE0024AF70 /* Formatter.swift in Sources */,
+				0EE7D4111E9A67AA00472966 /* TargetBuilder.swift in Sources */,
 				0EDC37681E226EF900A1B51F /* TragetFilter.swift in Sources */,
 				0EDCC3021E1E7C3100CCD82D /* Entry.swift in Sources */,
 				0EDCC2FE1E1E7C1E00CCD82D /* Cleaner.swift in Sources */,
@@ -605,6 +610,7 @@
 				0E0E31361E4662D10070B896 /* TargetSignatureTests.swift in Sources */,
 				0EC34F071E215159009CA999 /* EntryBuilder.swift in Sources */,
 				0EC5950C1E7594B000DF77D7 /* EnvironmentMock.swift in Sources */,
+				0EE7D4121E9A685000472966 /* TargetBuilder.swift in Sources */,
 				0E6D243A1E818FE8004484E1 /* FormatterTests.swift in Sources */,
 				0EB18E0D1E62CB1E00476876 /* DefaultCleanerTests.swift in Sources */,
 				0E8F93611E7EB5CE0024AF70 /* Environment.swift in Sources */,

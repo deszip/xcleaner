@@ -9,7 +9,7 @@
 import Foundation
 
 class TargetCleanerMock : TargetCleaner {
-    required init(fileManager: XCFileManager, urls: [URL], environment: EnvironmentInteractor) {}
+    required init(urls: [URL], environment: EnvironmentInteractor) {}
     
     var cleanCalled: Bool = false
     func clean() {

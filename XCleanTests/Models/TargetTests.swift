@@ -12,7 +12,6 @@ import Nimble
 
 class TargetTests: XCTestCase {
 
-    var fileManagerMock: FileManagerMock?
     var filterMock: FilterMock = FilterMock()
     var cleanerMock: TargetCleanerMock?
     var environmentMock: EnvironmentMock = EnvironmentMock()
@@ -23,8 +22,7 @@ class TargetTests: XCTestCase {
         super.setUp()
         
         let signature = TargetSignature(type: TargetType.deviceSupport)
-        fileManagerMock = FileManagerMock(fileManager: FileManager.default)
-        cleanerMock = TargetCleanerMock(fileManager: self.fileManagerMock!, urls: [], environment: environmentMock)
+        cleanerMock = TargetCleanerMock(urls: [], environment: environmentMock)
         
         target = Target(signature: signature, environment: environmentMock, cleaner: cleanerMock)
     }

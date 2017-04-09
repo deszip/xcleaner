@@ -9,6 +9,8 @@
 import Foundation
 
 protocol EnvironmentInteractor {
+    var fileManager: XCFileManager { get }
+    
     func stdout(_ string: String)
     func stderr(_ string: String)
     func terminate(success: Bool)
@@ -23,9 +25,14 @@ protocol EnvironmentInteractor {
 
 class Environment: EnvironmentInteractor {
     
+    // MARK: - File manager -
+    let fileManager: XCFileManager
+    
+    // MARK: - I/O -
     private let stdoutHandle: FileHandle
     private let stderrHandle: FileHandle
     
+    // MARK: - Arguments -
     let cli: CommandLine
     let listOption: MultiStringOption
     let removeOption: MultiStringOption
@@ -34,7 +41,9 @@ class Environment: EnvironmentInteractor {
     let helpOption: BoolOption
     let versionOption: BoolOption
     
-    init(arguments: [String] = Swift.CommandLine.arguments) {
+    init(arguments: [String] = Swift.CommandLine.arguments, fileManager: XCFileManager = XCFileManager(fileManager: FileManager.default)) {
+        self.fileManager = fileManager
+        
         self.stdoutHandle = FileHandle.standardOutput
         self.stderrHandle = FileHandle.standardError
         

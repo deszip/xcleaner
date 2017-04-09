@@ -16,7 +16,6 @@ class CoreSimulatorCleaner: TargetCleaner {
     }
     internal var filter: TargetFilter?
 
-    private let fileManager: XCFileManager
     private let environment: EnvironmentInteractor
     private let simulatorController: SimulatorController
     private let appsAnalyzer: SimulatorAppsAnalyzer
@@ -24,20 +23,19 @@ class CoreSimulatorCleaner: TargetCleaner {
     private var targetEntries: [Entry] = []
     private var appsEntries: [Entry] = []
     
-    required init(fileManager: XCFileManager, urls: [URL], environment: EnvironmentInteractor) {
-        self.fileManager = fileManager
+    required init(urls: [URL], environment: EnvironmentInteractor) {
         self.environment = environment
         self.simulatorController = SimulatorController()
-        self.appsAnalyzer = SimulatorAppsAnalyzer(fileManager: fileManager)
+        self.appsAnalyzer = SimulatorAppsAnalyzer(fileManager: environment.fileManager)
         
         // Get options from environemnt
         self.appsAnalyzer.appCleanTimeout = TimeInterval(environment.timeoutOption.value ?? 0)
         self.appsAnalyzer.appName = environment.appOption.value ?? nil
         
         // Apps entries
-        self.targetEntries = fileManager.entriesAtURLs(urls, onlyDirectories: true)
+        self.targetEntries = environment.fileManager.entriesAtURLs(urls, onlyDirectories: true)
         self.appsEntries = appsAnalyzer.outdatedApps(simulatorEntries: targetEntries)
-        self.appsEntries.forEach { self.fileManager.fetchSize(entry: $0) }
+        self.appsEntries.forEach { self.environment.fileManager.fetchSize(entry: $0) }
         self.appsEntries.sort { (left, right) -> Bool in
             left.size > right.size
         }

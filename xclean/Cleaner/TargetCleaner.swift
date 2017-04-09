@@ -10,7 +10,7 @@ import Foundation
 
 protocol TargetCleaner {
 
-    init(fileManager: XCFileManager, urls: [URL], environment: EnvironmentInteractor)
+    init(urls: [URL], environment: EnvironmentInteractor)
 
     func clean()
     func entriesDescription() -> String
@@ -30,13 +30,11 @@ class DefaultCleaner: TargetCleaner {
         }
     }
     
-    private let fileManager: XCFileManager
     private(set) var entries: [Entry]
     private let environment: EnvironmentInteractor
     
-    required init(fileManager: XCFileManager, urls: [URL], environment: EnvironmentInteractor) {
-        self.fileManager = fileManager
-        self.entries = fileManager.entriesAtURLs(urls, onlyDirectories: true)
+    required init(urls: [URL], environment: EnvironmentInteractor) {
+        self.entries = environment.fileManager.entriesAtURLs(urls, onlyDirectories: true)
         self.environment = environment
         
         // Sort and filter
@@ -44,7 +42,7 @@ class DefaultCleaner: TargetCleaner {
         self.entries = entries.filter { entry -> Bool in
             Date().timeIntervalSince(entry.accessDate) >= timeout
         }.map { entry in 
-            self.fileManager.fetchSize(entry: entry)
+            self.environment.fileManager.fetchSize(entry: entry)
             return entry
         }.sorted { (left, right) -> Bool in
             return left.size > right.size

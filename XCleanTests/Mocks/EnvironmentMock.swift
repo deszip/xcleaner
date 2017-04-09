@@ -9,6 +9,7 @@
 import Foundation
 
 class EnvironmentMock: EnvironmentInteractor {
+    var fileManager: XCFileManager
     
     func stdout(_ string: String) {}
     func stderr(_ string: String) {}
@@ -22,6 +23,8 @@ class EnvironmentMock: EnvironmentInteractor {
     var versionOption: BoolOption
     
     init() {
+        self.fileManager = FileManagerMock(fileManager: FileManager.default)
+        
         listOption = MultiStringOption(shortFlag: "l",
                                        longFlag: "list",
                                        helpMessage: "Lists target stats.")
