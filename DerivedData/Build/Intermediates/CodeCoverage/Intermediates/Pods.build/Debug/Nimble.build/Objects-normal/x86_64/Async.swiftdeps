@@ -1,0 +1,645 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "WaitingInfo"
+- "WaitLock"
+- "AssertionWaitLock"
+- "AwaitResult"
+- "AwaitPromise"
+- "AwaitTrigger"
+- "AwaitPromiseBuilder"
+- "Awaiter"
+- "pollBlock"
+provides-nominal:
+- "V6Nimble11WaitingInfo"
+- "P6Nimble8WaitLock"
+- "C6Nimble17AssertionWaitLock"
+- "O6Nimble11AwaitResult"
+- "C6Nimble12AwaitPromise"
+- "V6Nimble12AwaitTrigger"
+- "C6Nimble19AwaitPromiseBuilder"
+- "C6Nimble7Awaiter"
+provides-member:
+- ["V6Nimble11WaitingInfo", ""]
+- ["P6Nimble8WaitLock", ""]
+- ["C6Nimble17AssertionWaitLock", ""]
+- ["O6Nimble11AwaitResult", ""]
+- ["C6Nimble12AwaitPromise", ""]
+- ["V6Nimble12AwaitTrigger", ""]
+- ["C6Nimble19AwaitPromiseBuilder", ""]
+- ["C6Nimble7Awaiter", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "&&"
+- !private "*"
+- !private "+"
+- !private "+="
+- !private "/"
+- !private "<"
+- !private "=="
+- "AssertionWaitLock"
+- "AssignmentPrecedence"
+- "AwaitPromise"
+- "AwaitPromiseBuilder"
+- "AwaitResult"
+- "AwaitTrigger"
+- "Awaiter"
+- "Bool"
+- !private "BooleanLiteralType"
+- !private "CFRunLoopGetCurrent"
+- !private "CFRunLoopGetMain"
+- !private "CFRunLoopMode"
+- !private "CFRunLoopPerformBlock"
+- !private "CFRunLoopStop"
+- "CustomStringConvertible"
+- "DispatchQueue"
+- "DispatchSemaphore"
+- !private "DispatchSource"
+- "DispatchSourceTimer"
+- !private "DispatchTime"
+- "DispatchTimeInterval"
+- "Error"
+- "FileString"
+- "FloatLiteralType"
+- !private "Int"
+- "IntegerLiteralType"
+- !private "NMBExceptionCapture"
+- !private "NSEC_PER_SEC"
+- "NSException"
+- !private "NimbleEnvironment"
+- !private "RunLoop"
+- "String"
+- !private "StringLiteralType"
+- !private "Thread"
+- "TimeInterval"
+- "UInt"
+- !private "UnicodeScalarType"
+- "Void"
+- "WaitLock"
+- "WaitingInfo"
+- !private "nimblePrecondition"
+- "pollBlock"
+- !private "pollLeeway"
+- !private "timeoutLeeway"
+depends-member:
+- !private ["Ps16AbsoluteValuable", "init"]
+- !private ["Ps9AnyObject", "AwaitPromise"]
+- !private ["Ps9AnyObject", "AwaitPromiseBuilder"]
+- !private ["Ps9AnyObject", "AwaitTrigger"]
+- !private ["Ps9AnyObject", "CFRunLoopGetCurrent"]
+- !private ["Ps9AnyObject", "CFRunLoopGetMain"]
+- !private ["Ps9AnyObject", "CFRunLoopMode"]
+- !private ["Ps9AnyObject", "CFRunLoopPerformBlock"]
+- !private ["Ps9AnyObject", "CFRunLoopStop"]
+- !private ["Ps9AnyObject", "DispatchSemaphore"]
+- !private ["Ps9AnyObject", "DispatchSource"]
+- !private ["Ps9AnyObject", "DispatchTime"]
+- !private ["Ps9AnyObject", "DispatchTimeInterval"]
+- !private ["Ps9AnyObject", "Int"]
+- !private ["Ps9AnyObject", "NMBExceptionCapture"]
+- !private ["Ps9AnyObject", "NSEC_PER_SEC"]
+- !private ["Ps9AnyObject", "RunLoop"]
+- !private ["Ps9AnyObject", "Thread"]
+- !private ["Ps9AnyObject", "TimeInterval"]
+- !private ["Ps9AnyObject", "WaitingInfo"]
+- ["Ps9AnyObject", "acquireWaitingLock"]
+- !private ["Ps9AnyObject", "activeInstance"]
+- !private ["Ps9AnyObject", "asyncQueue"]
+- !private ["Ps9AnyObject", "asyncResult"]
+- !private ["Ps9AnyObject", "awaiter"]
+- !private ["Ps9AnyObject", "createTimerSource"]
+- !private ["Ps9AnyObject", "current"]
+- !private ["Ps9AnyObject", "currentWaiter"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isMainThread"]
+- ["Ps9AnyObject", "isWaitingLocked"]
+- !private ["Ps9AnyObject", "makeTimerSource"]
+- !private ["Ps9AnyObject", "nimblePrecondition"]
+- !private ["Ps9AnyObject", "poll"]
+- !private ["Ps9AnyObject", "pollLeeway"]
+- !private ["Ps9AnyObject", "promise"]
+- ["Ps9AnyObject", "releaseWaitingLock"]
+- !private ["Ps9AnyObject", "resolveResult"]
+- !private ["Ps9AnyObject", "run"]
+- !private ["Ps9AnyObject", "signal"]
+- !private ["Ps9AnyObject", "timeout"]
+- !private ["Ps9AnyObject", "timeoutLeeway"]
+- !private ["Ps9AnyObject", "timeoutQueue"]
+- !private ["Ps9AnyObject", "trigger"]
+- !private ["Ps9AnyObject", "tryBlock"]
+- !private ["Ps9AnyObject", "wait"]
+- !private ["Ps9AnyObject", "waitLock"]
+- ["Ps9AnyObject", ""]
+- ["C6Nimble17AssertionWaitLock", "Bool"]
+- ["C6Nimble17AssertionWaitLock", "FileString"]
+- ["C6Nimble17AssertionWaitLock", "String"]
+- !private ["C6Nimble17AssertionWaitLock", "Thread"]
+- ["C6Nimble17AssertionWaitLock", "UInt"]
+- ["C6Nimble17AssertionWaitLock", "WaitingInfo"]
+- ["C6Nimble17AssertionWaitLock", "acquireWaitingLock"]
+- !private ["C6Nimble17AssertionWaitLock", "currentWaiter"]
+- ["C6Nimble17AssertionWaitLock", "deinit"]
+- ["C6Nimble17AssertionWaitLock", "init"]
+- ["C6Nimble17AssertionWaitLock", "isWaitingLocked"]
+- !private ["C6Nimble17AssertionWaitLock", "nimblePrecondition"]
+- ["C6Nimble17AssertionWaitLock", "releaseWaitingLock"]
+- ["C6Nimble12AwaitPromise", "AwaitResult"]
+- ["C6Nimble12AwaitPromise", "Bool"]
+- ["C6Nimble12AwaitPromise", "DispatchSemaphore"]
+- ["C6Nimble12AwaitPromise", "T"]
+- ["C6Nimble12AwaitPromise", "asyncResult"]
+- ["C6Nimble12AwaitPromise", "deinit"]
+- ["C6Nimble12AwaitPromise", "init"]
+- ["C6Nimble12AwaitPromise", "resolveResult"]
+- !private ["C6Nimble12AwaitPromise", "signal"]
+- ["C6Nimble19AwaitPromiseBuilder", "AwaitPromise"]
+- ["C6Nimble19AwaitPromiseBuilder", "AwaitResult"]
+- ["C6Nimble19AwaitPromiseBuilder", "AwaitTrigger"]
+- ["C6Nimble19AwaitPromiseBuilder", "Awaiter"]
+- !private ["C6Nimble19AwaitPromiseBuilder", "CFRunLoopGetMain"]
+- !private ["C6Nimble19AwaitPromiseBuilder", "CFRunLoopMode"]
+- !private ["C6Nimble19AwaitPromiseBuilder", "CFRunLoopPerformBlock"]
+- !private ["C6Nimble19AwaitPromiseBuilder", "CFRunLoopStop"]
+- !private ["C6Nimble19AwaitPromiseBuilder", "DispatchSemaphore"]
+- !private ["C6Nimble19AwaitPromiseBuilder", "DispatchTime"]
+- ["C6Nimble19AwaitPromiseBuilder", "FileString"]
+- !private ["C6Nimble19AwaitPromiseBuilder", "NMBExceptionCapture"]
+- !private ["C6Nimble19AwaitPromiseBuilder", "RunLoop"]
+- ["C6Nimble19AwaitPromiseBuilder", "String"]
+- ["C6Nimble19AwaitPromiseBuilder", "T"]
+- ["C6Nimble19AwaitPromiseBuilder", "TimeInterval"]
+- ["C6Nimble19AwaitPromiseBuilder", "UInt"]
+- ["C6Nimble19AwaitPromiseBuilder", "WaitLock"]
+- ["C6Nimble19AwaitPromiseBuilder", "awaiter"]
+- ["C6Nimble19AwaitPromiseBuilder", "deinit"]
+- ["C6Nimble19AwaitPromiseBuilder", "init"]
+- ["C6Nimble19AwaitPromiseBuilder", "promise"]
+- ["C6Nimble19AwaitPromiseBuilder", "timeout"]
+- !private ["C6Nimble19AwaitPromiseBuilder", "timeoutLeeway"]
+- ["C6Nimble19AwaitPromiseBuilder", "trigger"]
+- ["C6Nimble19AwaitPromiseBuilder", "wait"]
+- ["C6Nimble19AwaitPromiseBuilder", "waitLock"]
+- ["O6Nimble11AwaitResult", "Bool"]
+- ["O6Nimble11AwaitResult", "Error"]
+- ["O6Nimble11AwaitResult", "NSException"]
+- ["O6Nimble11AwaitResult", "T"]
+- ["O6Nimble11AwaitResult", "blockedRunLoop"]
+- ["O6Nimble11AwaitResult", "completed"]
+- ["O6Nimble11AwaitResult", "errorThrown"]
+- ["O6Nimble11AwaitResult", "incomplete"]
+- ["O6Nimble11AwaitResult", "isCompleted"]
+- ["O6Nimble11AwaitResult", "isIncomplete"]
+- ["O6Nimble11AwaitResult", "raisedException"]
+- ["O6Nimble11AwaitResult", "timedOut"]
+- ["V6Nimble12AwaitTrigger", "DispatchSourceTimer"]
+- ["V6Nimble12AwaitTrigger", "Void"]
+- ["V6Nimble12AwaitTrigger", "actionSource"]
+- ["V6Nimble12AwaitTrigger", "init"]
+- ["V6Nimble12AwaitTrigger", "start"]
+- ["V6Nimble12AwaitTrigger", "timeoutSource"]
+- !private ["C6Nimble7Awaiter", "AwaitPromise"]
+- ["C6Nimble7Awaiter", "AwaitPromiseBuilder"]
+- !private ["C6Nimble7Awaiter", "AwaitTrigger"]
+- !private ["C6Nimble7Awaiter", "CFRunLoopGetCurrent"]
+- !private ["C6Nimble7Awaiter", "CFRunLoopGetMain"]
+- !private ["C6Nimble7Awaiter", "CFRunLoopStop"]
+- ["C6Nimble7Awaiter", "DispatchQueue"]
+- !private ["C6Nimble7Awaiter", "DispatchSource"]
+- !private ["C6Nimble7Awaiter", "DispatchSourceTimer"]
+- !private ["C6Nimble7Awaiter", "DispatchTimeInterval"]
+- !private ["C6Nimble7Awaiter", "Int"]
+- !private ["C6Nimble7Awaiter", "NSEC_PER_SEC"]
+- ["C6Nimble7Awaiter", "TimeInterval"]
+- ["C6Nimble7Awaiter", "Void"]
+- ["C6Nimble7Awaiter", "WaitLock"]
+- ["C6Nimble7Awaiter", "asyncQueue"]
+- !private ["C6Nimble7Awaiter", "createTimerSource"]
+- ["C6Nimble7Awaiter", "deinit"]
+- ["C6Nimble7Awaiter", "init"]
+- !private ["C6Nimble7Awaiter", "nimblePrecondition"]
+- ["C6Nimble7Awaiter", "performBlock"]
+- ["C6Nimble7Awaiter", "poll"]
+- !private ["C6Nimble7Awaiter", "pollLeeway"]
+- ["C6Nimble7Awaiter", "timeoutQueue"]
+- ["C6Nimble7Awaiter", "waitLock"]
+- !private ["Ps19BinaryFloatingPoint", "init"]
+- !private ["Ps17BitwiseOperations", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["VSC13CFRunLoopMode", "defaultMode"]
+- !private ["VSC13CFRunLoopMode", "rawValue"]
+- !private ["Ps7CVarArg", "current"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isMainThread"]
+- !private ["Ps7CVarArg", "makeTimerSource"]
+- !private ["Ps7CVarArg", "run"]
+- !private ["Ps7CVarArg", "signal"]
+- !private ["Ps7CVarArg", "tryBlock"]
+- !private ["Ps7CVarArg", "wait"]
+- !private ["Ps10Comparable", "defaultRunLoopMode"]
+- !private ["Ps10Comparable", "distantFuture"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "now"]
+- !private ["Ps28CustomDebugStringConvertible", "current"]
+- !private ["Ps28CustomDebugStringConvertible", "distantFuture"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isMainThread"]
+- !private ["Ps28CustomDebugStringConvertible", "makeTimerSource"]
+- !private ["Ps28CustomDebugStringConvertible", "run"]
+- !private ["Ps28CustomDebugStringConvertible", "signal"]
+- !private ["Ps28CustomDebugStringConvertible", "tryBlock"]
+- !private ["Ps28CustomDebugStringConvertible", "wait"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "distantFuture"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "distantFuture"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "current"]
+- ["Ps23CustomStringConvertible", "description"]
+- !private ["Ps23CustomStringConvertible", "distantFuture"]
+- !private ["Ps23CustomStringConvertible", "file"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isMainThread"]
+- !private ["Ps23CustomStringConvertible", "lineNumber"]
+- !private ["Ps23CustomStringConvertible", "makeTimerSource"]
+- !private ["Ps23CustomStringConvertible", "name"]
+- !private ["Ps23CustomStringConvertible", "run"]
+- !private ["Ps23CustomStringConvertible", "signal"]
+- !private ["Ps23CustomStringConvertible", "tryBlock"]
+- !private ["Ps23CustomStringConvertible", "wait"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["V10Foundation4Date", "distantFuture"]
+- !private ["CSo14DispatchObject", "init"]
+- !private ["CSo14DispatchObject", "makeTimerSource"]
+- !private ["CSo14DispatchObject", "signal"]
+- !private ["CSo14DispatchObject", "wait"]
+- !private ["CSo17DispatchSemaphore", "init"]
+- !private ["CSo17DispatchSemaphore", "signal"]
+- !private ["CSo17DispatchSemaphore", "wait"]
+- !private ["CSo14DispatchSource", "makeTimerSource"]
+- !private ["PSo30DispatchSourceFileSystemObject", "makeTimerSource"]
+- !private ["PSo25DispatchSourceMachReceive", "makeTimerSource"]
+- !private ["PSo22DispatchSourceMachSend", "makeTimerSource"]
+- !private ["PSo28DispatchSourceMemoryPressure", "makeTimerSource"]
+- !private ["PSo21DispatchSourceProcess", "makeTimerSource"]
+- !private ["PSo22DispatchSourceProtocol", "cancel"]
+- !private ["PSo22DispatchSourceProtocol", "makeTimerSource"]
+- !private ["PSo22DispatchSourceProtocol", "resume"]
+- !private ["PSo22DispatchSourceProtocol", "scheduleOneshot"]
+- !private ["PSo22DispatchSourceProtocol", "scheduleRepeating"]
+- !private ["PSo22DispatchSourceProtocol", "setEventHandler"]
+- !private ["PSo22DispatchSourceProtocol", "suspend"]
+- !private ["PSo18DispatchSourceRead", "makeTimerSource"]
+- !private ["PSo20DispatchSourceSignal", "makeTimerSource"]
+- !private ["PSo19DispatchSourceTimer", "cancel"]
+- !private ["PSo19DispatchSourceTimer", "makeTimerSource"]
+- !private ["PSo19DispatchSourceTimer", "resume"]
+- !private ["PSo19DispatchSourceTimer", "scheduleOneshot"]
+- !private ["PSo19DispatchSourceTimer", "scheduleRepeating"]
+- !private ["PSo19DispatchSourceTimer", "setEventHandler"]
+- !private ["PSo19DispatchSourceTimer", "suspend"]
+- !private ["PSo25DispatchSourceUserDataAdd", "makeTimerSource"]
+- !private ["PSo24DispatchSourceUserDataOr", "makeTimerSource"]
+- !private ["PSo19DispatchSourceWrite", "makeTimerSource"]
+- !private ["V8Dispatch12DispatchTime", "now"]
+- ["O8Dispatch20DispatchTimeInterval", "milliseconds"]
+- !private ["O8Dispatch20DispatchTimeInterval", "nanoseconds"]
+- !private ["O8Dispatch21DispatchTimeoutResult", "success"]
+- !private ["Sd", "deinit"]
+- !private ["Sd", "init"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "current"]
+- !private ["Ps9Equatable", "defaultRunLoopMode"]
+- !private ["Ps9Equatable", "distantFuture"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isMainThread"]
+- !private ["Ps9Equatable", "makeTimerSource"]
+- !private ["Ps9Equatable", "now"]
+- !private ["Ps9Equatable", "run"]
+- !private ["Ps9Equatable", "signal"]
+- !private ["Ps9Equatable", "strict"]
+- !private ["Ps9Equatable", "success"]
+- !private ["Ps9Equatable", "tryBlock"]
+- !private ["Ps9Equatable", "wait"]
+- !private ["Ps25ExpressibleByArrayLiteral", "strict"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "init"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps25ExpressibleByFloatLiteral", "init"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps13FloatingPoint", "init"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "current"]
+- !private ["Ps8Hashable", "defaultRunLoopMode"]
+- !private ["Ps8Hashable", "distantFuture"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isMainThread"]
+- !private ["Ps8Hashable", "makeTimerSource"]
+- !private ["Ps8Hashable", "run"]
+- !private ["Ps8Hashable", "signal"]
+- !private ["Ps8Hashable", "success"]
+- !private ["Ps8Hashable", "tryBlock"]
+- !private ["Ps8Hashable", "wait"]
+- !private ["Si", "deinit"]
+- !private ["Si", "init"]
+- !private ["Ps7Integer", "init"]
+- !private ["Ps17IntegerArithmetic", "init"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["P6Nimble13NMBComparable", "init"]
+- !private ["P6Nimble20NMBDoubleConvertible", "distantFuture"]
+- !private ["P6Nimble20NMBDoubleConvertible", "init"]
+- !private ["CSo19NMBExceptionCapture", "init"]
+- !private ["CSo19NMBExceptionCapture", "tryBlock"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "current"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isMainThread"]
+- !private ["CSo8NSObject", "makeTimerSource"]
+- !private ["CSo8NSObject", "run"]
+- !private ["CSo8NSObject", "signal"]
+- !private ["CSo8NSObject", "tryBlock"]
+- !private ["CSo8NSObject", "wait"]
+- !private ["PSo16NSObjectProtocol", "cancel"]
+- !private ["PSo16NSObjectProtocol", "current"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isMainThread"]
+- !private ["PSo16NSObjectProtocol", "makeTimerSource"]
+- !private ["PSo16NSObjectProtocol", "resume"]
+- !private ["PSo16NSObjectProtocol", "run"]
+- !private ["PSo16NSObjectProtocol", "scheduleOneshot"]
+- !private ["PSo16NSObjectProtocol", "scheduleRepeating"]
+- !private ["PSo16NSObjectProtocol", "setEventHandler"]
+- !private ["PSo16NSObjectProtocol", "signal"]
+- !private ["PSo16NSObjectProtocol", "suspend"]
+- !private ["PSo16NSObjectProtocol", "tryBlock"]
+- !private ["PSo16NSObjectProtocol", "wait"]
+- !private ["PSo19NSPasteboardReading", "init"]
+- !private ["PSo19NSPasteboardWriting", "init"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["C6Nimble17NimbleEnvironment", "activeInstance"]
+- !private ["C6Nimble17NimbleEnvironment", "awaiter"]
+- !private ["CSo9OS_object", "init"]
+- !private ["CSo9OS_object", "makeTimerSource"]
+- !private ["CSo9OS_object", "signal"]
+- !private ["CSo9OS_object", "wait"]
+- !private ["Ps9OptionSet", "strict"]
+- !private ["Ps16RawRepresentable", "defaultMode"]
+- !private ["Ps16RawRepresentable", "defaultRunLoopMode"]
+- !private ["Ps16RawRepresentable", "rawValue"]
+- !private ["Ps16RawRepresentable", "strict"]
+- !private ["P10Foundation20ReferenceConvertible", "distantFuture"]
+- !private ["CSo7RunLoop", "current"]
+- !private ["CSo7RunLoop", "run"]
+- !private ["VSC11RunLoopMode", "defaultRunLoopMode"]
+- !private ["Ps10SetAlgebra", "strict"]
+- !private ["Ps13SignedInteger", "init"]
+- !private ["Ps12SignedNumber", "init"]
+- !private ["Vs12StaticString", "init"]
+- !private ["Ps10Strideable", "init"]
+- !private ["SS", "init"]
+- !private ["P6Nimble27TestOutputStringConvertible", "distantFuture"]
+- !private ["P6Nimble27TestOutputStringConvertible", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["CSo6Thread", "isMainThread"]
+- !private ["VE8DispatchCSo14DispatchSource10TimerFlags", "strict"]
+- ["P6Nimble8WaitLock", "Bool"]
+- ["P6Nimble8WaitLock", "FileString"]
+- ["P6Nimble8WaitLock", "String"]
+- !private ["P6Nimble8WaitLock", "Thread"]
+- ["P6Nimble8WaitLock", "UInt"]
+- !private ["P6Nimble8WaitLock", "WaitingInfo"]
+- ["P6Nimble8WaitLock", "acquireWaitingLock"]
+- !private ["P6Nimble8WaitLock", "currentWaiter"]
+- ["P6Nimble8WaitLock", "isWaitingLocked"]
+- !private ["P6Nimble8WaitLock", "nimblePrecondition"]
+- ["P6Nimble8WaitLock", "releaseWaitingLock"]
+- ["P6Nimble8WaitLock", ""]
+- ["V6Nimble11WaitingInfo", "FileString"]
+- ["V6Nimble11WaitingInfo", "String"]
+- ["V6Nimble11WaitingInfo", "UInt"]
+- ["V6Nimble11WaitingInfo", "deinit"]
+- ["V6Nimble11WaitingInfo", "description"]
+- ["V6Nimble11WaitingInfo", "file"]
+- ["V6Nimble11WaitingInfo", "init"]
+- ["V6Nimble11WaitingInfo", "lineNumber"]
+- ["V6Nimble11WaitingInfo", "name"]
+- !private ["Ps15_CVarArgAligned", "init"]
+- !private ["Ps22_CVarArgPassedAsDouble", "init"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "current"]
+- !private ["Ps9_Hashable", "defaultRunLoopMode"]
+- !private ["Ps9_Hashable", "distantFuture"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isMainThread"]
+- !private ["Ps9_Hashable", "makeTimerSource"]
+- !private ["Ps9_Hashable", "run"]
+- !private ["Ps9_Hashable", "signal"]
+- !private ["Ps9_Hashable", "success"]
+- !private ["Ps9_Hashable", "tryBlock"]
+- !private ["Ps9_Hashable", "wait"]
+- !private ["Ps14_Incrementable", "init"]
+- !private ["Ps8_Integer", "init"]
+- !private ["Ps18_IntegerArithmetic", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "defaultRunLoopMode"]
+- !private ["Ps21_ObjectiveCBridgeable", "distantFuture"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps14_SignedInteger", "init"]
+- !private ["Ps11_Strideable", "init"]
+- !private ["Ps20_SwiftNewtypeWrapper", "defaultMode"]
+- !private ["Ps20_SwiftNewtypeWrapper", "defaultRunLoopMode"]
+- !private ["Ps20_SwiftNewtypeWrapper", "rawValue"]
+depends-nominal:
+- !private "Ps16AbsoluteValuable"
+- "Ps9AnyObject"
+- "C6Nimble17AssertionWaitLock"
+- "C6Nimble12AwaitPromise"
+- "C6Nimble19AwaitPromiseBuilder"
+- "O6Nimble11AwaitResult"
+- "V6Nimble12AwaitTrigger"
+- "C6Nimble7Awaiter"
+- !private "Ps19BinaryFloatingPoint"
+- !private "Ps17BitwiseOperations"
+- !private "Sb"
+- !private "VSC13CFRunLoopMode"
+- !private "Ps7CVarArg"
+- !private "Ps10Comparable"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- !private "V10Foundation4Date"
+- !private "CSo14DispatchObject"
+- !private "CSo17DispatchSemaphore"
+- !private "CSo14DispatchSource"
+- !private "PSo30DispatchSourceFileSystemObject"
+- !private "PSo25DispatchSourceMachReceive"
+- !private "PSo22DispatchSourceMachSend"
+- !private "PSo28DispatchSourceMemoryPressure"
+- !private "PSo21DispatchSourceProcess"
+- !private "PSo22DispatchSourceProtocol"
+- !private "PSo18DispatchSourceRead"
+- !private "PSo20DispatchSourceSignal"
+- !private "PSo19DispatchSourceTimer"
+- !private "PSo25DispatchSourceUserDataAdd"
+- !private "PSo24DispatchSourceUserDataOr"
+- !private "PSo19DispatchSourceWrite"
+- !private "V8Dispatch12DispatchTime"
+- "O8Dispatch20DispatchTimeInterval"
+- !private "O8Dispatch21DispatchTimeoutResult"
+- !private "Sd"
+- !private "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps25ExpressibleByFloatLiteral"
+- !private "Ps27ExpressibleByIntegerLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Ps13FloatingPoint"
+- !private "Ps8Hashable"
+- !private "Si"
+- !private "Ps7Integer"
+- !private "Ps17IntegerArithmetic"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "P6Nimble13NMBComparable"
+- !private "P6Nimble20NMBDoubleConvertible"
+- !private "CSo19NMBExceptionCapture"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "PSo19NSPasteboardReading"
+- !private "PSo19NSPasteboardWriting"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "C6Nimble17NimbleEnvironment"
+- !private "CSo9OS_object"
+- !private "Ps9OptionSet"
+- !private "Ps16RawRepresentable"
+- !private "P10Foundation20ReferenceConvertible"
+- !private "CSo7RunLoop"
+- !private "VSC11RunLoopMode"
+- !private "Ps10SetAlgebra"
+- !private "Ps13SignedInteger"
+- !private "Ps12SignedNumber"
+- !private "Vs12StaticString"
+- !private "Ps10Strideable"
+- !private "SS"
+- !private "P6Nimble27TestOutputStringConvertible"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "CSo6Thread"
+- !private "VE8DispatchCSo14DispatchSource10TimerFlags"
+- "P6Nimble8WaitLock"
+- "V6Nimble11WaitingInfo"
+- !private "Ps15_CVarArgAligned"
+- !private "Ps22_CVarArgPassedAsDouble"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps33_ExpressibleByBuiltinFloatLiteral"
+- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- !private "Ps9_Hashable"
+- !private "Ps14_Incrementable"
+- !private "Ps8_Integer"
+- !private "Ps18_IntegerArithmetic"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps14_SignedInteger"
+- !private "Ps11_Strideable"
+- !private "Ps20_SwiftNewtypeWrapper"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.swiftmodule"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUISiriService.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTKVOExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSPredicateExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSNotificationExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTDarwinNotificationExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservation.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/CwlCatchBadInstruction.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlCatchException/CwlCatchException/CwlCatchException.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTWaiter.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservationCenter.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/mach_excServer.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Intermediates/Pods.build/Debug/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+interface-hash: "a437f9d5960b6dfc8783183b56c8e626"

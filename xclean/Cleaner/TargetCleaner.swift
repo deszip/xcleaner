@@ -22,6 +22,8 @@ protocol TargetCleaner {
 
 class DefaultCleaner: TargetCleaner {
     
+    private static let DefaultTimeout = 3600
+    
     internal var filter: TargetFilter? {
         didSet {
             if let newFilter = self.filter {
@@ -38,7 +40,7 @@ class DefaultCleaner: TargetCleaner {
         self.environment = environment
         
         // Sort and filter
-        let timeout: TimeInterval = TimeInterval(environment.timeoutOption.value ?? 0)
+        let timeout: TimeInterval = TimeInterval(environment.timeoutOption.value ?? DefaultCleaner.DefaultTimeout)
         self.entries = entries.filter { entry -> Bool in
             Date().timeIntervalSince(entry.accessDate) >= timeout
         }.map { entry in 

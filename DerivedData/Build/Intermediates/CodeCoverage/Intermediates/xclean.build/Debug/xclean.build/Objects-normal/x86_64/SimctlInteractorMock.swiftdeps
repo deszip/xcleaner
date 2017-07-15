@@ -1,0 +1,175 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SimctlStub"
+- "SimctlInteractorMock"
+provides-nominal:
+- "V6xclean10SimctlStub"
+- "C6xclean20SimctlInteractorMock"
+provides-member:
+- ["V6xclean10SimctlStub", ""]
+- ["C6xclean20SimctlInteractorMock", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "AssignmentPrecedence"
+- "BooleanLiteralType"
+- !private "Bundle"
+- "Int"
+- "SimctlInteractor"
+- "SimctlInteractorMock"
+- "SimctlStub"
+- "String"
+- "StringLiteralType"
+depends-member:
+- !private ["Ps9AnyObject", "cleanCalled"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "output"]
+- !private ["Ps9AnyObject", "simctlStub"]
+- !private ["Ps9AnyObject", "url"]
+- ["Ps9AnyObject", ""]
+- !private ["CSo6Bundle", "init"]
+- !private ["CSo6Bundle", "url"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "url"]
+- ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "url"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- ["Ps17CustomReflectable", "init"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "url"]
+- !private ["Ps23CustomStringConvertible", "utf8"]
+- !private ["VE10FoundationSS8Encoding", "utf8"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "url"]
+- !private ["Ps9Equatable", "utf8"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "url"]
+- !private ["Ps8Hashable", "utf8"]
+- ["Ps25LosslessStringConvertible", "init"]
+- ["Ps10MirrorPath", "init"]
+- ["PSo8NSCoding", "init"]
+- ["PSo9NSCopying", "init"]
+- ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "url"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "url"]
+- ["PSo14NSSecureCoding", "init"]
+- ["CSo8NSString", "init"]
+- ["C6xclean17ProcessInteractor", "SimctlStub"]
+- ["C6xclean17ProcessInteractor", "String"]
+- ["C6xclean17ProcessInteractor", "cleanCalled"]
+- ["C6xclean17ProcessInteractor", "cleanUnavailable"]
+- ["C6xclean17ProcessInteractor", "init"]
+- ["C6xclean17ProcessInteractor", "list"]
+- ["C6xclean17ProcessInteractor", "loadStub"]
+- ["C6xclean17ProcessInteractor", "output"]
+- ["C6xclean17ProcessInteractor", "simctlStub"]
+- !private ["Ps16RawRepresentable", "utf8"]
+- ["C6xclean16SimctlInteractor", "SimctlStub"]
+- ["C6xclean16SimctlInteractor", "String"]
+- ["C6xclean16SimctlInteractor", "cleanCalled"]
+- ["C6xclean16SimctlInteractor", "cleanUnavailable"]
+- ["C6xclean16SimctlInteractor", "init"]
+- ["C6xclean16SimctlInteractor", "list"]
+- ["C6xclean16SimctlInteractor", "loadStub"]
+- ["C6xclean16SimctlInteractor", "output"]
+- ["C6xclean16SimctlInteractor", "simctlStub"]
+- ["C6xclean16SimctlInteractor", ""]
+- ["C6xclean20SimctlInteractorMock", "SimctlStub"]
+- ["C6xclean20SimctlInteractorMock", "String"]
+- ["C6xclean20SimctlInteractorMock", "cleanCalled"]
+- ["C6xclean20SimctlInteractorMock", "cleanUnavailable"]
+- ["C6xclean20SimctlInteractorMock", "deinit"]
+- ["C6xclean20SimctlInteractorMock", "init"]
+- ["C6xclean20SimctlInteractorMock", "list"]
+- ["C6xclean20SimctlInteractorMock", "loadStub"]
+- ["C6xclean20SimctlInteractorMock", "output"]
+- ["C6xclean20SimctlInteractorMock", "simctlStub"]
+- !private ["V6xclean10SimctlStub", "Bundle"]
+- ["V6xclean10SimctlStub", "Int"]
+- !private ["V6xclean10SimctlStub", "SimctlInteractorMock"]
+- ["V6xclean10SimctlStub", "SimctlStub"]
+- ["V6xclean10SimctlStub", "String"]
+- ["V6xclean10SimctlStub", "content"]
+- ["V6xclean10SimctlStub", "emptySection"]
+- ["V6xclean10SimctlStub", "init"]
+- ["V6xclean10SimctlStub", "invalid"]
+- ["V6xclean10SimctlStub", "mixedUnavailable"]
+- ["V6xclean10SimctlStub", "multipleUnavailable"]
+- ["V6xclean10SimctlStub", "name"]
+- ["V6xclean10SimctlStub", "noUnavailable"]
+- ["V6xclean10SimctlStub", "oneUnavailable"]
+- ["V6xclean10SimctlStub", "unavailableCount"]
+- ["SS", "init"]
+- ["Ps16TextOutputStream", "init"]
+- ["Ps20TextOutputStreamable", "init"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps33_ExpressibleByStringInterpolation", "init"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "url"]
+- !private ["Ps9_Hashable", "utf8"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "CSo6Bundle"
+- "Ps7CVarArg"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- !private "VE10FoundationSS8Encoding"
+- "Ps9Equatable"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo16NSMutableCopying"
+- !private "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
+- "C6xclean17ProcessInteractor"
+- !private "Ps16RawRepresentable"
+- "C6xclean16SimctlInteractor"
+- "C6xclean20SimctlInteractorMock"
+- "V6xclean10SimctlStub"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "87f7d2d5e2e98d07a5aa5e8b9efbf3ce"

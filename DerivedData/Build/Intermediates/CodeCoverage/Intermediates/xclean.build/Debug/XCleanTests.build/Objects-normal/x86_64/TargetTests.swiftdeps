@@ -1,0 +1,548 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TargetTests"
+provides-nominal:
+- "C11XCleanTests11TargetTests"
+provides-member:
+- ["C11XCleanTests11TargetTests", ""]
+provides-dynamic-lookup:
+- "setUp"
+- "tearDown"
+- "testTargetAsksCleanerForDescriptionIfEntriesSizeNotZero"
+- "testTargetAssignsFIlterToCleaner"
+- "testTargetCallsCleanOnCleaner"
+- "testTargetDoesntAskCleanerForDescriptionIfEntriesSizeIsZero"
+- "testTargetReturnCleanerEntries"
+- "testTargetReturnsCleanerSize"
+depends-top-level:
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "Entry"
+- "EnvironmentMock"
+- "FilterMock"
+- !private "StringLiteralType"
+- "Target"
+- "TargetCleanerMock"
+- !private "TargetSignature"
+- "TargetTests"
+- !private "TargetType"
+- !private "URL"
+- !private "UnicodeScalarType"
+- "XCTestCase"
+- !private "beIdenticalTo"
+- !private "equal"
+- !private "expect"
+depends-member:
+- !private ["Ps9AnyObject", "Entry"]
+- ["Ps9AnyObject", "EnvironmentMock"]
+- ["Ps9AnyObject", "FilterMock"]
+- !private ["Ps9AnyObject", "Target"]
+- !private ["Ps9AnyObject", "TargetCleanerMock"]
+- !private ["Ps9AnyObject", "TargetSignature"]
+- !private ["Ps9AnyObject", "TargetType"]
+- !private ["Ps9AnyObject", "URL"]
+- !private ["Ps9AnyObject", "beIdenticalTo"]
+- !private ["Ps9AnyObject", "clean"]
+- !private ["Ps9AnyObject", "cleanCalled"]
+- !private ["Ps9AnyObject", "cleanerMock"]
+- !private ["Ps9AnyObject", "entries"]
+- !private ["Ps9AnyObject", "entriesDescriptionCalled"]
+- !private ["Ps9AnyObject", "entriesSize"]
+- !private ["Ps9AnyObject", "entriesSizeValue"]
+- !private ["Ps9AnyObject", "entriesValue"]
+- !private ["Ps9AnyObject", "environmentMock"]
+- !private ["Ps9AnyObject", "equal"]
+- !private ["Ps9AnyObject", "expect"]
+- !private ["Ps9AnyObject", "filter"]
+- !private ["Ps9AnyObject", "filterMock"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "metadataDescription"]
+- !private ["Ps9AnyObject", "safeSize"]
+- !private ["Ps9AnyObject", "setUp"]
+- !private ["Ps9AnyObject", "target"]
+- !private ["Ps9AnyObject", "tearDown"]
+- !private ["Ps9AnyObject", "url"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "subscript"]
+- !private ["Ps23BidirectionalCollection", "subscript"]
+- !private ["Ps7CVarArg", "Entry"]
+- ["Ps7CVarArg", "EnvironmentMock"]
+- ["Ps7CVarArg", "FilterMock"]
+- !private ["Ps7CVarArg", "Target"]
+- !private ["Ps7CVarArg", "TargetCleanerMock"]
+- !private ["Ps7CVarArg", "TargetSignature"]
+- !private ["Ps7CVarArg", "TargetType"]
+- !private ["Ps7CVarArg", "URL"]
+- !private ["Ps7CVarArg", "beIdenticalTo"]
+- !private ["Ps7CVarArg", "cleanerMock"]
+- !private ["Ps7CVarArg", "environmentMock"]
+- !private ["Ps7CVarArg", "equal"]
+- !private ["Ps7CVarArg", "expect"]
+- !private ["Ps7CVarArg", "filterMock"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "setUp"]
+- !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps7CVarArg", "target"]
+- !private ["Ps7CVarArg", "tearDown"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Collection", "subscript"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Entry"]
+- ["Ps28CustomDebugStringConvertible", "EnvironmentMock"]
+- ["Ps28CustomDebugStringConvertible", "FilterMock"]
+- !private ["Ps28CustomDebugStringConvertible", "Target"]
+- !private ["Ps28CustomDebugStringConvertible", "TargetCleanerMock"]
+- !private ["Ps28CustomDebugStringConvertible", "TargetSignature"]
+- !private ["Ps28CustomDebugStringConvertible", "TargetType"]
+- !private ["Ps28CustomDebugStringConvertible", "URL"]
+- !private ["Ps28CustomDebugStringConvertible", "beIdenticalTo"]
+- !private ["Ps28CustomDebugStringConvertible", "cleanerMock"]
+- !private ["Ps28CustomDebugStringConvertible", "environmentMock"]
+- !private ["Ps28CustomDebugStringConvertible", "equal"]
+- !private ["Ps28CustomDebugStringConvertible", "expect"]
+- !private ["Ps28CustomDebugStringConvertible", "filterMock"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "setUp"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "target"]
+- !private ["Ps28CustomDebugStringConvertible", "tearDown"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps23CustomStringConvertible", "Entry"]
+- ["Ps23CustomStringConvertible", "EnvironmentMock"]
+- ["Ps23CustomStringConvertible", "FilterMock"]
+- !private ["Ps23CustomStringConvertible", "Target"]
+- !private ["Ps23CustomStringConvertible", "TargetCleanerMock"]
+- !private ["Ps23CustomStringConvertible", "TargetSignature"]
+- !private ["Ps23CustomStringConvertible", "TargetType"]
+- !private ["Ps23CustomStringConvertible", "URL"]
+- !private ["Ps23CustomStringConvertible", "beIdenticalTo"]
+- !private ["Ps23CustomStringConvertible", "cleanerMock"]
+- !private ["Ps23CustomStringConvertible", "environmentMock"]
+- !private ["Ps23CustomStringConvertible", "equal"]
+- !private ["Ps23CustomStringConvertible", "expect"]
+- !private ["Ps23CustomStringConvertible", "filterMock"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "setUp"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "target"]
+- !private ["Ps23CustomStringConvertible", "tearDown"]
+- !private ["Ps23CustomStringConvertible", "url"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["C11XCleanTests5Entry", "init"]
+- !private ["C11XCleanTests5Entry", "url"]
+- ["P11XCleanTests21EnvironmentInteractor", "init"]
+- !private ["C11XCleanTests15EnvironmentMock", "deinit"]
+- ["C11XCleanTests15EnvironmentMock", "init"]
+- !private ["Ps9Equatable", "Entry"]
+- ["Ps9Equatable", "EnvironmentMock"]
+- ["Ps9Equatable", "FilterMock"]
+- !private ["Ps9Equatable", "Target"]
+- !private ["Ps9Equatable", "TargetCleanerMock"]
+- !private ["Ps9Equatable", "TargetSignature"]
+- !private ["Ps9Equatable", "TargetType"]
+- !private ["Ps9Equatable", "URL"]
+- !private ["Ps9Equatable", "beIdenticalTo"]
+- !private ["Ps9Equatable", "cleanerMock"]
+- !private ["Ps9Equatable", "deviceSupport"]
+- !private ["Ps9Equatable", "environmentMock"]
+- !private ["Ps9Equatable", "equal"]
+- !private ["Ps9Equatable", "expect"]
+- !private ["Ps9Equatable", "filterMock"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "setUp"]
+- !private ["Ps9Equatable", "target"]
+- !private ["Ps9Equatable", "tearDown"]
+- ["Ps9Equatable", ""]
+- !private ["V6Nimble11Expectation", "to"]
+- !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["C11XCleanTests10FilterMock", "deinit"]
+- ["C11XCleanTests10FilterMock", "init"]
+- !private ["Ps8Hashable", "Entry"]
+- ["Ps8Hashable", "EnvironmentMock"]
+- ["Ps8Hashable", "FilterMock"]
+- !private ["Ps8Hashable", "Target"]
+- !private ["Ps8Hashable", "TargetCleanerMock"]
+- !private ["Ps8Hashable", "TargetSignature"]
+- !private ["Ps8Hashable", "TargetType"]
+- !private ["Ps8Hashable", "URL"]
+- !private ["Ps8Hashable", "beIdenticalTo"]
+- !private ["Ps8Hashable", "cleanerMock"]
+- !private ["Ps8Hashable", "deviceSupport"]
+- !private ["Ps8Hashable", "environmentMock"]
+- !private ["Ps8Hashable", "equal"]
+- !private ["Ps8Hashable", "expect"]
+- !private ["Ps8Hashable", "filterMock"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "setUp"]
+- !private ["Ps8Hashable", "target"]
+- !private ["Ps8Hashable", "tearDown"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "subscript"]
+- !private ["P6Nimble13NMBComparable", "init"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "Entry"]
+- ["CSo8NSObject", "EnvironmentMock"]
+- ["CSo8NSObject", "FilterMock"]
+- ["CSo8NSObject", "Target"]
+- ["CSo8NSObject", "TargetCleanerMock"]
+- !private ["CSo8NSObject", "TargetSignature"]
+- !private ["CSo8NSObject", "TargetType"]
+- !private ["CSo8NSObject", "URL"]
+- !private ["CSo8NSObject", "beIdenticalTo"]
+- ["CSo8NSObject", "cleanerMock"]
+- ["CSo8NSObject", "environmentMock"]
+- !private ["CSo8NSObject", "equal"]
+- !private ["CSo8NSObject", "expect"]
+- ["CSo8NSObject", "filterMock"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "setUp"]
+- ["CSo8NSObject", "target"]
+- ["CSo8NSObject", "tearDown"]
+- ["CSo8NSObject", "testTargetAsksCleanerForDescriptionIfEntriesSizeNotZero"]
+- ["CSo8NSObject", "testTargetAssignsFIlterToCleaner"]
+- ["CSo8NSObject", "testTargetCallsCleanOnCleaner"]
+- ["CSo8NSObject", "testTargetDoesntAskCleanerForDescriptionIfEntriesSizeIsZero"]
+- ["CSo8NSObject", "testTargetReturnCleanerEntries"]
+- ["CSo8NSObject", "testTargetReturnsCleanerSize"]
+- !private ["PSo16NSObjectProtocol", "Entry"]
+- ["PSo16NSObjectProtocol", "EnvironmentMock"]
+- ["PSo16NSObjectProtocol", "FilterMock"]
+- !private ["PSo16NSObjectProtocol", "Target"]
+- !private ["PSo16NSObjectProtocol", "TargetCleanerMock"]
+- !private ["PSo16NSObjectProtocol", "TargetSignature"]
+- !private ["PSo16NSObjectProtocol", "TargetType"]
+- !private ["PSo16NSObjectProtocol", "URL"]
+- !private ["PSo16NSObjectProtocol", "beIdenticalTo"]
+- !private ["PSo16NSObjectProtocol", "cleanerMock"]
+- !private ["PSo16NSObjectProtocol", "environmentMock"]
+- !private ["PSo16NSObjectProtocol", "equal"]
+- !private ["PSo16NSObjectProtocol", "expect"]
+- !private ["PSo16NSObjectProtocol", "filterMock"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "setUp"]
+- !private ["PSo16NSObjectProtocol", "target"]
+- !private ["PSo16NSObjectProtocol", "tearDown"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo19NSPasteboardReading", "init"]
+- !private ["PSo19NSPasteboardWriting", "init"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["Ps22RandomAccessCollection", "subscript"]
+- !private ["Ps26RangeReplaceableCollection", "subscript"]
+- !private ["P10Foundation20ReferenceConvertible", "init"]
+- !private ["Ps8Sequence", "subscript"]
+- !private ["SS", "init"]
+- !private ["C11XCleanTests6Target", "clean"]
+- !private ["C11XCleanTests6Target", "entries"]
+- !private ["C11XCleanTests6Target", "filter"]
+- !private ["C11XCleanTests6Target", "init"]
+- !private ["C11XCleanTests6Target", "metadataDescription"]
+- !private ["C11XCleanTests6Target", "safeSize"]
+- !private ["P11XCleanTests13TargetCleaner", "cleanCalled"]
+- !private ["P11XCleanTests13TargetCleaner", "entriesDescriptionCalled"]
+- !private ["P11XCleanTests13TargetCleaner", "entriesSize"]
+- !private ["P11XCleanTests13TargetCleaner", "entriesSizeValue"]
+- !private ["P11XCleanTests13TargetCleaner", "entriesValue"]
+- !private ["P11XCleanTests13TargetCleaner", "filter"]
+- !private ["P11XCleanTests13TargetCleaner", "init"]
+- !private ["C11XCleanTests17TargetCleanerMock", "cleanCalled"]
+- !private ["C11XCleanTests17TargetCleanerMock", "deinit"]
+- !private ["C11XCleanTests17TargetCleanerMock", "entriesDescriptionCalled"]
+- !private ["C11XCleanTests17TargetCleanerMock", "entriesSize"]
+- !private ["C11XCleanTests17TargetCleanerMock", "entriesSizeValue"]
+- !private ["C11XCleanTests17TargetCleanerMock", "entriesValue"]
+- !private ["C11XCleanTests17TargetCleanerMock", "filter"]
+- !private ["C11XCleanTests17TargetCleanerMock", "init"]
+- ["P11XCleanTests12TargetFilter", "init"]
+- !private ["V11XCleanTests15TargetSignature", "init"]
+- !private ["C11XCleanTests11TargetTests", "Entry"]
+- ["C11XCleanTests11TargetTests", "EnvironmentMock"]
+- ["C11XCleanTests11TargetTests", "FilterMock"]
+- ["C11XCleanTests11TargetTests", "Target"]
+- ["C11XCleanTests11TargetTests", "TargetCleanerMock"]
+- !private ["C11XCleanTests11TargetTests", "TargetSignature"]
+- !private ["C11XCleanTests11TargetTests", "TargetType"]
+- !private ["C11XCleanTests11TargetTests", "URL"]
+- !private ["C11XCleanTests11TargetTests", "beIdenticalTo"]
+- ["C11XCleanTests11TargetTests", "cleanerMock"]
+- ["C11XCleanTests11TargetTests", "deinit"]
+- ["C11XCleanTests11TargetTests", "environmentMock"]
+- !private ["C11XCleanTests11TargetTests", "equal"]
+- !private ["C11XCleanTests11TargetTests", "expect"]
+- ["C11XCleanTests11TargetTests", "filterMock"]
+- ["C11XCleanTests11TargetTests", "init"]
+- ["C11XCleanTests11TargetTests", "setUp"]
+- ["C11XCleanTests11TargetTests", "target"]
+- ["C11XCleanTests11TargetTests", "tearDown"]
+- ["C11XCleanTests11TargetTests", "testTargetAsksCleanerForDescriptionIfEntriesSizeNotZero"]
+- ["C11XCleanTests11TargetTests", "testTargetAssignsFIlterToCleaner"]
+- ["C11XCleanTests11TargetTests", "testTargetCallsCleanOnCleaner"]
+- ["C11XCleanTests11TargetTests", "testTargetDoesntAskCleanerForDescriptionIfEntriesSizeIsZero"]
+- ["C11XCleanTests11TargetTests", "testTargetReturnCleanerEntries"]
+- ["C11XCleanTests11TargetTests", "testTargetReturnsCleanerSize"]
+- !private ["O11XCleanTests10TargetType", "deviceSupport"]
+- !private ["P6Nimble27TestOutputStringConvertible", "init"]
+- !private ["P6Nimble27TestOutputStringConvertible", "subscript"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["V10Foundation3URL", "init"]
+- !private ["PSo17XCTWaiterDelegate", "Entry"]
+- ["PSo17XCTWaiterDelegate", "EnvironmentMock"]
+- ["PSo17XCTWaiterDelegate", "FilterMock"]
+- !private ["PSo17XCTWaiterDelegate", "Target"]
+- !private ["PSo17XCTWaiterDelegate", "TargetCleanerMock"]
+- !private ["PSo17XCTWaiterDelegate", "TargetSignature"]
+- !private ["PSo17XCTWaiterDelegate", "TargetType"]
+- !private ["PSo17XCTWaiterDelegate", "URL"]
+- !private ["PSo17XCTWaiterDelegate", "beIdenticalTo"]
+- !private ["PSo17XCTWaiterDelegate", "cleanerMock"]
+- !private ["PSo17XCTWaiterDelegate", "environmentMock"]
+- !private ["PSo17XCTWaiterDelegate", "equal"]
+- !private ["PSo17XCTWaiterDelegate", "expect"]
+- !private ["PSo17XCTWaiterDelegate", "filterMock"]
+- !private ["PSo17XCTWaiterDelegate", "init"]
+- !private ["PSo17XCTWaiterDelegate", "setUp"]
+- !private ["PSo17XCTWaiterDelegate", "target"]
+- !private ["PSo17XCTWaiterDelegate", "tearDown"]
+- ["PSo17XCTWaiterDelegate", ""]
+- !private ["CSo6XCTest", "Entry"]
+- ["CSo6XCTest", "EnvironmentMock"]
+- ["CSo6XCTest", "FilterMock"]
+- ["CSo6XCTest", "Target"]
+- ["CSo6XCTest", "TargetCleanerMock"]
+- !private ["CSo6XCTest", "TargetSignature"]
+- !private ["CSo6XCTest", "TargetType"]
+- !private ["CSo6XCTest", "URL"]
+- !private ["CSo6XCTest", "beIdenticalTo"]
+- ["CSo6XCTest", "cleanerMock"]
+- ["CSo6XCTest", "environmentMock"]
+- !private ["CSo6XCTest", "equal"]
+- !private ["CSo6XCTest", "expect"]
+- ["CSo6XCTest", "filterMock"]
+- ["CSo6XCTest", "init"]
+- ["CSo6XCTest", "setUp"]
+- ["CSo6XCTest", "target"]
+- ["CSo6XCTest", "tearDown"]
+- ["CSo6XCTest", "testTargetAsksCleanerForDescriptionIfEntriesSizeNotZero"]
+- ["CSo6XCTest", "testTargetAssignsFIlterToCleaner"]
+- ["CSo6XCTest", "testTargetCallsCleanOnCleaner"]
+- ["CSo6XCTest", "testTargetDoesntAskCleanerForDescriptionIfEntriesSizeIsZero"]
+- ["CSo6XCTest", "testTargetReturnCleanerEntries"]
+- ["CSo6XCTest", "testTargetReturnsCleanerSize"]
+- !private ["CSo10XCTestCase", "Entry"]
+- ["CSo10XCTestCase", "EnvironmentMock"]
+- ["CSo10XCTestCase", "FilterMock"]
+- ["CSo10XCTestCase", "Target"]
+- ["CSo10XCTestCase", "TargetCleanerMock"]
+- !private ["CSo10XCTestCase", "TargetSignature"]
+- !private ["CSo10XCTestCase", "TargetType"]
+- !private ["CSo10XCTestCase", "URL"]
+- !private ["CSo10XCTestCase", "beIdenticalTo"]
+- ["CSo10XCTestCase", "cleanerMock"]
+- ["CSo10XCTestCase", "environmentMock"]
+- !private ["CSo10XCTestCase", "equal"]
+- !private ["CSo10XCTestCase", "expect"]
+- ["CSo10XCTestCase", "filterMock"]
+- ["CSo10XCTestCase", "init"]
+- ["CSo10XCTestCase", "setUp"]
+- ["CSo10XCTestCase", "target"]
+- ["CSo10XCTestCase", "tearDown"]
+- ["CSo10XCTestCase", "testTargetAsksCleanerForDescriptionIfEntriesSizeNotZero"]
+- ["CSo10XCTestCase", "testTargetAssignsFIlterToCleaner"]
+- ["CSo10XCTestCase", "testTargetCallsCleanOnCleaner"]
+- ["CSo10XCTestCase", "testTargetDoesntAskCleanerForDescriptionIfEntriesSizeIsZero"]
+- ["CSo10XCTestCase", "testTargetReturnCleanerEntries"]
+- ["CSo10XCTestCase", "testTargetReturnsCleanerSize"]
+- ["CSo10XCTestCase", ""]
+- !private ["Ps14_ArrayProtocol", "subscript"]
+- !private ["Ps23_BidirectionalIndexable", "subscript"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "Entry"]
+- ["Ps9_Hashable", "EnvironmentMock"]
+- ["Ps9_Hashable", "FilterMock"]
+- !private ["Ps9_Hashable", "Target"]
+- !private ["Ps9_Hashable", "TargetCleanerMock"]
+- !private ["Ps9_Hashable", "TargetSignature"]
+- !private ["Ps9_Hashable", "TargetType"]
+- !private ["Ps9_Hashable", "URL"]
+- !private ["Ps9_Hashable", "beIdenticalTo"]
+- !private ["Ps9_Hashable", "cleanerMock"]
+- !private ["Ps9_Hashable", "deviceSupport"]
+- !private ["Ps9_Hashable", "environmentMock"]
+- !private ["Ps9_Hashable", "equal"]
+- !private ["Ps9_Hashable", "expect"]
+- !private ["Ps9_Hashable", "filterMock"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "setUp"]
+- !private ["Ps9_Hashable", "target"]
+- !private ["Ps9_Hashable", "tearDown"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps10_Indexable", "subscript"]
+- !private ["Ps14_IndexableBase", "subscript"]
+- !private ["Ps17_MutableIndexable", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps22_RandomAccessIndexable", "subscript"]
+- !private ["Ps26_RangeReplaceableIndexable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23BidirectionalCollection"
+- "Ps7CVarArg"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- !private "C11XCleanTests5Entry"
+- "P11XCleanTests21EnvironmentInteractor"
+- "C11XCleanTests15EnvironmentMock"
+- "Ps9Equatable"
+- !private "V6Nimble11Expectation"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "C11XCleanTests10FilterMock"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- !private "P6Nimble13NMBComparable"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo19NSPasteboardReading"
+- !private "PSo19NSPasteboardWriting"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps26RangeReplaceableCollection"
+- !private "P10Foundation20ReferenceConvertible"
+- !private "Ps8Sequence"
+- !private "SS"
+- !private "C11XCleanTests6Target"
+- !private "P11XCleanTests13TargetCleaner"
+- !private "C11XCleanTests17TargetCleanerMock"
+- "P11XCleanTests12TargetFilter"
+- !private "V11XCleanTests15TargetSignature"
+- "C11XCleanTests11TargetTests"
+- !private "O11XCleanTests10TargetType"
+- !private "P6Nimble27TestOutputStringConvertible"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "V10Foundation3URL"
+- "PSo17XCTWaiterDelegate"
+- "CSo6XCTest"
+- "CSo10XCTestCase"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps23_BidirectionalIndexable"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps34_ExpressibleByFileReferenceLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
+- !private "Ps17_MutableIndexable"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessIndexable"
+- !private "Ps26_RangeReplaceableIndexable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Modules/Nimble.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.swiftmodule"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Headers/DSL.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Headers/Nimble-umbrella.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUISiriService.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Headers/Nimble.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Headers/NMBExceptionCapture.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTKVOExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSPredicateExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSNotificationExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTDarwinNotificationExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservation.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Headers/CwlCatchBadInstruction.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Headers/CwlCatchException.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTWaiter.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservationCenter.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Headers/mach_excServer.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Headers/Nimble-Swift.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Headers/NMBStringify.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+interface-hash: "629901b6497211daf6fd6118871d02d8"

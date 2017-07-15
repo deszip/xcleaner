@@ -1,0 +1,297 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AsyncDefaults"
+- "AsyncMatcherWrapper"
+provides-nominal:
+- "V6Nimble13AsyncDefaults"
+- "V6Nimble19AsyncMatcherWrapper"
+provides-member:
+- ["V6Nimble13AsyncDefaults", ""]
+- ["V6Nimble19AsyncMatcherWrapper", ""]
+- ["V6Nimble11Expectation", ""]
+- ["V6Nimble11Expectation", "toEventually"]
+- ["V6Nimble11Expectation", "toEventuallyNot"]
+- ["V6Nimble11Expectation", "toNotEventually"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "+="
+- "AssignmentPrecedence"
+- "AsyncDefaults"
+- "AsyncMatcherWrapper"
+- "Bool"
+- !private "BooleanLiteralType"
+- "Expectation"
+- "Expression"
+- "FailureMessage"
+- "Matcher"
+- "String"
+- "StringLiteralType"
+- "TimeInterval"
+- !private "UnicodeScalarType"
+- !private "expressionDoesNotMatch"
+- !private "expressionMatches"
+- !private "internalError"
+- !private "pollBlock"
+- !private "toEventuallyRequiresClosureError"
+depends-member:
+- !private ["Ps9AnyObject", "actualValue"]
+- !private ["Ps9AnyObject", "file"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "line"]
+- !private ["Ps9AnyObject", "postfixMessage"]
+- ["V6Nimble13AsyncDefaults", "PollInterval"]
+- ["V6Nimble13AsyncDefaults", "TimeInterval"]
+- ["V6Nimble13AsyncDefaults", "Timeout"]
+- ["V6Nimble13AsyncDefaults", "init"]
+- !private ["V6Nimble19AsyncMatcherWrapper", "AsyncDefaults"]
+- ["V6Nimble19AsyncMatcherWrapper", "Bool"]
+- ["V6Nimble19AsyncMatcherWrapper", "Expression"]
+- ["V6Nimble19AsyncMatcherWrapper", "FailureMessage"]
+- ["V6Nimble19AsyncMatcherWrapper", "T"]
+- ["V6Nimble19AsyncMatcherWrapper", "TimeInterval"]
+- ["V6Nimble19AsyncMatcherWrapper", "U"]
+- ["V6Nimble19AsyncMatcherWrapper", "ValueType"]
+- ["V6Nimble19AsyncMatcherWrapper", "deinit"]
+- ["V6Nimble19AsyncMatcherWrapper", "doesNotMatch"]
+- ["V6Nimble19AsyncMatcherWrapper", "fullMatcher"]
+- ["V6Nimble19AsyncMatcherWrapper", "init"]
+- !private ["V6Nimble19AsyncMatcherWrapper", "internalError"]
+- ["V6Nimble19AsyncMatcherWrapper", "matches"]
+- !private ["V6Nimble19AsyncMatcherWrapper", "pollBlock"]
+- ["V6Nimble19AsyncMatcherWrapper", "pollInterval"]
+- ["V6Nimble19AsyncMatcherWrapper", "timeoutInterval"]
+- ["O6Nimble11AwaitResult", "blockedRunLoop"]
+- ["O6Nimble11AwaitResult", "completed"]
+- ["O6Nimble11AwaitResult", "errorThrown"]
+- ["O6Nimble11AwaitResult", "incomplete"]
+- ["O6Nimble11AwaitResult", "raisedException"]
+- ["O6Nimble11AwaitResult", "timedOut"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps7CVarArg", "actualValue"]
+- !private ["Ps7CVarArg", "file"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "line"]
+- !private ["Ps7CVarArg", "postfixMessage"]
+- ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "actualValue"]
+- !private ["Ps28CustomDebugStringConvertible", "file"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "line"]
+- !private ["Ps28CustomDebugStringConvertible", "postfixMessage"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "actualValue"]
+- !private ["Ps23CustomStringConvertible", "file"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "line"]
+- !private ["Ps23CustomStringConvertible", "postfixMessage"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "actualValue"]
+- !private ["Ps9Equatable", "file"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "line"]
+- !private ["Ps9Equatable", "postfixMessage"]
+- !private ["V6Nimble11Expectation", "AsyncDefaults"]
+- !private ["V6Nimble11Expectation", "AsyncMatcherWrapper"]
+- ["V6Nimble11Expectation", "Matcher"]
+- ["V6Nimble11Expectation", "String"]
+- ["V6Nimble11Expectation", "T"]
+- ["V6Nimble11Expectation", "TimeInterval"]
+- !private ["V6Nimble11Expectation", "expression"]
+- !private ["V6Nimble11Expectation", "expressionDoesNotMatch"]
+- !private ["V6Nimble11Expectation", "expressionMatches"]
+- ["V6Nimble11Expectation", "toEventually"]
+- ["V6Nimble11Expectation", "toEventuallyNot"]
+- !private ["V6Nimble11Expectation", "toEventuallyRequiresClosureError"]
+- ["V6Nimble11Expectation", "toNotEventually"]
+- !private ["V6Nimble11Expectation", "verify"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["V6Nimble10Expression", "isClosure"]
+- !private ["V6Nimble10Expression", "location"]
+- !private ["V6Nimble10Expression", "withoutCaching"]
+- !private ["C6Nimble14FailureMessage", "actualValue"]
+- ["C6Nimble14FailureMessage", "init"]
+- !private ["C6Nimble14FailureMessage", "postfixMessage"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "actualValue"]
+- !private ["Ps8Hashable", "file"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "line"]
+- !private ["Ps8Hashable", "postfixMessage"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps25LosslessStringConvertible", "init"]
+- !private ["P6Nimble7Matcher", "AsyncDefaults"]
+- ["P6Nimble7Matcher", "doesNotMatch"]
+- !private ["P6Nimble7Matcher", "fullMatcher"]
+- !private ["P6Nimble7Matcher", "init"]
+- !private ["P6Nimble7Matcher", "internalError"]
+- ["P6Nimble7Matcher", "matches"]
+- !private ["P6Nimble7Matcher", "pollBlock"]
+- !private ["P6Nimble7Matcher", "pollInterval"]
+- !private ["P6Nimble7Matcher", "timeoutInterval"]
+- ["P6Nimble7Matcher", ""]
+- ["Ps10MirrorPath", "init"]
+- ["P6Nimble13NMBComparable", "init"]
+- ["PSo8NSCoding", "init"]
+- ["PSo9NSCopying", "init"]
+- ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "actualValue"]
+- !private ["CSo8NSObject", "file"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "line"]
+- !private ["CSo8NSObject", "postfixMessage"]
+- !private ["PSo16NSObjectProtocol", "actualValue"]
+- !private ["PSo16NSObjectProtocol", "file"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "line"]
+- !private ["PSo16NSObjectProtocol", "postfixMessage"]
+- ["PSo19NSPasteboardReading", "init"]
+- ["PSo19NSPasteboardWriting", "init"]
+- ["PSo14NSSecureCoding", "init"]
+- ["CSo8NSString", "init"]
+- !private ["C6Nimble14SourceLocation", "file"]
+- !private ["C6Nimble14SourceLocation", "line"]
+- ["SS", "init"]
+- ["P6Nimble27TestOutputStringConvertible", "init"]
+- ["Ps16TextOutputStream", "init"]
+- ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps33_ExpressibleByStringInterpolation", "init"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "actualValue"]
+- !private ["Ps9_Hashable", "file"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "line"]
+- !private ["Ps9_Hashable", "postfixMessage"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- "V6Nimble13AsyncDefaults"
+- "V6Nimble19AsyncMatcherWrapper"
+- "O6Nimble11AwaitResult"
+- !private "Sb"
+- "Ps7CVarArg"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "V6Nimble11Expectation"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "V6Nimble10Expression"
+- "C6Nimble14FailureMessage"
+- "Ps8Hashable"
+- "Ps25LosslessStringConvertible"
+- "P6Nimble7Matcher"
+- "Ps10MirrorPath"
+- "P6Nimble13NMBComparable"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo19NSPasteboardReading"
+- "PSo19NSPasteboardWriting"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
+- !private "C6Nimble14SourceLocation"
+- "SS"
+- "P6Nimble27TestOutputStringConvertible"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.swiftmodule"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUISiriService.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTKVOExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSPredicateExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSNotificationExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTDarwinNotificationExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservation.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/CwlCatchBadInstruction.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlCatchException/CwlCatchException/CwlCatchException.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTWaiter.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservationCenter.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/mach_excServer.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Intermediates/Pods.build/Debug/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+interface-hash: "c2db3e8c11c12772ff222663a09d291a"

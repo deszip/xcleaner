@@ -1,0 +1,687 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Matcher"
+- "NMBMatcher"
+- "NMBContainer"
+- "NMBCollection"
+- "NMBOrderedCollection"
+- "NMBDoubleConvertible"
+- "NMBComparable"
+provides-nominal:
+- "P6Nimble7Matcher"
+- "P6Nimble10NMBMatcher"
+- "P6Nimble12NMBContainer"
+- "CSo7NSArray"
+- "CSo5NSSet"
+- "P6Nimble13NMBCollection"
+- "CSo11NSHashTable"
+- "CSo10NSMapTable"
+- "CSo10NSIndexSet"
+- "CSo12NSDictionary"
+- "P6Nimble20NMBOrderedCollection"
+- "P6Nimble20NMBDoubleConvertible"
+- "Sd"
+- "Sf"
+- "V12CoreGraphics7CGFloat"
+- "CSo8NSNumber"
+- "V10Foundation4Date"
+- "CSo6NSDate"
+- "P6Nimble13NMBComparable"
+- "CSo8NSString"
+provides-member:
+- ["P6Nimble7Matcher", ""]
+- ["P6Nimble10NMBMatcher", ""]
+- ["P6Nimble12NMBContainer", ""]
+- ["CSo7NSArray", ""]
+- ["CSo5NSSet", ""]
+- ["P6Nimble13NMBCollection", ""]
+- ["CSo11NSHashTable", ""]
+- ["CSo10NSMapTable", ""]
+- ["CSo10NSIndexSet", ""]
+- ["CSo12NSDictionary", ""]
+- ["P6Nimble20NMBOrderedCollection", ""]
+- ["P6Nimble20NMBDoubleConvertible", ""]
+- ["Sd", ""]
+- ["Sf", ""]
+- ["V12CoreGraphics7CGFloat", ""]
+- ["CSo8NSNumber", ""]
+- ["V10Foundation4Date", ""]
+- ["CSo6NSDate", ""]
+- ["P6Nimble13NMBComparable", ""]
+- ["CSo8NSString", ""]
+provides-dynamic-lookup:
+- "NMB_compare"
+- "contains"
+- "count"
+- "doesNotMatch"
+- "doubleValue"
+- "matches"
+- "object"
+- "testDescription"
+depends-top-level:
+- "AssignmentPrecedence"
+- "Bool"
+- "CDouble"
+- "CGFloat"
+- "CastingPrecedence"
+- "ComparisonResult"
+- "Date"
+- "DateFormatter"
+- "Double"
+- "Expression"
+- "FailureMessage"
+- "Float"
+- "Int"
+- "Locale"
+- "Matcher"
+- "NMBCollection"
+- "NMBComparable"
+- "NMBContainer"
+- "NMBDoubleConvertible"
+- "NMBMatcher"
+- "NMBOrderedCollection"
+- "NSArray"
+- "NSDate"
+- "NSDictionary"
+- "NSHashTable"
+- "NSIndexSet"
+- "NSMapTable"
+- "NSNumber"
+- "NSObject"
+- "NSSet"
+- "NSString"
+- "SourceLocation"
+- "String"
+- "StringLiteralType"
+- "TestOutputStringConvertible"
+- !private "dateFormatter"
+depends-member:
+- !private ["Ps16AbsoluteValuable", "CDouble"]
+- ["Ps16AbsoluteValuable", "doubleValue"]
+- !private ["Ps16AbsoluteValuable", "init"]
+- !private ["Ps9AnyObject", "Date"]
+- ["Ps9AnyObject", "NMB_compare"]
+- !private ["Ps9AnyObject", "compare"]
+- ["Ps9AnyObject", "contains"]
+- ["Ps9AnyObject", "count"]
+- ["Ps9AnyObject", "dateFormat"]
+- !private ["Ps9AnyObject", "dateFormatter"]
+- ["Ps9AnyObject", "doubleValue"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "locale"]
+- ["Ps9AnyObject", "object"]
+- !private ["Ps9AnyObject", "string"]
+- ["Ps9AnyObject", "testDescription"]
+- !private ["Ps9AnyObject", "timeIntervalSinceReferenceDate"]
+- !private ["Ps19BinaryFloatingPoint", "CDouble"]
+- ["Ps19BinaryFloatingPoint", "doubleValue"]
+- !private ["Ps19BinaryFloatingPoint", "init"]
+- ["V12CoreGraphics7CGFloat", "CDouble"]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- ["V12CoreGraphics7CGFloat", "doubleValue"]
+- !private ["Ps7CVarArg", "CDouble"]
+- !private ["Ps7CVarArg", "Date"]
+- ["Ps7CVarArg", "NMB_compare"]
+- !private ["Ps7CVarArg", "compare"]
+- ["Ps7CVarArg", "contains"]
+- ["Ps7CVarArg", "count"]
+- ["Ps7CVarArg", "dateFormat"]
+- !private ["Ps7CVarArg", "dateFormatter"]
+- ["Ps7CVarArg", "doubleValue"]
+- ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "locale"]
+- ["Ps7CVarArg", "object"]
+- !private ["Ps7CVarArg", "string"]
+- ["Ps7CVarArg", "testDescription"]
+- !private ["Ps7CVarArg", "timeIntervalSinceReferenceDate"]
+- !private ["Ps10Comparable", "CDouble"]
+- !private ["Ps10Comparable", "dateFormatter"]
+- ["Ps10Comparable", "doubleValue"]
+- ["Ps10Comparable", "init"]
+- ["Ps10Comparable", "testDescription"]
+- !private ["Ps10Comparable", "timeIntervalSinceReferenceDate"]
+- !private ["Ps28CustomDebugStringConvertible", "CDouble"]
+- !private ["Ps28CustomDebugStringConvertible", "Date"]
+- ["Ps28CustomDebugStringConvertible", "NMB_compare"]
+- !private ["Ps28CustomDebugStringConvertible", "compare"]
+- ["Ps28CustomDebugStringConvertible", "contains"]
+- ["Ps28CustomDebugStringConvertible", "count"]
+- ["Ps28CustomDebugStringConvertible", "dateFormat"]
+- !private ["Ps28CustomDebugStringConvertible", "dateFormatter"]
+- ["Ps28CustomDebugStringConvertible", "doubleValue"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "locale"]
+- ["Ps28CustomDebugStringConvertible", "object"]
+- !private ["Ps28CustomDebugStringConvertible", "string"]
+- ["Ps28CustomDebugStringConvertible", "testDescription"]
+- !private ["Ps28CustomDebugStringConvertible", "timeIntervalSinceReferenceDate"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "CDouble"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "Date"]
+- ["Ps29CustomPlaygroundQuickLookable", "NMB_compare"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "compare"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "dateFormatter"]
+- ["Ps29CustomPlaygroundQuickLookable", "doubleValue"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- ["Ps29CustomPlaygroundQuickLookable", "testDescription"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "timeIntervalSinceReferenceDate"]
+- !private ["Ps17CustomReflectable", "CDouble"]
+- ["Ps17CustomReflectable", "contains"]
+- ["Ps17CustomReflectable", "count"]
+- !private ["Ps17CustomReflectable", "dateFormatter"]
+- ["Ps17CustomReflectable", "doubleValue"]
+- ["Ps17CustomReflectable", "init"]
+- ["Ps17CustomReflectable", "object"]
+- ["Ps17CustomReflectable", "testDescription"]
+- !private ["Ps17CustomReflectable", "timeIntervalSinceReferenceDate"]
+- !private ["Ps23CustomStringConvertible", "CDouble"]
+- !private ["Ps23CustomStringConvertible", "Date"]
+- ["Ps23CustomStringConvertible", "NMB_compare"]
+- !private ["Ps23CustomStringConvertible", "compare"]
+- ["Ps23CustomStringConvertible", "contains"]
+- ["Ps23CustomStringConvertible", "count"]
+- ["Ps23CustomStringConvertible", "dateFormat"]
+- !private ["Ps23CustomStringConvertible", "dateFormatter"]
+- ["Ps23CustomStringConvertible", "doubleValue"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "locale"]
+- ["Ps23CustomStringConvertible", "object"]
+- !private ["Ps23CustomStringConvertible", "string"]
+- ["Ps23CustomStringConvertible", "testDescription"]
+- !private ["Ps23CustomStringConvertible", "timeIntervalSinceReferenceDate"]
+- ["V10Foundation4Date", "CDouble"]
+- ["V10Foundation4Date", "String"]
+- !private ["V10Foundation4Date", "dateFormatter"]
+- ["V10Foundation4Date", "deinit"]
+- ["V10Foundation4Date", "doubleValue"]
+- !private ["V10Foundation4Date", "init"]
+- ["V10Foundation4Date", "testDescription"]
+- !private ["V10Foundation4Date", "timeIntervalSinceReferenceDate"]
+- ["CSo13DateFormatter", "dateFormat"]
+- ["CSo13DateFormatter", "init"]
+- ["CSo13DateFormatter", "locale"]
+- !private ["CSo13DateFormatter", "string"]
+- ["Sd", "CDouble"]
+- ["Sd", "deinit"]
+- ["Sd", "doubleValue"]
+- !private ["Sd", "init"]
+- !private ["Ps9Equatable", "CDouble"]
+- !private ["Ps9Equatable", "Date"]
+- ["Ps9Equatable", "NMB_compare"]
+- !private ["Ps9Equatable", "compare"]
+- ["Ps9Equatable", "contains"]
+- ["Ps9Equatable", "count"]
+- ["Ps9Equatable", "dateFormat"]
+- !private ["Ps9Equatable", "dateFormatter"]
+- ["Ps9Equatable", "doubleValue"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "locale"]
+- ["Ps9Equatable", "object"]
+- !private ["Ps9Equatable", "string"]
+- ["Ps9Equatable", "testDescription"]
+- !private ["Ps9Equatable", "timeIntervalSinceReferenceDate"]
+- ["Ps25ExpressibleByArrayLiteral", "contains"]
+- ["Ps25ExpressibleByArrayLiteral", "count"]
+- ["Ps25ExpressibleByArrayLiteral", "object"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "CDouble"]
+- ["Ps27ExpressibleByBooleanLiteral", "NMB_compare"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "compare"]
+- ["Ps27ExpressibleByBooleanLiteral", "doubleValue"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "init"]
+- ["Ps30ExpressibleByDictionaryLiteral", "count"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "NMB_compare"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "compare"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps25ExpressibleByFloatLiteral", "CDouble"]
+- ["Ps25ExpressibleByFloatLiteral", "NMB_compare"]
+- !private ["Ps25ExpressibleByFloatLiteral", "compare"]
+- ["Ps25ExpressibleByFloatLiteral", "doubleValue"]
+- !private ["Ps25ExpressibleByFloatLiteral", "init"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "CDouble"]
+- ["Ps27ExpressibleByIntegerLiteral", "NMB_compare"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "compare"]
+- ["Ps27ExpressibleByIntegerLiteral", "doubleValue"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "init"]
+- ["Ps26ExpressibleByStringLiteral", "NMB_compare"]
+- !private ["Ps26ExpressibleByStringLiteral", "compare"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "NMB_compare"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "compare"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["Sf", "CDouble"]
+- ["Sf", "deinit"]
+- ["Sf", "doubleValue"]
+- !private ["Ps13FloatingPoint", "CDouble"]
+- ["Ps13FloatingPoint", "doubleValue"]
+- !private ["Ps13FloatingPoint", "init"]
+- ["CSo9Formatter", "dateFormat"]
+- ["CSo9Formatter", "init"]
+- ["CSo9Formatter", "locale"]
+- !private ["CSo9Formatter", "string"]
+- !private ["Ps8Hashable", "CDouble"]
+- !private ["Ps8Hashable", "Date"]
+- ["Ps8Hashable", "NMB_compare"]
+- !private ["Ps8Hashable", "compare"]
+- ["Ps8Hashable", "contains"]
+- ["Ps8Hashable", "count"]
+- ["Ps8Hashable", "dateFormat"]
+- !private ["Ps8Hashable", "dateFormatter"]
+- ["Ps8Hashable", "doubleValue"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "locale"]
+- ["Ps8Hashable", "object"]
+- !private ["Ps8Hashable", "string"]
+- ["Ps8Hashable", "testDescription"]
+- !private ["Ps8Hashable", "timeIntervalSinceReferenceDate"]
+- ["V10Foundation6Locale", "init"]
+- !private ["Ps25LosslessStringConvertible", "CDouble"]
+- ["Ps25LosslessStringConvertible", "doubleValue"]
+- ["Ps25LosslessStringConvertible", "init"]
+- ["P6Nimble7Matcher", "Bool"]
+- ["P6Nimble7Matcher", "Expression"]
+- ["P6Nimble7Matcher", "FailureMessage"]
+- ["P6Nimble7Matcher", "ValueType"]
+- ["P6Nimble7Matcher", "doesNotMatch"]
+- ["P6Nimble7Matcher", "matches"]
+- ["Ps10MirrorPath", "init"]
+- ["P6Nimble13NMBCollection", "Int"]
+- ["P6Nimble13NMBCollection", "contains"]
+- ["P6Nimble13NMBCollection", "count"]
+- ["P6Nimble13NMBCollection", "object"]
+- ["P6Nimble13NMBCollection", ""]
+- ["P6Nimble13NMBComparable", "ComparisonResult"]
+- ["P6Nimble13NMBComparable", "NMBComparable"]
+- ["P6Nimble13NMBComparable", "NMB_compare"]
+- !private ["P6Nimble13NMBComparable", "compare"]
+- ["P6Nimble13NMBComparable", "doubleValue"]
+- ["P6Nimble13NMBComparable", "init"]
+- ["P6Nimble13NMBComparable", ""]
+- ["P6Nimble12NMBContainer", "Bool"]
+- ["P6Nimble12NMBContainer", "contains"]
+- ["P6Nimble12NMBContainer", "count"]
+- ["P6Nimble12NMBContainer", "object"]
+- ["P6Nimble12NMBContainer", ""]
+- ["P6Nimble20NMBDoubleConvertible", "CDouble"]
+- !private ["P6Nimble20NMBDoubleConvertible", "Date"]
+- ["P6Nimble20NMBDoubleConvertible", "NMB_compare"]
+- !private ["P6Nimble20NMBDoubleConvertible", "compare"]
+- !private ["P6Nimble20NMBDoubleConvertible", "dateFormatter"]
+- ["P6Nimble20NMBDoubleConvertible", "doubleValue"]
+- !private ["P6Nimble20NMBDoubleConvertible", "init"]
+- ["P6Nimble20NMBDoubleConvertible", "testDescription"]
+- !private ["P6Nimble20NMBDoubleConvertible", "timeIntervalSinceReferenceDate"]
+- ["P6Nimble20NMBDoubleConvertible", ""]
+- ["P6Nimble10NMBMatcher", "Bool"]
+- ["P6Nimble10NMBMatcher", "FailureMessage"]
+- ["P6Nimble10NMBMatcher", "NSObject"]
+- ["P6Nimble10NMBMatcher", "SourceLocation"]
+- ["P6Nimble10NMBMatcher", "doesNotMatch"]
+- ["P6Nimble10NMBMatcher", "matches"]
+- ["P6Nimble20NMBOrderedCollection", "Int"]
+- ["P6Nimble20NMBOrderedCollection", "contains"]
+- ["P6Nimble20NMBOrderedCollection", "count"]
+- ["P6Nimble20NMBOrderedCollection", "object"]
+- ["P6Nimble20NMBOrderedCollection", ""]
+- ["CSo7NSArray", "contains"]
+- ["CSo7NSArray", "count"]
+- ["CSo7NSArray", "deinit"]
+- ["CSo7NSArray", "object"]
+- !private ["PSo8NSCoding", "Date"]
+- ["PSo8NSCoding", "NMB_compare"]
+- !private ["PSo8NSCoding", "compare"]
+- ["PSo8NSCoding", "contains"]
+- ["PSo8NSCoding", "count"]
+- ["PSo8NSCoding", "dateFormat"]
+- !private ["PSo8NSCoding", "dateFormatter"]
+- ["PSo8NSCoding", "doubleValue"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "locale"]
+- ["PSo8NSCoding", "object"]
+- !private ["PSo8NSCoding", "string"]
+- ["PSo8NSCoding", "testDescription"]
+- !private ["PSo8NSCoding", "timeIntervalSinceReferenceDate"]
+- !private ["PSo9NSCopying", "Date"]
+- ["PSo9NSCopying", "NMB_compare"]
+- !private ["PSo9NSCopying", "compare"]
+- ["PSo9NSCopying", "contains"]
+- ["PSo9NSCopying", "count"]
+- ["PSo9NSCopying", "dateFormat"]
+- !private ["PSo9NSCopying", "dateFormatter"]
+- ["PSo9NSCopying", "doubleValue"]
+- ["PSo9NSCopying", "init"]
+- ["PSo9NSCopying", "locale"]
+- ["PSo9NSCopying", "object"]
+- !private ["PSo9NSCopying", "string"]
+- ["PSo9NSCopying", "testDescription"]
+- !private ["PSo9NSCopying", "timeIntervalSinceReferenceDate"]
+- ["CSo6NSDate", "CDouble"]
+- !private ["CSo6NSDate", "Date"]
+- ["CSo6NSDate", "String"]
+- !private ["CSo6NSDate", "dateFormatter"]
+- ["CSo6NSDate", "deinit"]
+- ["CSo6NSDate", "doubleValue"]
+- ["CSo6NSDate", "testDescription"]
+- !private ["CSo6NSDate", "timeIntervalSinceReferenceDate"]
+- ["CSo12NSDictionary", "count"]
+- ["CSo12NSDictionary", "deinit"]
+- ["PSo17NSFastEnumeration", "contains"]
+- ["PSo17NSFastEnumeration", "count"]
+- ["PSo17NSFastEnumeration", "object"]
+- ["PSo20NSFetchRequestResult", "NMB_compare"]
+- !private ["PSo20NSFetchRequestResult", "compare"]
+- ["PSo20NSFetchRequestResult", "count"]
+- ["PSo20NSFetchRequestResult", "doubleValue"]
+- ["CSo11NSHashTable", "count"]
+- ["CSo11NSHashTable", "deinit"]
+- ["CSo10NSIndexSet", "count"]
+- ["CSo10NSIndexSet", "deinit"]
+- ["CSo10NSMapTable", "count"]
+- ["CSo10NSMapTable", "deinit"]
+- ["PSo16NSMutableCopying", "NMB_compare"]
+- !private ["PSo16NSMutableCopying", "compare"]
+- ["PSo16NSMutableCopying", "contains"]
+- ["PSo16NSMutableCopying", "count"]
+- ["PSo16NSMutableCopying", "init"]
+- ["PSo16NSMutableCopying", "object"]
+- ["CSo8NSNumber", "ComparisonResult"]
+- ["CSo8NSNumber", "NMBComparable"]
+- ["CSo8NSNumber", "NMB_compare"]
+- !private ["CSo8NSNumber", "NSNumber"]
+- !private ["CSo8NSNumber", "compare"]
+- ["CSo8NSNumber", "deinit"]
+- ["CSo8NSNumber", "doubleValue"]
+- ["CSo8NSObject", "CDouble"]
+- ["CSo8NSObject", "ComparisonResult"]
+- !private ["CSo8NSObject", "Date"]
+- ["CSo8NSObject", "NMBComparable"]
+- ["CSo8NSObject", "NMB_compare"]
+- !private ["CSo8NSObject", "NSNumber"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "compare"]
+- ["CSo8NSObject", "contains"]
+- ["CSo8NSObject", "count"]
+- ["CSo8NSObject", "dateFormat"]
+- !private ["CSo8NSObject", "dateFormatter"]
+- ["CSo8NSObject", "doubleValue"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "locale"]
+- ["CSo8NSObject", "object"]
+- !private ["CSo8NSObject", "string"]
+- ["CSo8NSObject", "testDescription"]
+- !private ["CSo8NSObject", "timeIntervalSinceReferenceDate"]
+- !private ["PSo16NSObjectProtocol", "Date"]
+- ["PSo16NSObjectProtocol", "NMB_compare"]
+- !private ["PSo16NSObjectProtocol", "compare"]
+- ["PSo16NSObjectProtocol", "contains"]
+- ["PSo16NSObjectProtocol", "count"]
+- ["PSo16NSObjectProtocol", "dateFormat"]
+- !private ["PSo16NSObjectProtocol", "dateFormatter"]
+- ["PSo16NSObjectProtocol", "doubleValue"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "locale"]
+- ["PSo16NSObjectProtocol", "object"]
+- !private ["PSo16NSObjectProtocol", "string"]
+- ["PSo16NSObjectProtocol", "testDescription"]
+- !private ["PSo16NSObjectProtocol", "timeIntervalSinceReferenceDate"]
+- ["PSo19NSPasteboardReading", "NMB_compare"]
+- !private ["PSo19NSPasteboardReading", "compare"]
+- ["PSo19NSPasteboardReading", "init"]
+- ["PSo19NSPasteboardWriting", "NMB_compare"]
+- !private ["PSo19NSPasteboardWriting", "compare"]
+- ["PSo19NSPasteboardWriting", "init"]
+- !private ["PSo14NSSecureCoding", "Date"]
+- ["PSo14NSSecureCoding", "NMB_compare"]
+- !private ["PSo14NSSecureCoding", "compare"]
+- ["PSo14NSSecureCoding", "contains"]
+- ["PSo14NSSecureCoding", "count"]
+- !private ["PSo14NSSecureCoding", "dateFormatter"]
+- ["PSo14NSSecureCoding", "doubleValue"]
+- ["PSo14NSSecureCoding", "init"]
+- ["PSo14NSSecureCoding", "object"]
+- ["PSo14NSSecureCoding", "testDescription"]
+- !private ["PSo14NSSecureCoding", "timeIntervalSinceReferenceDate"]
+- ["CSo5NSSet", "contains"]
+- ["CSo5NSSet", "count"]
+- ["CSo5NSSet", "deinit"]
+- ["CSo8NSString", "ComparisonResult"]
+- ["CSo8NSString", "NMBComparable"]
+- ["CSo8NSString", "NMB_compare"]
+- !private ["CSo8NSString", "String"]
+- !private ["CSo8NSString", "compare"]
+- ["CSo8NSString", "deinit"]
+- ["CSo8NSString", "init"]
+- ["CSo7NSValue", "ComparisonResult"]
+- ["CSo7NSValue", "NMBComparable"]
+- ["CSo7NSValue", "NMB_compare"]
+- !private ["CSo7NSValue", "NSNumber"]
+- !private ["CSo7NSValue", "compare"]
+- ["CSo7NSValue", "doubleValue"]
+- !private ["P10Foundation20ReferenceConvertible", "dateFormatter"]
+- ["P10Foundation20ReferenceConvertible", "doubleValue"]
+- ["P10Foundation20ReferenceConvertible", "init"]
+- ["P10Foundation20ReferenceConvertible", "testDescription"]
+- !private ["P10Foundation20ReferenceConvertible", "timeIntervalSinceReferenceDate"]
+- ["Ps8Sequence", "contains"]
+- ["Ps8Sequence", "count"]
+- ["Ps8Sequence", "object"]
+- !private ["Ps12SignedNumber", "CDouble"]
+- ["Ps12SignedNumber", "doubleValue"]
+- !private ["Ps12SignedNumber", "init"]
+- !private ["Ps10Strideable", "CDouble"]
+- ["Ps10Strideable", "doubleValue"]
+- !private ["Ps10Strideable", "init"]
+- ["SS", "init"]
+- !private ["P6Nimble27TestOutputStringConvertible", "CDouble"]
+- !private ["P6Nimble27TestOutputStringConvertible", "Date"]
+- ["P6Nimble27TestOutputStringConvertible", "NMB_compare"]
+- !private ["P6Nimble27TestOutputStringConvertible", "compare"]
+- ["P6Nimble27TestOutputStringConvertible", "contains"]
+- ["P6Nimble27TestOutputStringConvertible", "count"]
+- !private ["P6Nimble27TestOutputStringConvertible", "dateFormatter"]
+- ["P6Nimble27TestOutputStringConvertible", "doubleValue"]
+- ["P6Nimble27TestOutputStringConvertible", "init"]
+- ["P6Nimble27TestOutputStringConvertible", "object"]
+- ["P6Nimble27TestOutputStringConvertible", "testDescription"]
+- !private ["P6Nimble27TestOutputStringConvertible", "timeIntervalSinceReferenceDate"]
+- ["P6Nimble27TestOutputStringConvertible", ""]
+- ["Ps16TextOutputStream", "init"]
+- ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps15_CVarArgAligned", "CDouble"]
+- ["Ps15_CVarArgAligned", "doubleValue"]
+- !private ["Ps15_CVarArgAligned", "init"]
+- !private ["Ps22_CVarArgPassedAsDouble", "CDouble"]
+- ["Ps22_CVarArgPassedAsDouble", "doubleValue"]
+- !private ["Ps22_CVarArgPassedAsDouble", "init"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "CDouble"]
+- ["Ps33_ExpressibleByBuiltinFloatLiteral", "doubleValue"]
+- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "CDouble"]
+- ["Ps35_ExpressibleByBuiltinIntegerLiteral", "doubleValue"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "Date"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "NMB_compare"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "compare"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "contains"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "count"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "dateFormatter"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "doubleValue"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "testDescription"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "timeIntervalSinceReferenceDate"]
+- !private ["Ps9_Hashable", "CDouble"]
+- !private ["Ps9_Hashable", "Date"]
+- ["Ps9_Hashable", "NMB_compare"]
+- !private ["Ps9_Hashable", "compare"]
+- ["Ps9_Hashable", "contains"]
+- ["Ps9_Hashable", "count"]
+- ["Ps9_Hashable", "dateFormat"]
+- !private ["Ps9_Hashable", "dateFormatter"]
+- ["Ps9_Hashable", "doubleValue"]
+- ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "locale"]
+- ["Ps9_Hashable", "object"]
+- !private ["Ps9_Hashable", "string"]
+- ["Ps9_Hashable", "testDescription"]
+- !private ["Ps9_Hashable", "timeIntervalSinceReferenceDate"]
+- !private ["Ps21_ObjectiveCBridgeable", "CDouble"]
+- !private ["Ps21_ObjectiveCBridgeable", "dateFormatter"]
+- ["Ps21_ObjectiveCBridgeable", "doubleValue"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- ["Ps21_ObjectiveCBridgeable", "testDescription"]
+- !private ["Ps21_ObjectiveCBridgeable", "timeIntervalSinceReferenceDate"]
+- !private ["Ps11_Strideable", "CDouble"]
+- ["Ps11_Strideable", "doubleValue"]
+- !private ["Ps11_Strideable", "init"]
+depends-nominal:
+- "Ps16AbsoluteValuable"
+- "Ps9AnyObject"
+- "Ps19BinaryFloatingPoint"
+- "V12CoreGraphics7CGFloat"
+- "Ps7CVarArg"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "V10Foundation4Date"
+- "CSo13DateFormatter"
+- "Sd"
+- "Ps9Equatable"
+- "Ps25ExpressibleByArrayLiteral"
+- "Ps27ExpressibleByBooleanLiteral"
+- "Ps30ExpressibleByDictionaryLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps25ExpressibleByFloatLiteral"
+- "Ps27ExpressibleByIntegerLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Sf"
+- "Ps13FloatingPoint"
+- "CSo9Formatter"
+- "Ps8Hashable"
+- "V10Foundation6Locale"
+- "Ps25LosslessStringConvertible"
+- "P6Nimble7Matcher"
+- "Ps10MirrorPath"
+- "P6Nimble13NMBCollection"
+- "P6Nimble13NMBComparable"
+- "P6Nimble12NMBContainer"
+- "P6Nimble20NMBDoubleConvertible"
+- "P6Nimble10NMBMatcher"
+- "P6Nimble20NMBOrderedCollection"
+- "CSo7NSArray"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "CSo6NSDate"
+- "CSo12NSDictionary"
+- "PSo17NSFastEnumeration"
+- "PSo20NSFetchRequestResult"
+- "CSo11NSHashTable"
+- "CSo10NSIndexSet"
+- "CSo10NSMapTable"
+- "PSo16NSMutableCopying"
+- "CSo8NSNumber"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo19NSPasteboardReading"
+- "PSo19NSPasteboardWriting"
+- "PSo14NSSecureCoding"
+- "CSo5NSSet"
+- "CSo8NSString"
+- "CSo7NSValue"
+- "P10Foundation20ReferenceConvertible"
+- "Ps8Sequence"
+- "Ps12SignedNumber"
+- "Ps10Strideable"
+- "SS"
+- "P6Nimble27TestOutputStringConvertible"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- "Ps15_CVarArgAligned"
+- "Ps22_CVarArgPassedAsDouble"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps33_ExpressibleByBuiltinFloatLiteral"
+- "Ps35_ExpressibleByBuiltinIntegerLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
+- "Ps11_Strideable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.swiftmodule"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUISiriService.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTKVOExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSPredicateExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSNotificationExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTDarwinNotificationExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservation.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/CwlCatchBadInstruction.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlCatchException/CwlCatchException/CwlCatchException.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTWaiter.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservationCenter.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/mach_excServer.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Intermediates/Pods.build/Debug/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+interface-hash: "ad81cae6e9ca96c14c93d4567ae1e7f6"

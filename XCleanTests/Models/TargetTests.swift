@@ -9,7 +9,6 @@
 import XCTest
 import Nimble
 
-
 class TargetTests: XCTestCase {
 
     var filterMock: FilterMock = FilterMock()

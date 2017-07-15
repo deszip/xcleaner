@@ -18,6 +18,13 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>Pods-XCleanTests_.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Pods-xclean.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +34,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>1321E318D10CFDC9F5B93A7952492CCD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D77EA504B90F573A8E117E6E34324CA7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EA4125E58350E2384D423F395E672ED2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

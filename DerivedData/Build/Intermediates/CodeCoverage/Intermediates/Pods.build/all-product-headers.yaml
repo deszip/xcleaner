@@ -1,0 +1,133 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "CwlCatchBadInstruction.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/CwlCatchBadInstruction.h"
+        },
+        {
+          'type': 'file',
+          'name': "CwlCatchException.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlCatchException/CwlCatchException/CwlCatchException.h"
+        },
+        {
+          'type': 'file',
+          'name': "DSL.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+        },
+        {
+          'type': 'file',
+          'name': "NMBExceptionCapture.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+        },
+        {
+          'type': 'file',
+          'name': "NMBStringify.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+        },
+        {
+          'type': 'file',
+          'name': "Nimble-Swift.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Versions/A/Headers/Nimble-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Nimble-umbrella.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Nimble.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Nimble/Nimble.h"
+        },
+        {
+          'type': 'file',
+          'name': "mach_excServer.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/mach_excServer.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Intermediates/Pods.build/Debug/Nimble.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Nimble/Nimble.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "CurrentTestCaseTracker.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/CurrentTestCaseTracker.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Pods_XCleanTests.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-XCleanTests-umbrella.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Target Support Files/Pods-XCleanTests/Pods-XCleanTests-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_XCleanTests-Swift.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Pods_XCleanTests.framework/Versions/A/Headers/Pods_XCleanTests-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Pods_XCleanTests.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Intermediates/Pods.build/Debug/Pods-XCleanTests.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Pods_xclean.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-xclean-umbrella.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Target Support Files/Pods-xclean/Pods-xclean-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_xclean-Swift.h",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Pods_xclean.framework/Versions/A/Headers/Pods_xclean-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Products/Debug/Pods_xclean.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Intermediates/Pods.build/Debug/Pods-xclean.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

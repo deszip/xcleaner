@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='XCleanTests.xctest' tests='34' failures='0'>
+  <testsuite name='XCleanTests.DefaultCleanerTests' tests='1' failures='0'>
+    <testcase classname='XCleanTests.DefaultCleanerTests' name='testCleanerRespectsTimeoutOption' time='0.163'/>
+  </testsuite>
+  <testsuite name='XCleanTests.EnvironmentTests' tests='6' failures='0'>
+    <testcase classname='XCleanTests.EnvironmentTests' name='testEnvironmentAppNameOption' time='0.024'/>
+    <testcase classname='XCleanTests.EnvironmentTests' name='testEnvironmentHelpOption' time='0.002'/>
+    <testcase classname='XCleanTests.EnvironmentTests' name='testEnvironmentListOption' time='0.002'/>
+    <testcase classname='XCleanTests.EnvironmentTests' name='testEnvironmentRemoveOption' time='0.002'/>
+    <testcase classname='XCleanTests.EnvironmentTests' name='testEnvironmentTimeoutOption' time='0.002'/>
+    <testcase classname='XCleanTests.EnvironmentTests' name='testEnvironmentVersionOption' time='0.002'/>
+  </testsuite>
+  <testsuite name='XCleanTests.FormatterTests' tests='6' failures='0'>
+    <testcase classname='XCleanTests.FormatterTests' name='testFormatForEmptyInput' time='0.004'/>
+    <testcase classname='XCleanTests.FormatterTests' name='testFormatForLineWithNewlines' time='0.008'/>
+    <testcase classname='XCleanTests.FormatterTests' name='testFormatForMultipleLines' time='0.002'/>
+    <testcase classname='XCleanTests.FormatterTests' name='testFormatForMultipleLinesWithEmptyColumn' time='0.002'/>
+    <testcase classname='XCleanTests.FormatterTests' name='testFormatForSingleLine' time='0.001'/>
+    <testcase classname='XCleanTests.FormatterTests' name='testFormatForSingleLineWithEmptyColumn' time='0.001'/>
+  </testsuite>
+  <testsuite name='XCleanTests.SimulatorAppsAnalyzerTests' tests='5' failures='0'>
+    <testcase classname='XCleanTests.SimulatorAppsAnalyzerTests' name='testAnalyazerFiltersByDate' time='0.005'/>
+    <testcase classname='XCleanTests.SimulatorAppsAnalyzerTests' name='testAnalyazerFiltersByName' time='0.001'/>
+    <testcase classname='XCleanTests.SimulatorAppsAnalyzerTests' name='testAnalyazerIgnoresDefaultFilterValues' time='0.001'/>
+    <testcase classname='XCleanTests.SimulatorAppsAnalyzerTests' name='testAnalyazerReturnsEmptyIfAppsURLDoesNotExist' time='0.001'/>
+    <testcase classname='XCleanTests.SimulatorAppsAnalyzerTests' name='testAnalyzerGetsAppName' time='0.001'/>
+  </testsuite>
+  <testsuite name='XCleanTests.SimulatorControllerTests' tests='8' failures='0'>
+    <testcase classname='XCleanTests.SimulatorControllerTests' name='testControllerCallsCleanOnInteractor' time='0.001'/>
+    <testcase classname='XCleanTests.SimulatorControllerTests' name='testControllerHandlesEmptyOutput' time='0.001'/>
+    <testcase classname='XCleanTests.SimulatorControllerTests' name='testControllerHandlesEmptyUnavailableSection' time='0.003'/>
+    <testcase classname='XCleanTests.SimulatorControllerTests' name='testControllerHandlesInvalidSimctlOutput' time='0.001'/>
+    <testcase classname='XCleanTests.SimulatorControllerTests' name='testControllerHandlesMixedUnavailable' time='0.012'/>
+    <testcase classname='XCleanTests.SimulatorControllerTests' name='testControllerHandlesMultipleUnavailable' time='0.006'/>
+    <testcase classname='XCleanTests.SimulatorControllerTests' name='testControllerHandlesNoUnavailable' time='0.001'/>
+    <testcase classname='XCleanTests.SimulatorControllerTests' name='testControllerHandlesOneUnavailable' time='0.002'/>
+  </testsuite>
+  <testsuite name='XCleanTests.TargetSignatureTests' tests='2' failures='0'>
+    <testcase classname='XCleanTests.TargetSignatureTests' name='testTargetSignatureAllGetsAllTargets' time='0.001'/>
+    <testcase classname='XCleanTests.TargetSignatureTests' name='testTargetSignatureURLs' time='0.001'/>
+  </testsuite>
+  <testsuite name='XCleanTests.TargetTests' tests='6' failures='0'>
+    <testcase classname='XCleanTests.TargetTests' name='testTargetAsksCleanerForDescriptionIfEntriesSizeNotZero' time='0.006'/>
+    <testcase classname='XCleanTests.TargetTests' name='testTargetAssignsFIlterToCleaner' time='0.005'/>
+    <testcase classname='XCleanTests.TargetTests' name='testTargetCallsCleanOnCleaner' time='0.001'/>
+    <testcase classname='XCleanTests.TargetTests' name='testTargetDoesntAskCleanerForDescriptionIfEntriesSizeIsZero' time='0.001'/>
+    <testcase classname='XCleanTests.TargetTests' name='testTargetReturnCleanerEntries' time='0.001'/>
+    <testcase classname='XCleanTests.TargetTests' name='testTargetReturnsCleanerSize' time='0.001'/>
+  </testsuite>
+</testsuites>

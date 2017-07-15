@@ -1,0 +1,490 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NimbleXCTestHandler"
+- "NimbleShortXCTestHandler"
+- "NimbleXCTestUnavailableHandler"
+- "CurrentTestCaseTracker"
+- "isXCTestAvailable"
+provides-nominal:
+- "C6Nimble19NimbleXCTestHandler"
+- "C6Nimble24NimbleShortXCTestHandler"
+- "C6Nimble30NimbleXCTestUnavailableHandler"
+- "C6Nimble22CurrentTestCaseTracker"
+provides-member:
+- ["C6Nimble19NimbleXCTestHandler", ""]
+- ["C6Nimble24NimbleShortXCTestHandler", ""]
+- ["C6Nimble30NimbleXCTestUnavailableHandler", ""]
+- ["C6Nimble22CurrentTestCaseTracker", ""]
+provides-dynamic-lookup:
+- "currentTestCase"
+- "sharedInstance"
+- "testCaseDidFinish"
+- "testCaseWillStart"
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "+"
+- "AssertionHandler"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CurrentTestCaseTracker"
+- "FailureMessage"
+- !private "NSClassFromString"
+- !private "NSException"
+- "NSObject"
+- "NimbleShortXCTestHandler"
+- "NimbleXCTestHandler"
+- "NimbleXCTestUnavailableHandler"
+- "SourceLocation"
+- !private "String"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
+- "XCTestCase"
+- "XCTestObservation"
+- !private "fatalError"
+- "isXCTestAvailable"
+- !private "recordFailure"
+depends-member:
+- ["Ps9AnyObject", "CurrentTestCaseTracker"]
+- !private ["Ps9AnyObject", "actualValue"]
+- ["Ps9AnyObject", "assert"]
+- !private ["Ps9AnyObject", "currentTestCase"]
+- !private ["Ps9AnyObject", "fatalError"]
+- !private ["Ps9AnyObject", "file"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "line"]
+- !private ["Ps9AnyObject", "postfixActual"]
+- !private ["Ps9AnyObject", "postfixMessage"]
+- !private ["Ps9AnyObject", "raise"]
+- !private ["Ps9AnyObject", "recordFailure"]
+- !private ["Ps9AnyObject", "sharedInstance"]
+- !private ["Ps9AnyObject", "stringValue"]
+- ["Ps9AnyObject", "testBundleDidFinish"]
+- ["Ps9AnyObject", "testBundleWillStart"]
+- ["Ps9AnyObject", "testCase"]
+- ["Ps9AnyObject", "testCaseDidFinish"]
+- ["Ps9AnyObject", "testCaseWillStart"]
+- ["Ps9AnyObject", "testSuite"]
+- ["Ps9AnyObject", "testSuiteDidFinish"]
+- ["Ps9AnyObject", "testSuiteWillStart"]
+- !private ["Ps9AnyObject", "to"]
+- ["Ps9AnyObject", ""]
+- ["P6Nimble16AssertionHandler", "assert"]
+- !private ["P6Nimble16AssertionHandler", "fatalError"]
+- !private ["P6Nimble16AssertionHandler", "recordFailure"]
+- ["P6Nimble16AssertionHandler", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Ps7CVarArg", "CurrentTestCaseTracker"]
+- !private ["Ps7CVarArg", "actualValue"]
+- !private ["Ps7CVarArg", "currentTestCase"]
+- !private ["Ps7CVarArg", "file"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "line"]
+- !private ["Ps7CVarArg", "postfixActual"]
+- !private ["Ps7CVarArg", "postfixMessage"]
+- !private ["Ps7CVarArg", "raise"]
+- !private ["Ps7CVarArg", "recordFailure"]
+- !private ["Ps7CVarArg", "sharedInstance"]
+- !private ["Ps7CVarArg", "stringValue"]
+- ["Ps7CVarArg", "testBundleDidFinish"]
+- ["Ps7CVarArg", "testBundleWillStart"]
+- ["Ps7CVarArg", "testCase"]
+- ["Ps7CVarArg", "testCaseDidFinish"]
+- ["Ps7CVarArg", "testCaseWillStart"]
+- ["Ps7CVarArg", "testSuite"]
+- ["Ps7CVarArg", "testSuiteDidFinish"]
+- ["Ps7CVarArg", "testSuiteWillStart"]
+- !private ["Ps7CVarArg", "to"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "internalInconsistencyException"]
+- ["C6Nimble22CurrentTestCaseTracker", "CurrentTestCaseTracker"]
+- ["C6Nimble22CurrentTestCaseTracker", "XCTestCase"]
+- ["C6Nimble22CurrentTestCaseTracker", "currentTestCase"]
+- ["C6Nimble22CurrentTestCaseTracker", "deinit"]
+- ["C6Nimble22CurrentTestCaseTracker", "init"]
+- ["C6Nimble22CurrentTestCaseTracker", "sharedInstance"]
+- ["C6Nimble22CurrentTestCaseTracker", "testBundleDidFinish"]
+- ["C6Nimble22CurrentTestCaseTracker", "testBundleWillStart"]
+- ["C6Nimble22CurrentTestCaseTracker", "testCase"]
+- ["C6Nimble22CurrentTestCaseTracker", "testCaseDidFinish"]
+- ["C6Nimble22CurrentTestCaseTracker", "testCaseWillStart"]
+- ["C6Nimble22CurrentTestCaseTracker", "testSuite"]
+- ["C6Nimble22CurrentTestCaseTracker", "testSuiteDidFinish"]
+- ["C6Nimble22CurrentTestCaseTracker", "testSuiteWillStart"]
+- ["Ps28CustomDebugStringConvertible", "CurrentTestCaseTracker"]
+- !private ["Ps28CustomDebugStringConvertible", "actualValue"]
+- !private ["Ps28CustomDebugStringConvertible", "currentTestCase"]
+- !private ["Ps28CustomDebugStringConvertible", "file"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "line"]
+- !private ["Ps28CustomDebugStringConvertible", "postfixActual"]
+- !private ["Ps28CustomDebugStringConvertible", "postfixMessage"]
+- !private ["Ps28CustomDebugStringConvertible", "raise"]
+- !private ["Ps28CustomDebugStringConvertible", "recordFailure"]
+- !private ["Ps28CustomDebugStringConvertible", "sharedInstance"]
+- !private ["Ps28CustomDebugStringConvertible", "stringValue"]
+- ["Ps28CustomDebugStringConvertible", "testBundleDidFinish"]
+- ["Ps28CustomDebugStringConvertible", "testBundleWillStart"]
+- ["Ps28CustomDebugStringConvertible", "testCase"]
+- ["Ps28CustomDebugStringConvertible", "testCaseDidFinish"]
+- ["Ps28CustomDebugStringConvertible", "testCaseWillStart"]
+- ["Ps28CustomDebugStringConvertible", "testSuite"]
+- ["Ps28CustomDebugStringConvertible", "testSuiteDidFinish"]
+- ["Ps28CustomDebugStringConvertible", "testSuiteWillStart"]
+- !private ["Ps28CustomDebugStringConvertible", "to"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "init"]
+- ["Ps23CustomStringConvertible", "CurrentTestCaseTracker"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "actualValue"]
+- !private ["Ps23CustomStringConvertible", "currentTestCase"]
+- !private ["Ps23CustomStringConvertible", "file"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "line"]
+- !private ["Ps23CustomStringConvertible", "postfixActual"]
+- !private ["Ps23CustomStringConvertible", "postfixMessage"]
+- !private ["Ps23CustomStringConvertible", "raise"]
+- !private ["Ps23CustomStringConvertible", "recordFailure"]
+- !private ["Ps23CustomStringConvertible", "sharedInstance"]
+- !private ["Ps23CustomStringConvertible", "stringValue"]
+- ["Ps23CustomStringConvertible", "testBundleDidFinish"]
+- ["Ps23CustomStringConvertible", "testBundleWillStart"]
+- ["Ps23CustomStringConvertible", "testCase"]
+- ["Ps23CustomStringConvertible", "testCaseDidFinish"]
+- ["Ps23CustomStringConvertible", "testCaseWillStart"]
+- ["Ps23CustomStringConvertible", "testSuite"]
+- ["Ps23CustomStringConvertible", "testSuiteDidFinish"]
+- ["Ps23CustomStringConvertible", "testSuiteWillStart"]
+- !private ["Ps23CustomStringConvertible", "to"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "CurrentTestCaseTracker"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "actualValue"]
+- !private ["Ps9Equatable", "currentTestCase"]
+- !private ["Ps9Equatable", "file"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "internalInconsistencyException"]
+- !private ["Ps9Equatable", "line"]
+- !private ["Ps9Equatable", "postfixActual"]
+- !private ["Ps9Equatable", "postfixMessage"]
+- !private ["Ps9Equatable", "raise"]
+- !private ["Ps9Equatable", "recordFailure"]
+- !private ["Ps9Equatable", "sharedInstance"]
+- !private ["Ps9Equatable", "stringValue"]
+- ["Ps9Equatable", "testBundleDidFinish"]
+- ["Ps9Equatable", "testBundleWillStart"]
+- ["Ps9Equatable", "testCase"]
+- ["Ps9Equatable", "testCaseDidFinish"]
+- ["Ps9Equatable", "testCaseWillStart"]
+- ["Ps9Equatable", "testSuite"]
+- ["Ps9Equatable", "testSuiteDidFinish"]
+- ["Ps9Equatable", "testSuiteWillStart"]
+- !private ["Ps9Equatable", "to"]
+- ["Ps9Equatable", ""]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["C6Nimble14FailureMessage", "actualValue"]
+- !private ["C6Nimble14FailureMessage", "postfixActual"]
+- !private ["C6Nimble14FailureMessage", "postfixMessage"]
+- !private ["C6Nimble14FailureMessage", "stringValue"]
+- !private ["C6Nimble14FailureMessage", "to"]
+- ["Ps8Hashable", "CurrentTestCaseTracker"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "actualValue"]
+- !private ["Ps8Hashable", "currentTestCase"]
+- !private ["Ps8Hashable", "file"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "internalInconsistencyException"]
+- !private ["Ps8Hashable", "line"]
+- !private ["Ps8Hashable", "postfixActual"]
+- !private ["Ps8Hashable", "postfixMessage"]
+- !private ["Ps8Hashable", "raise"]
+- !private ["Ps8Hashable", "recordFailure"]
+- !private ["Ps8Hashable", "sharedInstance"]
+- !private ["Ps8Hashable", "stringValue"]
+- ["Ps8Hashable", "testBundleDidFinish"]
+- ["Ps8Hashable", "testBundleWillStart"]
+- ["Ps8Hashable", "testCase"]
+- ["Ps8Hashable", "testCaseDidFinish"]
+- ["Ps8Hashable", "testCaseWillStart"]
+- ["Ps8Hashable", "testSuite"]
+- ["Ps8Hashable", "testSuiteDidFinish"]
+- ["Ps8Hashable", "testSuiteWillStart"]
+- !private ["Ps8Hashable", "to"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["P6Nimble13NMBComparable", "init"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "raise"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "raise"]
+- !private ["CSo11NSException", "init"]
+- !private ["CSo11NSException", "raise"]
+- !private ["VSC15NSExceptionName", "internalInconsistencyException"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "CurrentTestCaseTracker"]
+- ["CSo8NSObject", "XCTestCase"]
+- !private ["CSo8NSObject", "actualValue"]
+- ["CSo8NSObject", "currentTestCase"]
+- !private ["CSo8NSObject", "file"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "line"]
+- !private ["CSo8NSObject", "postfixActual"]
+- !private ["CSo8NSObject", "postfixMessage"]
+- !private ["CSo8NSObject", "raise"]
+- !private ["CSo8NSObject", "recordFailure"]
+- ["CSo8NSObject", "sharedInstance"]
+- !private ["CSo8NSObject", "stringValue"]
+- ["CSo8NSObject", "testBundleDidFinish"]
+- ["CSo8NSObject", "testBundleWillStart"]
+- ["CSo8NSObject", "testCase"]
+- ["CSo8NSObject", "testCaseDidFinish"]
+- ["CSo8NSObject", "testCaseWillStart"]
+- ["CSo8NSObject", "testSuite"]
+- ["CSo8NSObject", "testSuiteDidFinish"]
+- ["CSo8NSObject", "testSuiteWillStart"]
+- !private ["CSo8NSObject", "to"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "CurrentTestCaseTracker"]
+- !private ["PSo16NSObjectProtocol", "actualValue"]
+- !private ["PSo16NSObjectProtocol", "currentTestCase"]
+- !private ["PSo16NSObjectProtocol", "file"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "line"]
+- !private ["PSo16NSObjectProtocol", "postfixActual"]
+- !private ["PSo16NSObjectProtocol", "postfixMessage"]
+- !private ["PSo16NSObjectProtocol", "raise"]
+- !private ["PSo16NSObjectProtocol", "recordFailure"]
+- !private ["PSo16NSObjectProtocol", "sharedInstance"]
+- !private ["PSo16NSObjectProtocol", "stringValue"]
+- ["PSo16NSObjectProtocol", "testBundleDidFinish"]
+- ["PSo16NSObjectProtocol", "testBundleWillStart"]
+- ["PSo16NSObjectProtocol", "testCase"]
+- ["PSo16NSObjectProtocol", "testCaseDidFinish"]
+- ["PSo16NSObjectProtocol", "testCaseWillStart"]
+- ["PSo16NSObjectProtocol", "testSuite"]
+- ["PSo16NSObjectProtocol", "testSuiteDidFinish"]
+- ["PSo16NSObjectProtocol", "testSuiteWillStart"]
+- !private ["PSo16NSObjectProtocol", "to"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo19NSPasteboardReading", "init"]
+- !private ["PSo19NSPasteboardWriting", "init"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- ["C6Nimble24NimbleShortXCTestHandler", "Bool"]
+- ["C6Nimble24NimbleShortXCTestHandler", "FailureMessage"]
+- ["C6Nimble24NimbleShortXCTestHandler", "SourceLocation"]
+- !private ["C6Nimble24NimbleShortXCTestHandler", "String"]
+- ["C6Nimble24NimbleShortXCTestHandler", "assert"]
+- ["C6Nimble24NimbleShortXCTestHandler", "deinit"]
+- ["C6Nimble24NimbleShortXCTestHandler", "init"]
+- !private ["C6Nimble24NimbleShortXCTestHandler", "recordFailure"]
+- ["C6Nimble19NimbleXCTestHandler", "Bool"]
+- ["C6Nimble19NimbleXCTestHandler", "FailureMessage"]
+- ["C6Nimble19NimbleXCTestHandler", "SourceLocation"]
+- ["C6Nimble19NimbleXCTestHandler", "assert"]
+- ["C6Nimble19NimbleXCTestHandler", "deinit"]
+- ["C6Nimble19NimbleXCTestHandler", "init"]
+- !private ["C6Nimble19NimbleXCTestHandler", "recordFailure"]
+- ["C6Nimble30NimbleXCTestUnavailableHandler", "Bool"]
+- ["C6Nimble30NimbleXCTestUnavailableHandler", "FailureMessage"]
+- ["C6Nimble30NimbleXCTestUnavailableHandler", "SourceLocation"]
+- ["C6Nimble30NimbleXCTestUnavailableHandler", "assert"]
+- ["C6Nimble30NimbleXCTestUnavailableHandler", "deinit"]
+- !private ["C6Nimble30NimbleXCTestUnavailableHandler", "fatalError"]
+- ["C6Nimble30NimbleXCTestUnavailableHandler", "init"]
+- !private ["Ps16RawRepresentable", "internalInconsistencyException"]
+- !private ["C6Nimble14SourceLocation", "file"]
+- !private ["C6Nimble14SourceLocation", "line"]
+- !private ["Vs12StaticString", "init"]
+- !private ["SS", "init"]
+- !private ["P6Nimble27TestOutputStringConvertible", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo17XCTWaiterDelegate", "recordFailure"]
+- !private ["CSo6XCTest", "recordFailure"]
+- !private ["CSo10XCTestCase", "recordFailure"]
+- ["PSo17XCTestObservation", "CurrentTestCaseTracker"]
+- !private ["PSo17XCTestObservation", "currentTestCase"]
+- ["PSo17XCTestObservation", "init"]
+- !private ["PSo17XCTestObservation", "sharedInstance"]
+- ["PSo17XCTestObservation", "testBundleDidFinish"]
+- ["PSo17XCTestObservation", "testBundleWillStart"]
+- ["PSo17XCTestObservation", "testCase"]
+- ["PSo17XCTestObservation", "testCaseDidFinish"]
+- ["PSo17XCTestObservation", "testCaseWillStart"]
+- ["PSo17XCTestObservation", "testSuite"]
+- ["PSo17XCTestObservation", "testSuiteDidFinish"]
+- ["PSo17XCTestObservation", "testSuiteWillStart"]
+- ["PSo17XCTestObservation", ""]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps9_Hashable", "CurrentTestCaseTracker"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "actualValue"]
+- !private ["Ps9_Hashable", "currentTestCase"]
+- !private ["Ps9_Hashable", "file"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "internalInconsistencyException"]
+- !private ["Ps9_Hashable", "line"]
+- !private ["Ps9_Hashable", "postfixActual"]
+- !private ["Ps9_Hashable", "postfixMessage"]
+- !private ["Ps9_Hashable", "raise"]
+- !private ["Ps9_Hashable", "recordFailure"]
+- !private ["Ps9_Hashable", "sharedInstance"]
+- !private ["Ps9_Hashable", "stringValue"]
+- ["Ps9_Hashable", "testBundleDidFinish"]
+- ["Ps9_Hashable", "testBundleWillStart"]
+- ["Ps9_Hashable", "testCase"]
+- ["Ps9_Hashable", "testCaseDidFinish"]
+- ["Ps9_Hashable", "testCaseWillStart"]
+- ["Ps9_Hashable", "testSuite"]
+- ["Ps9_Hashable", "testSuiteDidFinish"]
+- ["Ps9_Hashable", "testSuiteWillStart"]
+- !private ["Ps9_Hashable", "to"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "internalInconsistencyException"]
+- !private ["Ps20_SwiftNewtypeWrapper", "internalInconsistencyException"]
+depends-nominal:
+- "Ps9AnyObject"
+- "P6Nimble16AssertionHandler"
+- !private "Sb"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "C6Nimble22CurrentTestCaseTracker"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "C6Nimble14FailureMessage"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "P6Nimble13NMBComparable"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo11NSException"
+- !private "VSC15NSExceptionName"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo19NSPasteboardReading"
+- !private "PSo19NSPasteboardWriting"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "C6Nimble24NimbleShortXCTestHandler"
+- "C6Nimble19NimbleXCTestHandler"
+- "C6Nimble30NimbleXCTestUnavailableHandler"
+- !private "Ps16RawRepresentable"
+- !private "C6Nimble14SourceLocation"
+- !private "Vs12StaticString"
+- !private "SS"
+- !private "P6Nimble27TestOutputStringConvertible"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo17XCTWaiterDelegate"
+- !private "CSo6XCTest"
+- !private "CSo10XCTestCase"
+- "PSo17XCTestObservation"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps20_SwiftNewtypeWrapper"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.swiftmodule"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUISiriService.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTKVOExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSPredicateExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSNotificationExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTDarwinNotificationExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservation.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/CwlCatchBadInstruction.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlCatchException/CwlCatchException/CwlCatchException.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTWaiter.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservationCenter.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/mach_excServer.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h"
+- "/Users/zardoz/Projects/OSS/XClean/xclean-source/DerivedData/Build/Intermediates/CodeCoverage/Intermediates/Pods.build/Debug/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+interface-hash: "c6ef1da14d745240004eb7b4ce3766f9"

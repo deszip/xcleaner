@@ -1,0 +1,97 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "environment"
+- "cleaner"
+provides-nominal:
+provides-member:
+provides-dynamic-lookup:
+depends-top-level:
+- "Cleaner"
+- "Environment"
+- "TargetSignature"
+- "cleaner"
+- "environment"
+depends-member:
+- ["Ps9AnyObject", "helpOption"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "list"]
+- ["Ps9AnyObject", "listOption"]
+- ["Ps9AnyObject", "printUsage"]
+- ["Ps9AnyObject", "printVersion"]
+- ["Ps9AnyObject", "remove"]
+- ["Ps9AnyObject", "removeOption"]
+- ["Ps9AnyObject", "terminate"]
+- ["Ps9AnyObject", "versionOption"]
+- ["Ps9AnyObject", "wasSet"]
+- ["Sb", "_getBuiltinLogicValue"]
+- ["C6xclean10BoolOption", "wasSet"]
+- ["C6xclean7Cleaner", "init"]
+- ["C6xclean7Cleaner", "list"]
+- ["C6xclean7Cleaner", "remove"]
+- ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["C6xclean11Environment", "deinit"]
+- ["C6xclean11Environment", "helpOption"]
+- ["C6xclean11Environment", "init"]
+- ["C6xclean11Environment", "listOption"]
+- ["C6xclean11Environment", "printUsage"]
+- ["C6xclean11Environment", "printVersion"]
+- ["C6xclean11Environment", "removeOption"]
+- ["C6xclean11Environment", "terminate"]
+- ["C6xclean11Environment", "versionOption"]
+- ["P6xclean21EnvironmentInteractor", "helpOption"]
+- ["P6xclean21EnvironmentInteractor", "init"]
+- ["P6xclean21EnvironmentInteractor", "listOption"]
+- ["P6xclean21EnvironmentInteractor", "printUsage"]
+- ["P6xclean21EnvironmentInteractor", "printVersion"]
+- ["P6xclean21EnvironmentInteractor", "removeOption"]
+- ["P6xclean21EnvironmentInteractor", "terminate"]
+- ["P6xclean21EnvironmentInteractor", "versionOption"]
+- ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "signaturesForOption"]
+- ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["C6xclean17MultiStringOption", "wasSet"]
+- ["C6xclean6Option", "wasSet"]
+- ["V6xclean15TargetSignature", "signaturesForOption"]
+- ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sb"
+- "C6xclean10BoolOption"
+- "C6xclean7Cleaner"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "C6xclean11Environment"
+- "P6xclean21EnvironmentInteractor"
+- "Ps9Equatable"
+- "Ps27ExpressibleByBooleanLiteral"
+- "Ps8Hashable"
+- "Ps25LosslessStringConvertible"
+- "C6xclean17MultiStringOption"
+- "C6xclean6Option"
+- "V6xclean15TargetSignature"
+- "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "b3ccac6453927bb44e17f5f5a8aaf59b"

@@ -8,7 +8,7 @@ target 'xclean' do
   target 'XCleanTests' do
     inherit! :search_paths
     
-    pod 'Nimble', '~> 5.1.1'
+    pod 'Nimble'
 
   end
 
