@@ -250,12 +250,12 @@
 		0E64DD8C1F1BFDBA0097C6B8 /* xcleanerTests */ = {
 			isa = PBXGroup;
 			children = (
+				0E64DD8F1F1BFDBA0097C6B8 /* Info.plist */,
 				0E0EAD2C1F81D42900F5C933 /* Environment */,
 				0E0EAD1F1F81D3C800F5C933 /* Stubs */,
 				0E0EAD121F81D3C600F5C933 /* Mocks */,
 				0E0EAD171F81D3C700F5C933 /* Cleaner */,
 				0E0EAD221F81D3C900F5C933 /* Models */,
-				0E64DD8F1F1BFDBA0097C6B8 /* Info.plist */,
 			);
 			path = xcleanerTests;
 			sourceTree = "<group>";

@@ -96,16 +96,12 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-l CoreSimulator -a CaboPDF"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
             argument = "-l"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l DerivedData -t 3600"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l foo"
@@ -121,10 +117,6 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l DeviceSupport"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "-r CoreSimulator -a CaboPDF"
             isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
