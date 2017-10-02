@@ -241,11 +241,6 @@ public class MultiStringOption: Option {
   }
 
   override func setValue(_ values: [String]) -> Bool {
-    // Disabled to allow optional arguments to option
-//    if values.count == 0 {
-//      return false
-//    }
-
     _value = values
     return true
   }
