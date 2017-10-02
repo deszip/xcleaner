@@ -4,8 +4,8 @@ platform :osx, '10.10'
 target 'xcleaner' do
     use_frameworks!
 
-    workspace ‘xclean’
-	xcodeproj ‘xcleaner/xcleaner.xcodeproj’
+    workspace 'xclean'
+	project 'xcleaner/xcleaner.xcodeproj'
 
     target 'xcleanerTests' do
     
