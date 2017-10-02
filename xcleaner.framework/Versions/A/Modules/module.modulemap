@@ -1,0 +1,4 @@
+framework module xcleaner {
+    header "xcleaner-Swift.h"
+    requires objc
+}

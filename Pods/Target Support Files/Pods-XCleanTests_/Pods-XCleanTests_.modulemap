@@ -1,6 +1,0 @@
-framework module Pods_XCleanTests_ {
-  umbrella header "Pods-XCleanTests_-umbrella.h"
-
-  export *
-  module * { export * }
-}

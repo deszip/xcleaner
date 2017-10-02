@@ -1,15 +1,17 @@
+# Uncomment the next line to define a global platform for your project
 platform :osx, '10.10'
 
-target 'xclean' do
-  use_frameworks!
+target 'xcleaner' do
+    use_frameworks!
 
-  #pod 'CommandLine', :git => 'https://github.com/deszip/CommandLine.git'
+    workspace ‘xclean’
+	xcodeproj ‘xcleaner/xcleaner.xcodeproj’
 
-  target 'XCleanTests' do
-    inherit! :search_paths
+    target 'xcleanerTests' do
     
-    pod 'Nimble'
-
-  end
+        inherit! :search_paths
+        pod 'Nimble'
+    
+    end
 
 end

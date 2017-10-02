@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import xcleaner
 
 let environment = Environment()
 let cleaner = Cleaner(environment: environment)

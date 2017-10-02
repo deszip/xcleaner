@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:xcleaner/xcleaner.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:xclean.xcodeproj">
    </FileRef>
    <FileRef
