@@ -106,6 +106,7 @@
 		0E64DDB71F1BFDF40097C6B8 /* EntryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryBuilder.swift; sourceTree = "<group>"; };
 		0E64DDB81F1BFDF40097C6B8 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		0E64DDB91F1BFDF40097C6B8 /* TargetSignature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSignature.swift; sourceTree = "<group>"; };
+		0EC724A81F84862B00470C3B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1079AF978037AB2662B33C5E /* Pods-xcleanerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xcleanerTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-xcleanerTests/Pods-xcleanerTests.release.xcconfig"; sourceTree = "<group>"; };
 		1707F6A171D458091CBAA5DB /* Pods_xcleaner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xcleaner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6BF980D15085E9CC8F6F9E /* Pods-xcleanerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xcleanerTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-xcleanerTests/Pods-xcleanerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +218,7 @@
 		0E64DD751F1BFDB90097C6B8 = {
 			isa = PBXGroup;
 			children = (
+				0EC724A81F84862B00470C3B /* README.md */,
 				0E64DD811F1BFDB90097C6B8 /* xcleaner */,
 				0E64DD8C1F1BFDBA0097C6B8 /* xcleanerTests */,
 				0E64DD801F1BFDB90097C6B8 /* Products */,
