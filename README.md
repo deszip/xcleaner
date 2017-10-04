@@ -1,5 +1,6 @@
 # xcleaner 
 ![](https://www.bitrise.io/app/ce6e2398ea118a40/status.svg?token=31hcFmLhHf5FUfU_PU5wDQ&branch=master)
+[![codecov](https://codecov.io/gh/deszip/xcleaner/branch/master/graph/badge.svg)](https://codecov.io/gh/deszip/xcleaner)
 
 Simple tool to clean some of the stuff created by XCode.<br>
 Looks at next locations and tries to remove some of the stuff located here:
