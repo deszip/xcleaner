@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6ED30963467F9B7799C8443CAD0C8511"
-               BuildableName = "Pods_xcleaner.framework"
-               BlueprintName = "Pods-xcleaner"
+               BlueprintIdentifier = "1F4CC4A2649CF5A93C20827A04AE5E70"
+               BuildableName = "Pods_xcleanTests.framework"
+               BlueprintName = "Pods-xcleanTests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6ED30963467F9B7799C8443CAD0C8511"
-            BuildableName = "Pods_xcleaner.framework"
-            BlueprintName = "Pods-xcleaner"
+            BlueprintIdentifier = "1F4CC4A2649CF5A93C20827A04AE5E70"
+            BuildableName = "Pods_xcleanTests.framework"
+            BlueprintName = "Pods-xcleanTests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_xcleanerTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_xcleanerTestsVersionString[];
+FOUNDATION_EXPORT double Pods_xcleanVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_xcleanVersionString[];
 
