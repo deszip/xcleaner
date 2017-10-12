@@ -7,7 +7,6 @@
 //
 
 import Foundation
-@testable import xcleaner
 
 class FilterMock : TargetFilter {
     

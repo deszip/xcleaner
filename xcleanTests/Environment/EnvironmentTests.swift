@@ -8,7 +8,6 @@
 
 import XCTest
 import Nimble
-@testable import xcleaner
 
 class EnvironmentTests: XCTestCase {
 

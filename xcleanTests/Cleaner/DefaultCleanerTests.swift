@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import xcleaner
 
 class DefaultCleanerTests: XCTestCase {
 

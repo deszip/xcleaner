@@ -7,7 +7,6 @@
 //
 
 import Foundation
-@testable import xcleaner
 
 class TargetCleanerMock : TargetCleaner {
     required init(urls: [URL], environment: EnvironmentInteractor) {}
