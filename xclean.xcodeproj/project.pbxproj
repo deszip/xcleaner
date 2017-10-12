@@ -7,7 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E64DDD61F1BFF830097C6B8 /* xcleaner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E64DDD51F1BFF830097C6B8 /* xcleaner.framework */; };
+		0E8D24241F8F1934000C670F /* TargetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24091F8F18A9000C670F /* TargetBuilder.swift */; };
+		0E8D24251F8F1934000C670F /* CoreSimulatorCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D240B1F8F18A9000C670F /* CoreSimulatorCleaner.swift */; };
+		0E8D24261F8F1934000C670F /* SimulatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D240C1F8F18A9000C670F /* SimulatorController.swift */; };
+		0E8D24271F8F1934000C670F /* SimulatorAppsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D240D1F8F18A9000C670F /* SimulatorAppsAnalyzer.swift */; };
+		0E8D24281F8F1934000C670F /* Cleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D240E1F8F18A9000C670F /* Cleaner.swift */; };
+		0E8D24291F8F1934000C670F /* TargetCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D240F1F8F18A9000C670F /* TargetCleaner.swift */; };
+		0E8D242A1F8F1934000C670F /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24181F8F18A9000C670F /* CommandLine.swift */; };
+		0E8D242B1F8F1934000C670F /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24191F8F18A9000C670F /* Option.swift */; };
+		0E8D242C1F8F1934000C670F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D241A1F8F18A9000C670F /* StringExtensions.swift */; };
+		0E8D242D1F8F1934000C670F /* SimctlInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24111F8F18A9000C670F /* SimctlInteractor.swift */; };
+		0E8D242E1F8F1934000C670F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24121F8F18A9000C670F /* Environment.swift */; };
+		0E8D242F1F8F1934000C670F /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24131F8F18A9000C670F /* Formatter.swift */; };
+		0E8D24301F8F1934000C670F /* ProcessInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24141F8F18A9000C670F /* ProcessInteractor.swift */; };
+		0E8D24311F8F1934000C670F /* XCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24151F8F18A9000C670F /* XCFileManager.swift */; };
+		0E8D24321F8F1934000C670F /* EntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24201F8F18A9000C670F /* EntryBuilder.swift */; };
+		0E8D24331F8F1934000C670F /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24211F8F18A9000C670F /* Target.swift */; };
+		0E8D24341F8F1934000C670F /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24221F8F18A9000C670F /* Entry.swift */; };
+		0E8D24351F8F1934000C670F /* TargetSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24231F8F18A9000C670F /* TargetSignature.swift */; };
+		0E8D24361F8F1934000C670F /* TargetFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D241C1F8F18A9000C670F /* TargetFilter.swift */; };
+		0E8D24371F8F1934000C670F /* ArchivesFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D241D1F8F18A9000C670F /* ArchivesFilter.swift */; };
+		0E8D24381F8F1934000C670F /* DeviceSupportFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D241E1F8F18A9000C670F /* DeviceSupportFilter.swift */; };
+		0E8D24401F8F1A39000C670F /* xcleanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D243F1F8F1A39000C670F /* xcleanTests.swift */; };
+		0E8D24771F8F1B5A000C670F /* SimulatorControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24631F8F1B53000C670F /* SimulatorControllerTests.swift */; };
+		0E8D24781F8F1B5A000C670F /* SimulatorAppsAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24641F8F1B53000C670F /* SimulatorAppsAnalyzerTests.swift */; };
+		0E8D24791F8F1B5A000C670F /* DefaultCleanerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24651F8F1B53000C670F /* DefaultCleanerTests.swift */; };
+		0E8D247A1F8F1B5E000C670F /* EnvironmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24751F8F1B53000C670F /* EnvironmentTests.swift */; };
+		0E8D247B1F8F1B5E000C670F /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24761F8F1B53000C670F /* FormatterTests.swift */; };
+		0E8D247C1F8F1B63000C670F /* SimctlInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D246F1F8F1B53000C670F /* SimctlInteractorMock.swift */; };
+		0E8D247D1F8F1B63000C670F /* EnvironmentMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24701F8F1B53000C670F /* EnvironmentMock.swift */; };
+		0E8D247E1F8F1B63000C670F /* FilterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24711F8F1B53000C670F /* FilterMock.swift */; };
+		0E8D247F1F8F1B63000C670F /* TargetCleanerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24721F8F1B53000C670F /* TargetCleanerMock.swift */; };
+		0E8D24801F8F1B63000C670F /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24731F8F1B53000C670F /* FileManagerMock.swift */; };
+		0E8D24811F8F1B68000C670F /* TargetSignatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D245F1F8F1B53000C670F /* TargetSignatureTests.swift */; };
+		0E8D24821F8F1B68000C670F /* TargetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D24601F8F1B53000C670F /* TargetTests.swift */; };
+		0E8D24831F8F1B6E000C670F /* simctl_stub_multiple_unavailable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8D24681F8F1B53000C670F /* simctl_stub_multiple_unavailable.txt */; };
+		0E8D24841F8F1B6E000C670F /* simctl_stub_empty_unavailable_section.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8D24691F8F1B53000C670F /* simctl_stub_empty_unavailable_section.txt */; };
+		0E8D24851F8F1B6E000C670F /* simctl_stub_no_unavailable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8D246A1F8F1B53000C670F /* simctl_stub_no_unavailable.txt */; };
+		0E8D24861F8F1B6E000C670F /* simctl_stub_mixed_unavailable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8D246B1F8F1B53000C670F /* simctl_stub_mixed_unavailable.txt */; };
+		0E8D24871F8F1B6E000C670F /* simctl_stub_one_unavailable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8D246C1F8F1B53000C670F /* simctl_stub_one_unavailable.txt */; };
+		0E8D24881F8F1B6E000C670F /* simctl_stub_invalid.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E8D246D1F8F1B53000C670F /* simctl_stub_invalid.txt */; };
 		0EC7418A1E1D345C0008A630 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC741891E1D345C0008A630 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,27 +65,249 @@
 /* Begin PBXFileReference section */
 		0E64DDD11F1BFE9D0097C6B8 /* xcleaner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = xcleaner.framework; path = "../../../../Library/Developer/Xcode/DerivedData/xclean-gjtlvfmoacuuggdvvznuagqbhean/Build/Products/Debug/xcleaner.framework"; sourceTree = "<group>"; };
 		0E64DDD51F1BFF830097C6B8 /* xcleaner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = xcleaner.framework; path = xcleaner/build/Debug/xcleaner.framework; sourceTree = "<group>"; };
+		0E8D24091F8F18A9000C670F /* TargetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetBuilder.swift; sourceTree = "<group>"; };
+		0E8D240B1F8F18A9000C670F /* CoreSimulatorCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSimulatorCleaner.swift; sourceTree = "<group>"; };
+		0E8D240C1F8F18A9000C670F /* SimulatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorController.swift; sourceTree = "<group>"; };
+		0E8D240D1F8F18A9000C670F /* SimulatorAppsAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorAppsAnalyzer.swift; sourceTree = "<group>"; };
+		0E8D240E1F8F18A9000C670F /* Cleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cleaner.swift; sourceTree = "<group>"; };
+		0E8D240F1F8F18A9000C670F /* TargetCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetCleaner.swift; sourceTree = "<group>"; };
+		0E8D24111F8F18A9000C670F /* SimctlInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimctlInteractor.swift; sourceTree = "<group>"; };
+		0E8D24121F8F18A9000C670F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		0E8D24131F8F18A9000C670F /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		0E8D24141F8F18A9000C670F /* ProcessInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInteractor.swift; sourceTree = "<group>"; };
+		0E8D24151F8F18A9000C670F /* XCFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCFileManager.swift; sourceTree = "<group>"; };
+		0E8D24181F8F18A9000C670F /* CommandLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
+		0E8D24191F8F18A9000C670F /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		0E8D241A1F8F18A9000C670F /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		0E8D241C1F8F18A9000C670F /* TargetFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetFilter.swift; sourceTree = "<group>"; };
+		0E8D241D1F8F18A9000C670F /* ArchivesFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivesFilter.swift; sourceTree = "<group>"; };
+		0E8D241E1F8F18A9000C670F /* DeviceSupportFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSupportFilter.swift; sourceTree = "<group>"; };
+		0E8D24201F8F18A9000C670F /* EntryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryBuilder.swift; sourceTree = "<group>"; };
+		0E8D24211F8F18A9000C670F /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		0E8D24221F8F18A9000C670F /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		0E8D24231F8F18A9000C670F /* TargetSignature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSignature.swift; sourceTree = "<group>"; };
+		0E8D243D1F8F1A39000C670F /* xcleanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xcleanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E8D243F1F8F1A39000C670F /* xcleanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xcleanTests.swift; sourceTree = "<group>"; };
+		0E8D24411F8F1A39000C670F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E8D245F1F8F1B53000C670F /* TargetSignatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSignatureTests.swift; sourceTree = "<group>"; };
+		0E8D24601F8F1B53000C670F /* TargetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetTests.swift; sourceTree = "<group>"; };
+		0E8D24631F8F1B53000C670F /* SimulatorControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorControllerTests.swift; sourceTree = "<group>"; };
+		0E8D24641F8F1B53000C670F /* SimulatorAppsAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorAppsAnalyzerTests.swift; sourceTree = "<group>"; };
+		0E8D24651F8F1B53000C670F /* DefaultCleanerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCleanerTests.swift; sourceTree = "<group>"; };
+		0E8D24681F8F1B53000C670F /* simctl_stub_multiple_unavailable.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = simctl_stub_multiple_unavailable.txt; sourceTree = "<group>"; };
+		0E8D24691F8F1B53000C670F /* simctl_stub_empty_unavailable_section.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = simctl_stub_empty_unavailable_section.txt; sourceTree = "<group>"; };
+		0E8D246A1F8F1B53000C670F /* simctl_stub_no_unavailable.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = simctl_stub_no_unavailable.txt; sourceTree = "<group>"; };
+		0E8D246B1F8F1B53000C670F /* simctl_stub_mixed_unavailable.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = simctl_stub_mixed_unavailable.txt; sourceTree = "<group>"; };
+		0E8D246C1F8F1B53000C670F /* simctl_stub_one_unavailable.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = simctl_stub_one_unavailable.txt; sourceTree = "<group>"; };
+		0E8D246D1F8F1B53000C670F /* simctl_stub_invalid.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = simctl_stub_invalid.txt; sourceTree = "<group>"; };
+		0E8D246F1F8F1B53000C670F /* SimctlInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimctlInteractorMock.swift; sourceTree = "<group>"; };
+		0E8D24701F8F1B53000C670F /* EnvironmentMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentMock.swift; sourceTree = "<group>"; };
+		0E8D24711F8F1B53000C670F /* FilterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterMock.swift; sourceTree = "<group>"; };
+		0E8D24721F8F1B53000C670F /* TargetCleanerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetCleanerMock.swift; sourceTree = "<group>"; };
+		0E8D24731F8F1B53000C670F /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
+		0E8D24751F8F1B53000C670F /* EnvironmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentTests.swift; sourceTree = "<group>"; };
+		0E8D24761F8F1B53000C670F /* FormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
 		0EC3DC1C1E786390006370FD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EC741861E1D345C0008A630 /* xclean */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xclean; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC741891E1D345C0008A630 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0E8D243A1F8F1A39000C670F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EC741831E1D345C0008A630 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E64DDD61F1BFF830097C6B8 /* xcleaner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E8D24071F8F1895000C670F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24081F8F18A9000C670F /* Cleaner */,
+				0E8D24161F8F18A9000C670F /* Dependencies */,
+				0E8D24101F8F18A9000C670F /* Environment */,
+				0E8D241F1F8F18A9000C670F /* Models */,
+				0E8D241B1F8F18A9000C670F /* Target Filters */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0E8D24081F8F18A9000C670F /* Cleaner */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24091F8F18A9000C670F /* TargetBuilder.swift */,
+				0E8D240A1F8F18A9000C670F /* Core Simulator */,
+				0E8D240E1F8F18A9000C670F /* Cleaner.swift */,
+				0E8D240F1F8F18A9000C670F /* TargetCleaner.swift */,
+			);
+			name = Cleaner;
+			path = xcleaner/Cleaner;
+			sourceTree = SOURCE_ROOT;
+		};
+		0E8D240A1F8F18A9000C670F /* Core Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D240B1F8F18A9000C670F /* CoreSimulatorCleaner.swift */,
+				0E8D240C1F8F18A9000C670F /* SimulatorController.swift */,
+				0E8D240D1F8F18A9000C670F /* SimulatorAppsAnalyzer.swift */,
+			);
+			path = "Core Simulator";
+			sourceTree = "<group>";
+		};
+		0E8D24101F8F18A9000C670F /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24111F8F18A9000C670F /* SimctlInteractor.swift */,
+				0E8D24121F8F18A9000C670F /* Environment.swift */,
+				0E8D24131F8F18A9000C670F /* Formatter.swift */,
+				0E8D24141F8F18A9000C670F /* ProcessInteractor.swift */,
+				0E8D24151F8F18A9000C670F /* XCFileManager.swift */,
+			);
+			name = Environment;
+			path = xcleaner/Environment;
+			sourceTree = SOURCE_ROOT;
+		};
+		0E8D24161F8F18A9000C670F /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24171F8F18A9000C670F /* CommandLineKit */,
+			);
+			name = Dependencies;
+			path = xcleaner/Dependencies;
+			sourceTree = SOURCE_ROOT;
+		};
+		0E8D24171F8F18A9000C670F /* CommandLineKit */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24181F8F18A9000C670F /* CommandLine.swift */,
+				0E8D24191F8F18A9000C670F /* Option.swift */,
+				0E8D241A1F8F18A9000C670F /* StringExtensions.swift */,
+			);
+			path = CommandLineKit;
+			sourceTree = "<group>";
+		};
+		0E8D241B1F8F18A9000C670F /* Target Filters */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D241C1F8F18A9000C670F /* TargetFilter.swift */,
+				0E8D241D1F8F18A9000C670F /* ArchivesFilter.swift */,
+				0E8D241E1F8F18A9000C670F /* DeviceSupportFilter.swift */,
+			);
+			name = "Target Filters";
+			path = "xcleaner/Target Filters";
+			sourceTree = SOURCE_ROOT;
+		};
+		0E8D241F1F8F18A9000C670F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24201F8F18A9000C670F /* EntryBuilder.swift */,
+				0E8D24211F8F18A9000C670F /* Target.swift */,
+				0E8D24221F8F18A9000C670F /* Entry.swift */,
+				0E8D24231F8F18A9000C670F /* TargetSignature.swift */,
+			);
+			name = Models;
+			path = xcleaner/Models;
+			sourceTree = SOURCE_ROOT;
+		};
+		0E8D243E1F8F1A39000C670F /* xcleanTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24611F8F1B53000C670F /* Cleaner */,
+				0E8D24741F8F1B53000C670F /* Environment */,
+				0E8D246E1F8F1B53000C670F /* Mocks */,
+				0E8D245E1F8F1B53000C670F /* Models */,
+				0E8D24661F8F1B53000C670F /* Stubs */,
+				0E8D243F1F8F1A39000C670F /* xcleanTests.swift */,
+				0E8D24411F8F1A39000C670F /* Info.plist */,
+			);
+			path = xcleanTests;
+			sourceTree = "<group>";
+		};
+		0E8D245E1F8F1B53000C670F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D245F1F8F1B53000C670F /* TargetSignatureTests.swift */,
+				0E8D24601F8F1B53000C670F /* TargetTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0E8D24611F8F1B53000C670F /* Cleaner */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24621F8F1B53000C670F /* CoreSimulator */,
+				0E8D24651F8F1B53000C670F /* DefaultCleanerTests.swift */,
+			);
+			path = Cleaner;
+			sourceTree = "<group>";
+		};
+		0E8D24621F8F1B53000C670F /* CoreSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24631F8F1B53000C670F /* SimulatorControllerTests.swift */,
+				0E8D24641F8F1B53000C670F /* SimulatorAppsAnalyzerTests.swift */,
+			);
+			path = CoreSimulator;
+			sourceTree = "<group>";
+		};
+		0E8D24661F8F1B53000C670F /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24671F8F1B53000C670F /* simctl */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		0E8D24671F8F1B53000C670F /* simctl */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24681F8F1B53000C670F /* simctl_stub_multiple_unavailable.txt */,
+				0E8D24691F8F1B53000C670F /* simctl_stub_empty_unavailable_section.txt */,
+				0E8D246A1F8F1B53000C670F /* simctl_stub_no_unavailable.txt */,
+				0E8D246B1F8F1B53000C670F /* simctl_stub_mixed_unavailable.txt */,
+				0E8D246C1F8F1B53000C670F /* simctl_stub_one_unavailable.txt */,
+				0E8D246D1F8F1B53000C670F /* simctl_stub_invalid.txt */,
+			);
+			path = simctl;
+			sourceTree = "<group>";
+		};
+		0E8D246E1F8F1B53000C670F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D246F1F8F1B53000C670F /* SimctlInteractorMock.swift */,
+				0E8D24701F8F1B53000C670F /* EnvironmentMock.swift */,
+				0E8D24711F8F1B53000C670F /* FilterMock.swift */,
+				0E8D24721F8F1B53000C670F /* TargetCleanerMock.swift */,
+				0E8D24731F8F1B53000C670F /* FileManagerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		0E8D24741F8F1B53000C670F /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D24751F8F1B53000C670F /* EnvironmentTests.swift */,
+				0E8D24761F8F1B53000C670F /* FormatterTests.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		0EC7417D1E1D345C0008A630 = {
 			isa = PBXGroup;
 			children = (
+				0E8D24071F8F1895000C670F /* Core */,
 				0EC741881E1D345C0008A630 /* xclean */,
+				0E8D243E1F8F1A39000C670F /* xcleanTests */,
 				0EC741871E1D345C0008A630 /* Products */,
 				153A145B4491E325C294BAAB /* Frameworks */,
 			);
@@ -56,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC741861E1D345C0008A630 /* xclean */,
+				0E8D243D1F8F1A39000C670F /* xcleanTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +343,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0E8D243C1F8F1A39000C670F /* xcleanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E8D24421F8F1A39000C670F /* Build configuration list for PBXNativeTarget "xcleanTests" */;
+			buildPhases = (
+				0E8D24391F8F1A39000C670F /* Sources */,
+				0E8D243A1F8F1A39000C670F /* Frameworks */,
+				0E8D243B1F8F1A39000C670F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xcleanTests;
+			productName = xcleanTests;
+			productReference = 0E8D243D1F8F1A39000C670F /* xcleanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0EC741851E1D345C0008A630 /* xclean */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EC7418D1E1D345C0008A630 /* Build configuration list for PBXNativeTarget "xclean" */;
@@ -108,6 +387,11 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Deszip;
 				TargetAttributes = {
+					0E8D243C1F8F1A39000C670F = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = AM5334753U;
+						ProvisioningStyle = Automatic;
+					};
 					0EC741851E1D345C0008A630 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = R623GA6E42;
@@ -128,22 +412,136 @@
 			projectRoot = "";
 			targets = (
 				0EC741851E1D345C0008A630 /* xclean */,
+				0E8D243C1F8F1A39000C670F /* xcleanTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		0E8D243B1F8F1A39000C670F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E8D24851F8F1B6E000C670F /* simctl_stub_no_unavailable.txt in Resources */,
+				0E8D24831F8F1B6E000C670F /* simctl_stub_multiple_unavailable.txt in Resources */,
+				0E8D24881F8F1B6E000C670F /* simctl_stub_invalid.txt in Resources */,
+				0E8D24841F8F1B6E000C670F /* simctl_stub_empty_unavailable_section.txt in Resources */,
+				0E8D24871F8F1B6E000C670F /* simctl_stub_one_unavailable.txt in Resources */,
+				0E8D24861F8F1B6E000C670F /* simctl_stub_mixed_unavailable.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		0E8D24391F8F1A39000C670F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E8D247B1F8F1B5E000C670F /* FormatterTests.swift in Sources */,
+				0E8D24821F8F1B68000C670F /* TargetTests.swift in Sources */,
+				0E8D247E1F8F1B63000C670F /* FilterMock.swift in Sources */,
+				0E8D24771F8F1B5A000C670F /* SimulatorControllerTests.swift in Sources */,
+				0E8D24781F8F1B5A000C670F /* SimulatorAppsAnalyzerTests.swift in Sources */,
+				0E8D247C1F8F1B63000C670F /* SimctlInteractorMock.swift in Sources */,
+				0E8D24791F8F1B5A000C670F /* DefaultCleanerTests.swift in Sources */,
+				0E8D247A1F8F1B5E000C670F /* EnvironmentTests.swift in Sources */,
+				0E8D24801F8F1B63000C670F /* FileManagerMock.swift in Sources */,
+				0E8D24401F8F1A39000C670F /* xcleanTests.swift in Sources */,
+				0E8D24811F8F1B68000C670F /* TargetSignatureTests.swift in Sources */,
+				0E8D247D1F8F1B63000C670F /* EnvironmentMock.swift in Sources */,
+				0E8D247F1F8F1B63000C670F /* TargetCleanerMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EC741821E1D345C0008A630 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8D24301F8F1934000C670F /* ProcessInteractor.swift in Sources */,
+				0E8D24261F8F1934000C670F /* SimulatorController.swift in Sources */,
+				0E8D242F1F8F1934000C670F /* Formatter.swift in Sources */,
+				0E8D242E1F8F1934000C670F /* Environment.swift in Sources */,
+				0E8D24271F8F1934000C670F /* SimulatorAppsAnalyzer.swift in Sources */,
+				0E8D242C1F8F1934000C670F /* StringExtensions.swift in Sources */,
+				0E8D24341F8F1934000C670F /* Entry.swift in Sources */,
+				0E8D24381F8F1934000C670F /* DeviceSupportFilter.swift in Sources */,
+				0E8D24331F8F1934000C670F /* Target.swift in Sources */,
+				0E8D24321F8F1934000C670F /* EntryBuilder.swift in Sources */,
+				0E8D24241F8F1934000C670F /* TargetBuilder.swift in Sources */,
+				0E8D24371F8F1934000C670F /* ArchivesFilter.swift in Sources */,
+				0E8D24361F8F1934000C670F /* TargetFilter.swift in Sources */,
+				0E8D242A1F8F1934000C670F /* CommandLine.swift in Sources */,
+				0E8D24351F8F1934000C670F /* TargetSignature.swift in Sources */,
+				0E8D242D1F8F1934000C670F /* SimctlInteractor.swift in Sources */,
+				0E8D24311F8F1934000C670F /* XCFileManager.swift in Sources */,
+				0E8D24251F8F1934000C670F /* CoreSimulatorCleaner.swift in Sources */,
+				0E8D24281F8F1934000C670F /* Cleaner.swift in Sources */,
 				0EC7418A1E1D345C0008A630 /* main.swift in Sources */,
+				0E8D242B1F8F1934000C670F /* Option.swift in Sources */,
+				0E8D24291F8F1934000C670F /* TargetCleaner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		0E8D24431F8F1A39000C670F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AM5334753U;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = xcleanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = AS.xcleanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		0E8D24441F8F1A39000C670F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AM5334753U;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = xcleanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = AS.xcleanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		0EC7418B1E1D345C0008A630 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -275,6 +673,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E8D24421F8F1A39000C670F /* Build configuration list for PBXNativeTarget "xcleanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E8D24431F8F1A39000C670F /* Debug */,
+				0E8D24441F8F1A39000C670F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0EC741811E1D345C0008A630 /* Build configuration list for PBXProject "xclean" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
