@@ -21,7 +21,6 @@ Looks at next locations and tries to remove some of the stuff located here:
 
 ```
 Cleans some of the stuff created by XCode.
-May corrupt or remove any random data on your or your neighbours discs, you were warned :)
 
 Usage:
 xclean [-l] <TARGET> [-r] <TARGET> [-t] <TIMEOUT> [-a] <APPNAME>

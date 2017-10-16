@@ -85,6 +85,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E2B0D321F94F78D0088B2B4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		0E64DDD11F1BFE9D0097C6B8 /* xcleaner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = xcleaner.framework; path = "../../../../Library/Developer/Xcode/DerivedData/xclean-gjtlvfmoacuuggdvvznuagqbhean/Build/Products/Debug/xcleaner.framework"; sourceTree = "<group>"; };
 		0E64DDD51F1BFF830097C6B8 /* xcleaner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = xcleaner.framework; path = xcleaner/build/Debug/xcleaner.framework; sourceTree = "<group>"; };
 		0E8D243D1F8F1A39000C670F /* xcleanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xcleanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +350,7 @@
 		0EC741881E1D345C0008A630 /* xclean */ = {
 			isa = PBXGroup;
 			children = (
+				0E2B0D321F94F78D0088B2B4 /* README.md */,
 				0EC3DC1C1E786390006370FD /* Info.plist */,
 				0EC741891E1D345C0008A630 /* main.swift */,
 			);
