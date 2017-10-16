@@ -81,7 +81,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-h"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-v"
@@ -97,7 +97,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-l DerivedData -t 3600"
