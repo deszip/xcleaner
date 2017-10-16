@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-xcleaner.xcscheme</key>
+		<key>Pods-xclean.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-xcleanerTests.xcscheme</key>
+		<key>Pods-xcleanTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

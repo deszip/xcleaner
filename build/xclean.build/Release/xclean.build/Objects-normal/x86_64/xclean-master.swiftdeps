@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
+options: "c51a0293ba64f83ca2f42b4b032ffc52"
+build_time: [1507175560, 667152000]
+inputs:
+  "/Users/zardoz/Projects/OSS/XClean/xclean-source/xclean/main.swift": !dirty [1507085873, 0]
