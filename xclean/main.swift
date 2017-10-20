@@ -22,11 +22,19 @@ if environment.versionOption.wasSet {
 }
 
 if environment.listOption.wasSet {
-    cleaner.list(targetSignatures: TargetSignature.signaturesForOption(environment.listOption))
+    if let signatures = TargetSignature.signaturesForOption(environment.listOption) {
+        cleaner.list(targetSignatures: signatures)
+    } else {
+        environment.printUsage()
+    }
 }
 
 if environment.removeOption.wasSet {
-    cleaner.remove(targetSignatures: TargetSignature.signaturesForOption(environment.removeOption))
+    if let signatures = TargetSignature.signaturesForOption(environment.removeOption) {
+        cleaner.remove(targetSignatures: signatures)
+    } else {
+        environment.printUsage()
+    }
 }
 
 environment.terminate()

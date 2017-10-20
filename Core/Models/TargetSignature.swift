@@ -94,9 +94,16 @@ public struct TargetSignature: Equatable {
                 TargetSignature(type: TargetType.xcodeCaches)]
     }
     
-    public static func signaturesForOption(_ option: MultiStringOption) -> [TargetSignature] {
+    public static func signaturesForOption(_ option: MultiStringOption) -> [TargetSignature]? {
         let targetNames = option.value ?? []
-        var signatures = targetNames.flatMap { TargetSignature.signaturesForTarget(target: $0) }
+        var signatures = targetNames.flatMap { TargetSignature.signatureForTarget(target: $0) }
+        
+        // Having more arguments than signatures means some arguments are invalid
+        if targetNames.count != signatures.count {
+            return nil;
+        }
+        
+        // If no arguments provided - assume all targets
         if signatures.count == 0 {
             signatures = TargetSignature.all()
         }
@@ -104,7 +111,7 @@ public struct TargetSignature: Equatable {
         return signatures
     }
     
-    public static func signaturesForTarget(target: String?) -> TargetSignature? {
+    private static func signatureForTarget(target: String?) -> TargetSignature? {
         guard let target = target else {
             return nil
         }
@@ -130,3 +137,4 @@ public struct TargetSignature: Equatable {
 public func ==(lhs: TargetSignature, rhs: TargetSignature) -> Bool {
     return lhs.type == rhs.type
 }
+
